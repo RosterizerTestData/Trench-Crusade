@@ -1,0 +1,1495 @@
+{
+  "name": "Trench Crusade Playtest Rules",
+  "revision": "1.2.1",
+  "game": "Trench Crusade",
+  "genre": "generic",
+  "publisher": "",
+  "url": "https://www.trenchcrusade.com/",
+  "notes": "Unofficial",
+  "wip": true,
+  "rulebook": {
+    "assetTaxonomy": {
+      "Abilities": {
+        "text": ""
+      },
+      "Equipment": {},
+      "Infantry": {
+        "keywords": {
+          "Faction": [],
+          "Keywords": []
+        },
+        "stats": {
+          "MaxQty": {
+            "statType": "numeric",
+            "value": null,
+            "visibility": "hidden"
+          }
+        },
+        "templateClass": "Model"
+      },
+      "Model": {
+        "aspects": {
+          "Group By": "Keywords",
+          "Type": "game piece"
+        },
+        "rules": {
+          "formatMeleeDiceNon-positive": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee",
+                    "format"
+                  ]
+                ],
+                "value": "{v} Dice"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "max": 0,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "formatRangedDiceNon-positive": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Ranged",
+                    "format"
+                  ]
+                ],
+                "value": "{v} Dice"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "max": 0,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Ranged",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "Armour": {
+            "statOrder": 4,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Base": {
+            "format": "{v} mm",
+            "statOrder": 5,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Ducats": {
+            "group": "Cost",
+            "groupOrder": -1,
+            "statOrder": -1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": null,
+            "visibility": "always"
+          },
+          "Melee": {
+            "format": "+{v} Dice",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Movement": {
+            "format": "{v}”",
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Ranged": {
+            "format": "+{v} Dice",
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Variant": {
+        "aspects": {
+          "Visibility": "active"
+        }
+      }
+    },
+    "assetCatalog": {
+      "Abilities§Agile": {
+        "text": "Stigmatic Nuns may take any Dash, Jump or Climb ACTION with +1 DICE."
+      },
+      "Abilities§Artificial Life": {
+        "text": "Artillery Witches are not affected by FEAR and attacks with the Keyword GAS cannot damage them."
+      },
+      "Abilities§Blessed Stigmata": {
+        "text": "When a Stigmatic Nun suffers any BLOOD MARKERS from any source (except attacks with the Keyword GAS or FIRE, which damage the nuns normally), you can convert any such BLOOD MARKERS into BLESSING MARKERS."
+      },
+      "Abilities§Bodyguard": {
+        "text": "If any model with the PILGRIM Keyword within 1” of the Communicant is hit, you can choose to redirect the hit against the Communicant instead. Determine the injuries exactly as if the weapon just hit the Communicant."
+      },
+      "Abilities§Broken on the Wheel": {
+        "text": "Before the start of the battle, one Trench Pilgrim or Stigmatic Nun may voluntarily be broken on the wheel to show their piety and devotion (remove all weapons, armour and equipment from the victim and use/ store them as you wish). The Shrine Anchorite will then shatter the bones of the volunteer and carry the broken victim to the battle on its Wheel. Any attacks against the Anchorite are then taken by the volunteer instead of the Anchorite (using the Armour of the volunteer) until the volunteer has been taken Out of Action. Down results against the volunteer do not affect the Anchorite movement. Note that they are otherwise treated as a single model and share any BLOOD MARKERS from any source. A volunteer cannot make any attacks or move, for obvious reasons. At the end of the battle, even if the volunteer has survived, the model dies and is removed from your warband."
+      },
+      "Abilities§Chainmaw": {
+        "text": "The War Wolf can attack any enemy with his chainsaw mouth in melee combat - this is a RISKY ACTION with +3 DICE. The attack ignores any armour worn by the target. Roll any injuries with +1 DICE."
+      },
+      "Abilities§Elite": {
+        "keywords": {
+          "Keywords": [
+            "KEYWORD"
+          ]
+        },
+        "text": "The most senior and heroic models of the\nwarband. They have different rules for experience and\nadvancement, and often enjoy a different weapon,\narmour and equipment selection."
+      },
+      "Abilities§Enforced Orthodoxy": {
+        "text": "During its Activation, a Castigator may take a RISKY ACTION with +1 DICE. If successful, all friendly models that are Down and within 8” of the Castigator may mediately stand up at no penalty or cost."
+      },
+      "Abilities§Fear": {
+        "keywords": {
+          "Keywords": [
+            "KEYWORD"
+          ]
+        },
+        "text": "The Shrine Anchorite is immune to FEAR."
+      },
+      "Abilities§Hide": {
+        "text": "As a RISKY ACTION the Commando can hide behind a wall, obstacle, building or any other piece of scenery the model is touching and that can block line of sight, even partially. If successful, enemies cannot charge or shoot at the Commando. If after hiding the Commando moves in any way, charges or shoots, this effect is cancelled and the enemies can target the Commando as standard."
+      },
+      "Abilities§Infernal Bomb": {
+        "text": "Specify any point on the battlefield within 36” (that the Witch can see) that you want to target. Next, take a Ranged Attack ACTION with -1 DICE. If the roll fails (i.e. you roll 6 or less with the two lowest dice), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. Roll on the Injury Chart for each model within 3” of the landing spot as the bomb explodes – no roll to hit is needed. If the bomb lands exactly on top of any model, roll with 3D6 on the Injury Chart and add the dice together! Other models hit by the Bomb roll on the Injury Chart as standard. Any model hit but not taken Out of Action by this attack is blown D3” directly away from the point of impact, stopping if they hit other models/buildings/objects. This attack has the Keyword SHRAPNEL and therefore causes an additional +1 BLOOD MARKER."
+      },
+      "Abilities§Infiltrator": {
+        "keywords": {
+          "Keywords": [
+            "KEYWORD"
+          ]
+        },
+        "text": "The Death Commando can be placed anywhere on the table out of line of sight of any enemies, but at least 8” away from the closest enemy. Deployed after all other models without the Keyword INFILTRATOR."
+      },
+      "Abilities§Laying on Hands": {
+        "text": "With a successful ACTION, you may remove D3 BLOOD MARKERS from any friendly model within 6”."
+      },
+      "Abilities§Legionnaire (Melee)": {
+        "text": "\"Congrats worm. You are better with a knife than the usual canon-fodder...\""
+      },
+      "Abilities§Legionnaire (Ranged)": {
+        "text": "\"Congrats, worm. You are better with a rifle than the usual canon-fodder...\""
+      },
+      "Abilities§Loping Dash": {
+        "text": "A War Wolf may take its Dash ACTION with +2 DICE."
+      },
+      "Abilities§Mad Dash": {
+        "text": "Ecclesiastic Prisoners can add +1 DICE to their DASH ACTION."
+      },
+      "Abilities§Memento Mori": {
+        "text": "The War Prophet is touched by Heaven and the revealed truth allows them a degree of protection against premature death. Once per battle, when the War Prophet is taken Out of Action for any reason, ignore the result as if nothing had happened."
+      },
+      "Abilities§Miracle of Regeneration": {
+        "text": "At the start of each Activation, the Communicant can remove one BLOOD MARKER from themselves, should they have any."
+      },
+      "Abilities§Puppet Master": {
+        "text": "Select a target a model, friend or foe, within 12”. As an ACTION you can move the model D6” in any direction, including forcing it to fall down or enter into melee combat with any enemy model."
+      },
+      "Abilities§Resurrection": {
+        "text": "When a Trench Pilgrim dies, you may elect to re-buy them as a Martyr-Penitent resurrected by a Meta-Christ for a cost of 45 Ducats. When hit, any attacks against a Martyr-Penitent always add -1 DICE to their dice pool when rolling on the Injury Chart. Their Melee Weapon bonus is increased to +1 DICE"
+      },
+      "Abilities§Shredding Claws": {
+        "text": "The War Wolf can take a Melee combat attack as an ACTION with +1 DICE to hit. Roll any injuries with +2 DICE."
+      },
+      "Abilities§Stealth Generator": {
+        "text": "Ranged attacks against a Death Commando suffer -1 DICE to all the attack rolls."
+      },
+      "Abilities§Strong": {
+        "keywords": {
+          "Keywords": [
+            "KEYWORD"
+          ]
+        },
+        "text": "Ignores the effect of the Keyword HEAVY on any weapon they wield."
+      },
+      "Abilities§Tough": {
+        "keywords": {
+          "Keywords": [
+            "KEYWORD"
+          ]
+        },
+        "text": "Subject to the rules for TOUGH creatures."
+      },
+      "Abilities§Unholy Hymns": {
+        "text": "All enemy models within 8” of the Chorister suffer an additional -1 DICE for all ACTIONS they attempt."
+      },
+      "Abilities§Whip of God": {
+        "text": "Unlike other models, the Castigator is allowed to attack friendly models within 1” and can do this without declaring a charge. If the Castigator"
+      },
+      "Equipment§Bonebreaker Mace": {
+        "text": "The Anchorite may use the Bonebreaker Mace in Melee. This attack is a RISKY ACTION and has +1 DICE for rolling to hit, as well as for any injury rolls."
+      },
+      "Equipment§Catherine Wheel": {
+        "text": "The Shrine Anchorite uses the great Catherine Wheel and mace as melee weapons. The Anchorite can take a RISKY ACTION with +3 DICE with its Catherine Wheel in Melee combat as an attack. Due to the enormous weight and the skill of the Shrine Anchorite in inflicting maximum pain, Catherine Wheel attacks roll on the Injury Chart with 3D6 (instead of usual 2D6), adding all three dice together!"
+      },
+      "Equipment§Iron Capirote": {},
+      "Equipment§Loudspeakers": {
+        "text": "The War Prophet blares out holy sermons and dire prophecies at 100 decibels to inspire the faithful. The Prophet can take a RISKY ACTION with +2DICE once during each Activation. If the action is successful, all friendly models within 8” of the Prophet can immediately move up to 3” towards any enemy models on the table. This move can allow them to enter combat as if they charged the enemy."
+      },
+      "Equipment§Martyrdom Explosive": {
+        "text": "Each prisoner is strapped with an explosive which can be triggered one time at any point during their Activation. This counts as a ranged attack against every model (friend or foe) within 3” of the Prisoner. Everyone, including the Prisoner, is automatically hit – roll on the Injury Chart to see what happens. Any model within 1” rolls +1 DICE on the Injury Chart. Other models within 3” roll 2D6 as normal. The Prisoner rolls 4D6 and adds the results together to determine their injury roll! If the explosive goes off and the Prisoner somehow survives the battle, you can buy them a new explosive for 25 ducats or field them without an explosive."
+      },
+      "Equipment§The Communicant Cross": {
+        "text": "A sacred cross is nailed on the face of the Communicant. This counts as an Iron Capirote, a Combat Helmet and a Gas Mask."
+      },
+      "Infantry§Anointed Heavy Infantry": {
+        "assets": {
+          "traits": [
+            "Abilities§Strong"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Heretic Legion"
+          ],
+          "Keywords": [
+            "HERETIC"
+          ]
+        },
+        "rules": {
+          "KO CheckMaxQty": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Anointed Heavy Infantry"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "tracked",
+                  "MaxQty"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        },
+        "stats": {
+          "Armour": {
+            "value": -2
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 95
+          },
+          "MaxQty": {
+            "tracked": true,
+            "value": 5
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Artillery Witch": {
+        "assets": {
+          "traits": [
+            "Abilities§Infernal Bomb",
+            "Abilities§Artificial Life"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Heretic Legion"
+          ],
+          "Keywords": [
+            "HERETIC"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 90
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "format": "{v} Dice",
+            "value": -1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "format": "{v} Dice",
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Castigator": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Abilities§Enforced Orthodoxy",
+            "Abilities§Whip of God",
+            "Abilities§Elite"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Trench Pilgrims"
+          ],
+          "Keywords": [
+            "PILGRIM"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 50
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Ecclesiastic Prisoners": {
+        "assets": {
+          "traits": [
+            "Equipment§Iron Capirote"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Trench Pilgrims"
+          ],
+          "Keywords": [
+            "PILGRIM"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 50
+          },
+          "MaxQty": {
+            "value": 4
+          },
+          "Melee": {
+            "format": "{v} Dice",
+            "value": -1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": null
+          }
+        }
+      },
+      "Infantry§Heretic Chorister": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Abilities§Unholy Hymns",
+            "Abilities§Elite",
+            "Abilities§Fear"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Heretic Legion"
+          ],
+          "Keywords": [
+            "HERETIC"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 65
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "format": "{v} Dice",
+            "value": -2
+          }
+        }
+      },
+      "Infantry§Heretic Death Commando": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Abilities§Infiltrator",
+            "Abilities§Stealth Generator",
+            "Abilities§Hide",
+            "Abilities§Elite"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Heretic Legion"
+          ],
+          "Keywords": [
+            "HERETIC"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 95
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Heretic Priest": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Abilities§Puppet Master",
+            "Abilities§Tough",
+            "Abilities§Elite"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Heretic Legion"
+          ],
+          "Keywords": [
+            "HERETIC"
+          ],
+          "Tags": [
+            "Compulsory"
+          ]
+        },
+        "removed": {
+          "stats": {}
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 80
+          },
+          "MaxQty": {},
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        }
+      },
+      "Infantry§Heretic Trooper": {
+        "keywords": {
+          "Faction": [
+            "Heretic Legion"
+          ],
+          "Keywords": [
+            "HERETIC"
+          ]
+        },
+        "rules": {
+          "Only half of your Heretic Troopers can upgrade.": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{roster}",
+                  "tally",
+                  "Heretic Trooper"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Legionnaire"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one type of Legionnaire allowed (Melee OR Ranged)": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionable": false,
+                "min": 1,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Legionnaire (Ranged)"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Legionnaire (Ranged)"
+                  ]
+                ],
+                "value": 0
+              },
+              {
+                "actionable": false,
+                "min": 1,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Legionnaire (Melee)"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Legionnaire (Melee)"
+                  ]
+                ],
+                "value": 0
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{this}",
+                    "evals",
+                    "1",
+                    "result",
+                    "truthy"
+                  ],
+                  [
+                    "{this}",
+                    "evals",
+                    "4",
+                    "result",
+                    "truthy"
+                  ]
+                ],
+                "value": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{this}",
+                    "evals",
+                    "2",
+                    "result",
+                    "truthy"
+                  ],
+                  [
+                    "{this}",
+                    "evals",
+                    "3",
+                    "result",
+                    "truthy"
+                  ]
+                ],
+                "value": true
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "UpdateDesignation": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "prepend": " ",
+                "value": "Legionnaire"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Legionnaire"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 999
+          }
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 30
+          },
+          "Melee": {
+            "tracked": true,
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "tracked": true,
+            "value": 0
+          },
+          "Upgrade": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "number": 0,
+                "order": 0,
+                "tracking": {
+                  "Ducats": 0,
+                  "Melee": 0,
+                  "Ranged": 0
+                }
+              },
+              "Legionnaire (Melee)": {
+                "number": 1,
+                "order": 1,
+                "tracking": {
+                  "Ducats": 10,
+                  "Legionnaire (Melee)": 1,
+                  "Melee": 1
+                }
+              },
+              "Legionnaire (Ranged)": {
+                "number": 2,
+                "order": 2,
+                "tracking": {
+                  "Ducats": 10,
+                  "Legionnaire (Ranged)": 1,
+                  "Ranged": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          }
+        },
+        "text": "You can upgrade up to half of your Heretic Troopers (rounding down) into Heretic Legionnaires at the cost of +10 ducats each. You can elect to upgrade either the Ranged OR Melee characteristic of all your legionnaires by +1 DICE. All Legionnaires must have the same bonus."
+      },
+      "Infantry§Martyr Penitent": {
+        "keywords": {
+          "Faction": [
+            "Trench Pilgrims"
+          ],
+          "Keywords": [
+            "PILGRIM"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 30
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Pilgrim Communicant": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Abilities§Strong",
+            "Abilities§Tough",
+            "Abilities§Miracle of Regeneration",
+            "Abilities§Bodyguard",
+            "Equipment§The Communicant Cross",
+            "Abilities§Elite"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Trench Pilgrims"
+          ],
+          "Keywords": [
+            "PILGRIM"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 40
+          },
+          "Ducats": {
+            "value": 100
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "format": "{v} Dice",
+            "value": -3
+          }
+        }
+      },
+      "Infantry§Shrine Anchorite": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Equipment§Catherine Wheel",
+            "Equipment§Bonebreaker Mace",
+            "Abilities§Fear",
+            "Abilities§Tough"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Trench Pilgrims"
+          ],
+          "Keywords": [
+            "PILGRIM"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -3
+          },
+          "Base": {
+            "value": 50
+          },
+          "Ducats": {
+            "value": 140
+          },
+          "Melee": {
+            "statType": "term",
+            "value": "+3/+1"
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": null
+          }
+        }
+      },
+      "Infantry§Stigmatic Nuns": {
+        "keywords": {
+          "Faction": [
+            "Trench Pilgrims"
+          ],
+          "Keywords": [
+            "PILGRIM"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 50
+          },
+          "MaxQty": {
+            "value": 4
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 8
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Trench Pilgrim": {
+        "assets": {
+          "traits": [
+            "Abilities§Resurrection"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Trench Pilgrims"
+          ],
+          "Keywords": [
+            "PILGRIM"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 30
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§War Prophet": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Abilities§Memento Mori",
+            "Abilities§Laying on Hands",
+            "Equipment§Loudspeakers",
+            "Abilities§Elite"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Trench Pilgrims"
+          ],
+          "Keywords": [
+            "PILGRIM"
+          ],
+          "Tags": [
+            "Compulsory"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 80
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        }
+      },
+      "Infantry§War Wolf Assault Beast": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Abilities§Tough",
+            "Abilities§Loping Dash",
+            "Abilities§Chainmaw",
+            "Abilities§Shredding Claws",
+            "Abilities§Fear"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Heretic Legion"
+          ],
+          "Keywords": [
+            "HERETIC"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -3
+          },
+          "Base": {
+            "value": 50
+          },
+          "Ducats": {
+            "value": 140
+          },
+          "Melee": {
+            "statType": "term",
+            "value": "+3/+1"
+          },
+          "Movement": {
+            "value": 8
+          },
+          "Ranged": {
+            "value": null
+          }
+        }
+      },
+      "Roster§Roster": {
+        "allowed": {
+          "classifications": [
+            "Model"
+          ]
+        },
+        "aspects": {
+          "Group Traits": true,
+          "Label": "Warband"
+        },
+        "constraints": {
+          "any": [],
+          "none": [
+            "Compulsory"
+          ]
+        },
+        "rules": {
+          "detectFactionHeretic": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Faction",
+                    "value"
+                  ]
+                ],
+                "value": "Heretic Legion"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "included",
+                    "templateClass",
+                    "Model",
+                    "tally",
+                    "Heretic Legion"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "detectFactionPilgrim": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Faction",
+                    "value"
+                  ]
+                ],
+                "value": "Trench Pilgrims"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "included",
+                    "templateClass",
+                    "Model",
+                    "tally",
+                    "Trench Pilgrims"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "setFactionConstraints": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "prepend": "",
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "string"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Faction",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          },
+          "unsetNonHereticVariants": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Variant",
+                    "ranks"
+                  ]
+                ],
+                "prepend": "",
+                "value": "Procession of the Sacred Affliction"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Variant",
+                    "ranks"
+                  ]
+                ],
+                "prepend": "",
+                "value": "Cavalcade of the Tenth Plague"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Faction",
+                    "value"
+                  ]
+                ],
+                "value": "Heretic Legion"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 20
+          },
+          "unsetNonPilgrimVariants": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Variant",
+                    "ranks"
+                  ]
+                ],
+                "prepend": "",
+                "value": "Heretic Naval Raiding Party"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Variant",
+                    "ranks"
+                  ]
+                ],
+                "prepend": "",
+                "value": "Trench Ghosts"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Faction",
+                    "value"
+                  ]
+                ],
+                "value": "Trench Pilgrims"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 20
+          }
+        },
+        "stats": {
+          "Ducats": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Faction": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Heretic Legion": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Infantry§Heretic Priest"
+                  }
+                ]
+              },
+              "Trench Pilgrims": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Infantry§War Prophet"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Glory Points": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Variant": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Heretic Naval Raiding Party": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Variant§Heretic Naval Raiding Party"
+                  }
+                ]
+              },
+              "Trench Ghosts": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Variant§Trench Ghosts"
+                  }
+                ]
+              },
+              "Procession of the Sacred Affliction": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Variant§Procession of the Sacred Affliction"
+                  }
+                ]
+              },
+              "Cavalcade of the Tenth Plague": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Variant§Cavalcade of the Tenth Plague"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          }
+        }
+      },
+      "Variant§Cavalcade of the Tenth Plague": {
+        "keywords": {
+          "Keywords": [
+            "PILGRIM"
+          ],
+          "Faction": [
+            "Trench Pilgrims"
+          ]
+        },
+        "text": "* **Blood Sacrifice**: Any model in the warband\n(except Ecclesiastic Prisoners who are not worthy)\ncan purchase a Sacrificial Lamb (see below).\n* **Heaven Awaits**: The Cavalcade rejects the\ndoctrine of the Meta-Christ. Their dead Pilgrims\ncannot be resurrected as Martyr-Penitents.\n* **The Unclean**: The Cavalcade detests using the\nunclean Ecclesiastic Prisoners and may only have up\nto two of them.\n* **Day of his Wrath**: The War Prophet of this\nwarband cannot use Laying on Hands, but can call\nupon the Wrath of God instead. This is a RISKY\nACTION. If successful, roll on the Injury Chart\nagainst one enemy model within 3” of the Prophet.\nArmour offers no protection."
+      },
+      "Variant§Heretic Naval Raiding Party": {
+        "allowed": {
+          "items": []
+        },
+        "disallowed": {
+          "items": []
+        },
+        "keywords": {
+          "Keywords": [
+            "HERETIC"
+          ],
+          "Faction": [
+            "Heretic Legion"
+          ]
+        },
+        "text": "* All models have +1 DICE when taking their\nDash ACTIONS.\n* The warband can buy Submachine Guns at 25\nducats per weapon.\n* The warband can have only one Anointed model\nand may have only one Artillery Witch.\n* The warband may not include a War Wolf.\n* Up to three models without ELITE Keyword\ncan be upgraded into INFILTRATORS at the cost of\n10 ducats per model."
+      },
+      "Variant§Procession of the Sacred Affliction": {
+        "keywords": {
+          "Keywords": [
+            "PILGRIM"
+          ],
+          "Faction": [
+            "Trench Pilgrims"
+          ]
+        },
+        "text": "* **Face thy Fears**: No model in the Procession of\nthe Sacred Affliction can wear Iron Capirotes. Those\ntroops with Capirotes in their base profile will not\nhave them, though their cost remains the same.\n* **Reliquary Armoury**: All models of this warband\n(save for Anchorite) can buy Holy Icon Shields\nfor 20 ducats, not just ELITE models. In addition,\nwarband models with the ELITE Keyword may\nacquire Holy Icon Armour (see below).\n* **Punishing Millstones**: All models in the\nProcession of the Sacred Affliction add +1 DICE to\ninjury rolls with melee attacks against enemies who\nare Down.\n* **Melee-focused**: This warband may not have any\nMachine Guns"
+      },
+      "Variant§Trench Ghosts": {
+        "allowed": {
+          "items": []
+        },
+        "disallowed": {
+          "items": []
+        },
+        "keywords": {
+          "Keywords": [
+            "HERETIC"
+          ],
+          "Faction": [
+            "Heretic Legion"
+          ]
+        },
+        "text": "* **Horror**: All models in the Warband cause FEAR.\n* **Semi-corporeal**: All attacks against all models\nin the Trench Ghost Warband roll injuries with -1\nDICE – the undead are hard to kill!\n* **Spectral**: All models in the warband ignore\nmovement penalties for any terrain, though they\ncannot move through any objects/terrain.\n* **Undead**: All models in the Trench Ghost\nwarband are immune to weapons with the Keyword\nGAS.\n* **Lost Souls**: Since only mortals who have souls\nbecome ghosts, this warband may not have any War\nWolves or Artillery Witches, since they are artificial\nbeings.\n* **Slow**: All models in Trench Ghost Warband have\n-1 DICE in all their DASH ACTIONS."
+      }
+    },
+    "gameModes": {},
+    "theme": {}
+  }
+}
