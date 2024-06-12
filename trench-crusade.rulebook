@@ -1,17 +1,15 @@
 {
-  "name": "Trench Crusade Playtest Rules",
-  "revision": "1.2.1",
+  "name": "Trench Crusade",
+  "revision": "0.3.0",
   "game": "Trench Crusade",
-  "genre": "generic",
+  "genre": "fantasy",
   "publisher": "",
   "url": "https://www.trenchcrusade.com/",
-  "notes": "Unofficial",
+  "notes": "",
   "wip": true,
   "rulebook": {
     "assetTaxonomy": {
-      "Abilities": {
-        "text": ""
-      },
+      "Ability": {},
       "Equipment": {},
       "Infantry": {
         "keywords": {
@@ -27,7 +25,22 @@
         },
         "templateClass": "Model"
       },
+      "Melee Weapon": {
+        "stats": {
+          "Range": {
+            "format": "{v}",
+            "statType": "term",
+            "value": "Melee"
+          }
+        },
+        "templateClass": "Weapon"
+      },
       "Model": {
+        "allowed": {
+          "classifications": [
+            "Weapon"
+          ]
+        },
         "aspects": {
           "Group By": "Keywords",
           "Type": "game piece"
@@ -102,6 +115,55 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "Too many of this type of model.": {
+            "evals": [
+              {
+                "actionable": false,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ]
+              },
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "MaxQty",
+                    "value"
+                  ]
+                ]
+              },
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "stats",
+                  "MaxQty",
+                  "value"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "{0string}"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
           }
         },
         "stats": {
@@ -121,6 +183,9 @@
           "Ducats": {
             "group": "Cost",
             "groupOrder": -1,
+            "icons": [
+              "two-coins"
+            ],
             "statOrder": -1,
             "statType": "numeric",
             "tracked": true,
@@ -150,117 +215,206 @@
           }
         }
       },
+      "Ranged Weapon": {
+        "templateClass": "Weapon"
+      },
       "Variant": {
         "aspects": {
           "Visibility": "active"
         }
+      },
+      "Weapon": {
+        "stats": {
+          "Ducats": {
+            "group": "Cost",
+            "groupOrder": -1,
+            "icons": [
+              "two-coins"
+            ],
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Modifiers": {
+            "statOrder": 3,
+            "statType": "term",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Range": {
+            "format": "{v}”",
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Type": {
+            "ranks": {
+              "1-handed": {
+                "order": 0
+              },
+              "2-handed": {
+                "order": 1
+              },
+              "Special": {
+                "order": 2
+              },
+              "Grenade": {
+                "order": 3
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": null,
+            "visibility": "normal"
+          }
+        }
       }
     },
     "assetCatalog": {
-      "Abilities§Agile": {
+      "Ability§-Dice": {
+        "text": "Modifier for ACTION rolls. For each -DICE, add one dice to the dice pool of the 2D6 roll you are about to make. Thus -1 DICE makes the roll a total of 3D6. Then roll all the dice and pick the two lowest. If two -DICE are added, roll 4D6 and pick the two lowest, and so on."
+      },
+      "Ability§+Dice": {
+        "text": "Modifier for ACTION rolls. For each +DICE, add one dice to the dice pool of the 2D6 roll you are about to make. +1 DICE thus makes the roll a total of 3D6. Then roll all the dice and pick the two highest. If two +DICE are added, roll 4D6 and pick the two highest, and so on."
+      },
+      "Ability§Action": {
+        "text": "Covers attacking with Melee and Ranged Weapons, Dashing and any other activity where the player must roll on the Action Success Chart to make an Action. This roll can be modified by the opposing player by using BLOOD MARKERS. Each marker causes -1 DICE penalty to the roll."
+      },
+      "Ability§Agile": {
         "text": "Stigmatic Nuns may take any Dash, Jump or Climb ACTION with +1 DICE."
       },
-      "Abilities§Artificial Life": {
+      "Ability§Artificial Life": {
         "text": "Artillery Witches are not affected by FEAR and attacks with the Keyword GAS cannot damage them."
       },
-      "Abilities§Blessed Stigmata": {
+      "Ability§Assault": {
+        "text": "Weapons with this Keyword can make a ranged attack and charge during the same Activation. Only one such attack can be done in this instance, regardless of any rules the ranged weapon may have."
+      },
+      "Ability§Black Grail": {
+        "text": "This model is part of the Black Grail faction."
+      },
+      "Ability§Blessed Stigmata": {
         "text": "When a Stigmatic Nun suffers any BLOOD MARKERS from any source (except attacks with the Keyword GAS or FIRE, which damage the nuns normally), you can convert any such BLOOD MARKERS into BLESSING MARKERS."
       },
-      "Abilities§Bodyguard": {
+      "Ability§Blessing Marker": {
+        "text": "Supernatural or chemical temporary enhancement. Each marker can be converted into +1 DICE for any ACTION the model takes, or into -1 DICE when rolling injuries for this model."
+      },
+      "Ability§Blood Marker": {
+        "text": "Damage inflicted by attacks. Each can be converted into -1 DICE for any ACTION the wounded model takes or into +1 DICE when rolling injuries for this model."
+      },
+      "Ability§Bodyguard": {
         "text": "If any model with the PILGRIM Keyword within 1” of the Communicant is hit, you can choose to redirect the hit against the Communicant instead. Determine the injuries exactly as if the weapon just hit the Communicant."
       },
-      "Abilities§Broken on the Wheel": {
+      "Ability§Broken on the Wheel": {
         "text": "Before the start of the battle, one Trench Pilgrim or Stigmatic Nun may voluntarily be broken on the wheel to show their piety and devotion (remove all weapons, armour and equipment from the victim and use/ store them as you wish). The Shrine Anchorite will then shatter the bones of the volunteer and carry the broken victim to the battle on its Wheel. Any attacks against the Anchorite are then taken by the volunteer instead of the Anchorite (using the Armour of the volunteer) until the volunteer has been taken Out of Action. Down results against the volunteer do not affect the Anchorite movement. Note that they are otherwise treated as a single model and share any BLOOD MARKERS from any source. A volunteer cannot make any attacks or move, for obvious reasons. At the end of the battle, even if the volunteer has survived, the model dies and is removed from your warband."
       },
-      "Abilities§Chainmaw": {
+      "Ability§Chainmaw": {
         "text": "The War Wolf can attack any enemy with his chainsaw mouth in melee combat - this is a RISKY ACTION with +3 DICE. The attack ignores any armour worn by the target. Roll any injuries with +1 DICE."
       },
-      "Abilities§Elite": {
-        "keywords": {
-          "Keywords": [
-            "KEYWORD"
-          ]
-        },
-        "text": "The most senior and heroic models of the\nwarband. They have different rules for experience and\nadvancement, and often enjoy a different weapon,\narmour and equipment selection."
+      "Ability§Consumable": {
+        "text": "An item with this keyword can only be used once per battle and it is then gone."
       },
-      "Abilities§Enforced Orthodoxy": {
+      "Ability§Critical": {
+        "text": "When attacking with a weapon with this keyword, add +1 DICE to any injury rolls the weapon causes if you roll a Critical (i.e. 12+) on the Action Success Chart."
+      },
+      "Ability§Elite": {
+        "text": "The most senior and heroic models of the warband. They have different rules for experience and advancement, and often enjoy a different weapon, armour and equipment selection."
+      },
+      "Ability§Enforced Orthodoxy": {
         "text": "During its Activation, a Castigator may take a RISKY ACTION with +1 DICE. If successful, all friendly models that are Down and within 8” of the Castigator may mediately stand up at no penalty or cost."
       },
-      "Abilities§Fear": {
-        "keywords": {
-          "Keywords": [
-            "KEYWORD"
-          ]
-        },
-        "text": "The Shrine Anchorite is immune to FEAR."
+      "Ability§Fear": {
+        "text": "Enemies of models with this Keyword suffer -1 DICE in Melee combat against this model. Some units are immune to this effect."
       },
-      "Abilities§Hide": {
+      "Ability§Fire": {
+        "text": "Damage by this weapon is due to fire. This weapon causes an extra +1 BLOOD MARKER when it hits enemies, even if the damage is otherwise negated by armour or other circumstances."
+      },
+      "Ability§Fireteam": {
+        "text": "This model is part of a Fireteam. All models that are part of the same Fireteam can be activated at the same time without your opponent getting their turn in between. They can take their ACTIONS in any order between them as they wish. Note that if either member of the Fireteam fails in a RISKY ACTION, it ends both Activations."
+      },
+      "Ability§Gas": {
+        "text": "These weapons damage lungs so they cause an extra +1 BLOOD MARKER due to toxic fumes, even if the damage is otherwise negated by armour. Some equipment specifically protects against this type of damage. Troops equipped with Gas Masks will be immune to such weapons and will suffer no damage from them under any circumstances."
+      },
+      "Ability§Grenade": {
+        "text": "Grenade-type weapons ignore penalties for cover and long range. They do not count towards the number of missile weapons a model can carry and do not have to be held in your hand at all times. A model armed with grenades can use them as many times as they wish."
+      },
+      "Ability§Heavy": {
+        "text": "If carrying a weapon, armour or equipment with this Keyword, the model cannot move/dash and shoot during its Activation, and the model cannot roll D6 and add it to the Charge move. Only one such item can be carried by a single model."
+      },
+      "Ability§Heretic": {
+        "text": "The model is a member of the Heretic Legion faction."
+      },
+      "Ability§Hide": {
         "text": "As a RISKY ACTION the Commando can hide behind a wall, obstacle, building or any other piece of scenery the model is touching and that can block line of sight, even partially. If successful, enemies cannot charge or shoot at the Commando. If after hiding the Commando moves in any way, charges or shoots, this effect is cancelled and the enemies can target the Commando as standard."
       },
-      "Abilities§Infernal Bomb": {
+      "Ability§Infernal Bomb": {
         "text": "Specify any point on the battlefield within 36” (that the Witch can see) that you want to target. Next, take a Ranged Attack ACTION with -1 DICE. If the roll fails (i.e. you roll 6 or less with the two lowest dice), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. Roll on the Injury Chart for each model within 3” of the landing spot as the bomb explodes – no roll to hit is needed. If the bomb lands exactly on top of any model, roll with 3D6 on the Injury Chart and add the dice together! Other models hit by the Bomb roll on the Injury Chart as standard. Any model hit but not taken Out of Action by this attack is blown D3” directly away from the point of impact, stopping if they hit other models/buildings/objects. This attack has the Keyword SHRAPNEL and therefore causes an additional +1 BLOOD MARKER."
       },
-      "Abilities§Infiltrator": {
-        "keywords": {
-          "Keywords": [
-            "KEYWORD"
-          ]
-        },
-        "text": "The Death Commando can be placed anywhere on the table out of line of sight of any enemies, but at least 8” away from the closest enemy. Deployed after all other models without the Keyword INFILTRATOR."
+      "Ability§Infiltrator": {
+        "text": "Models with this Keyword can be placed anywhere on the table out of line of sight of any enemies, but at least 8” away from the closest enemy. Deployed after all other models without this Keyword."
       },
-      "Abilities§Laying on Hands": {
+      "Ability§Laying on Hands": {
         "text": "With a successful ACTION, you may remove D3 BLOOD MARKERS from any friendly model within 6”."
       },
-      "Abilities§Legionnaire (Melee)": {
-        "text": "\"Congrats worm. You are better with a knife than the usual canon-fodder...\""
+      "Ability§Limit (X)": {
+        "text": "You can only purchase as many of this piece of equipment/weapon/armour as indicated by the number in parenthesis for your Warband. If you find more via looting/exploration, you can break this limit."
       },
-      "Abilities§Legionnaire (Ranged)": {
-        "text": "\"Congrats, worm. You are better with a rifle than the usual canon-fodder...\""
-      },
-      "Abilities§Loping Dash": {
+      "Ability§Loping Dash": {
         "text": "A War Wolf may take its Dash ACTION with +2 DICE."
       },
-      "Abilities§Mad Dash": {
+      "Ability§Mad Dash": {
         "text": "Ecclesiastic Prisoners can add +1 DICE to their DASH ACTION."
       },
-      "Abilities§Memento Mori": {
+      "Ability§Memento Mori": {
         "text": "The War Prophet is touched by Heaven and the revealed truth allows them a degree of protection against premature death. Once per battle, when the War Prophet is taken Out of Action for any reason, ignore the result as if nothing had happened."
       },
-      "Abilities§Miracle of Regeneration": {
+      "Ability§Miracle of Regeneration": {
         "text": "At the start of each Activation, the Communicant can remove one BLOOD MARKER from themselves, should they have any."
       },
-      "Abilities§Puppet Master": {
+      "Ability§New Antioch": {
+        "text": "This model is part of the New Antioch faction."
+      },
+      "Ability§Pilgrim": {
+        "text": "This model is part of the Pilgrim faction."
+      },
+      "Ability§Puppet Master": {
         "text": "Select a target a model, friend or foe, within 12”. As an ACTION you can move the model D6” in any direction, including forcing it to fall down or enter into melee combat with any enemy model."
       },
-      "Abilities§Resurrection": {
+      "Ability§Resurrection": {
         "text": "When a Trench Pilgrim dies, you may elect to re-buy them as a Martyr-Penitent resurrected by a Meta-Christ for a cost of 45 Ducats. When hit, any attacks against a Martyr-Penitent always add -1 DICE to their dice pool when rolling on the Injury Chart. Their Melee Weapon bonus is increased to +1 DICE"
       },
-      "Abilities§Shredding Claws": {
+      "Ability§Risky Action": {
+        "text": "If you fail your roll on the Action Success Chart when taking this ACTION, the Activation of this model ends immediately."
+      },
+      "Ability§Shrapnel": {
+        "text": "These weapons cause damage via an explosion of shrapnel, so they always cause an extra +1 BLOOD MARKER due to fragments hitting the target, even if the damage is otherwise negated by armour or other means. Wearing a helmet negates this extra marker."
+      },
+      "Ability§Shredding Claws": {
         "text": "The War Wolf can take a Melee combat attack as an ACTION with +1 DICE to hit. Roll any injuries with +2 DICE."
       },
-      "Abilities§Stealth Generator": {
+      "Ability§Skirmisher": {
+        "text": "Unless engaged in melee, before an enemy moves a model making a charge against a SKIRMISHER, you can immediately move D3” in any direction you wish (except within 1” of any enemy). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter Melee."
+      },
+      "Ability§Stealth": {
+        "text": "Enemy ranged attacks suffer -1 DICE against this target."
+      },
+      "Ability§Stealth Generator": {
         "text": "Ranged attacks against a Death Commando suffer -1 DICE to all the attack rolls."
       },
-      "Abilities§Strong": {
-        "keywords": {
-          "Keywords": [
-            "KEYWORD"
-          ]
-        },
-        "text": "Ignores the effect of the Keyword HEAVY on any weapon they wield."
+      "Ability§Strong": {
+        "text": "A model with this Keyword ignores the rules for weapons/armour/equipment with the Keyword HEAVY. They may wield a two-handed melee weapon and carry one HEAVY Melee weapon and one HEAVY ranged weapon."
       },
-      "Abilities§Tough": {
-        "keywords": {
-          "Keywords": [
-            "KEYWORD"
-          ]
-        },
-        "text": "Subject to the rules for TOUGH creatures."
+      "Ability§Sultanate": {
+        "text": "This model is part of the Sultanate faction."
       },
-      "Abilities§Unholy Hymns": {
+      "Ability§Tough": {
+        "text": "TOUGH Creatures treat Out of Action results as Down instead. Once a TOUGH Creature is Down it is treated as any other model when rolling on the Injury Chart and can be taken Out of Action. Once a TOUGH creature suffers an Out of Action result and avoids it due to the TOUGH rule, it can be taken out exactly as any other model."
+      },
+      "Ability§Unholy Hymns": {
         "text": "All enemy models within 8” of the Chorister suffer an additional -1 DICE for all ACTIONS they attempt."
       },
-      "Abilities§Whip of God": {
+      "Ability§Whip of God": {
         "text": "Unlike other models, the Castigator is allowed to attack friendly models within 1” and can do this without declaring a charge. If the Castigator"
       },
       "Equipment§Bonebreaker Mace": {
@@ -279,10 +433,131 @@
       "Equipment§The Communicant Cross": {
         "text": "A sacred cross is nailed on the face of the Communicant. This counts as an Iron Capirote, a Combat Helmet and a Gas Mask."
       },
+      "Infantry§Alamut Assassin": {
+        "assets": {
+          "traits": [
+            "Ability§Infiltrator"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 85
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Alamut Master Assassin": {
+        "assets": {
+          "traits": [
+            "Ability§Infiltrator",
+            "Ability§Tough"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Type": [
+            "Leader",
+            "Elite"
+          ],
+          "Tags": [
+            "Compulsory"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 95
+          },
+          "MaxQty": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Amalgam": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Fear",
+            "Ability§Tough"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Black Grail"
+          ],
+          "Type": [
+            "M"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 60
+          },
+          "Ducats": {
+            "value": 150
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
       "Infantry§Anointed Heavy Infantry": {
         "assets": {
           "traits": [
-            "Abilities§Strong"
+            "Ability§Strong"
           ]
         },
         "keywords": {
@@ -291,6 +566,9 @@
           ],
           "Keywords": [
             "HERETIC"
+          ],
+          "Type": [
+            "Troop"
           ]
         },
         "rules": {
@@ -346,8 +624,8 @@
       "Infantry§Artillery Witch": {
         "assets": {
           "traits": [
-            "Abilities§Infernal Bomb",
-            "Abilities§Artificial Life"
+            "Ability§Infernal Bomb",
+            "Ability§Artificial Life"
           ]
         },
         "keywords": {
@@ -356,6 +634,9 @@
           ],
           "Keywords": [
             "HERETIC"
+          ],
+          "Type": [
+            "M"
           ]
         },
         "stats": {
@@ -372,14 +653,194 @@
             "value": 2
           },
           "Melee": {
-            "format": "{v} Dice",
             "value": -1
           },
           "Movement": {
             "value": 6
           },
           "Ranged": {
-            "format": "{v} Dice",
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Assassin Acolyte": {
+        "assets": {
+          "traits": [
+            "Ability§Infiltrator"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 35
+          },
+          "MaxQty": {
+            "value": 3
+          },
+          "Melee": {
+            "value": -1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Avarice Witch": {
+        "assets": {
+          "traits": [
+            "Ability§Gas"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Heretic Legion"
+          ],
+          "Type": [
+            "M"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 90
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": -1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Azeb": {
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 25
+          },
+          "Melee": {
+            "value": -1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Azeb Skirmisher": {
+        "assets": {
+          "traits": [
+            "Ability§Skirmisher"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 30
+          },
+          "Melee": {
+            "value": -1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Brazen Bull": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Fear",
+            "Ability§Tough",
+            "Ability§Strong"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Type": [
+            "M"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 60
+          },
+          "Ducats": {
+            "value": 100
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
             "value": 0
           }
         }
@@ -390,9 +851,9 @@
         },
         "assets": {
           "traits": [
-            "Abilities§Enforced Orthodoxy",
-            "Abilities§Whip of God",
-            "Abilities§Elite"
+            "Ability§Enforced Orthodoxy",
+            "Ability§Whip of God",
+            "Ability§Elite"
           ]
         },
         "keywords": {
@@ -401,6 +862,9 @@
           ],
           "Keywords": [
             "PILGRIM"
+          ],
+          "Type": [
+            "Elite"
           ]
         },
         "stats": {
@@ -412,6 +876,193 @@
           },
           "Ducats": {
             "value": 50
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Combat engineer": {
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -2
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 75
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Combat medic": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -1
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 65
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Communicant Anti-tank Hunter": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Strong",
+            "Ability§Tough",
+            "Ability§Regenerates"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Mercenaries"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -1
+          },
+          "Base": {
+            "value": 40
+          },
+          "Ducats": {
+            "value": null
+          },
+          "Glory": {
+            "value": 5
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Corpse Guard": {
+        "assets": {
+          "traits": [
+            "Ability§Fear"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Black Grail"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 55
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Dervish": {
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 55
+          },
+          "MaxQty": {
+            "value": 4
           },
           "Melee": {
             "value": 1
@@ -436,6 +1087,9 @@
           ],
           "Keywords": [
             "PILGRIM"
+          ],
+          "Type": [
+            "Troop"
           ]
         },
         "stats": {
@@ -452,7 +1106,6 @@
             "value": 4
           },
           "Melee": {
-            "format": "{v} Dice",
             "value": -1
           },
           "Movement": {
@@ -463,15 +1116,203 @@
           }
         }
       },
+      "Infantry§Eire Trench Cleric": {
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 60
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Fianna": {
+        "assets": {
+          "traits": [
+            "Ability§Infiltrator"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 60
+          },
+          "MaxQty": {
+            "value": 5
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Goetic Warlock": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Fear",
+            "Ability§Teleport 6\""
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Mercenaries"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -2
+          },
+          "Base": {
+            "value": 40
+          },
+          "Ducats": {
+            "value": null
+          },
+          "Glory": {
+            "value": 4
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Grail Thrall": {
+        "assets": {
+          "traits": [
+            "Ability§Fear"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Black Grail"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 30
+          },
+          "Melee": {
+            "value": -1
+          },
+          "Movement": {
+            "value": 4
+          },
+          "Ranged": {
+            "value": null
+          }
+        }
+      },
+      "Infantry§Herald of Beelzebub": {
+        "assets": {
+          "traits": [
+            "Ability§Fear",
+            "Ability§Skirmisher",
+            "Ability§Ignores Gas",
+            "Ability§Weak to Fire"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Black Grail"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 40
+          },
+          "Ducats": {
+            "value": 60
+          },
+          "MaxQty": {
+            "value": 4
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "format": "{v}” flying",
+            "value": 10
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
       "Infantry§Heretic Chorister": {
         "aspects": {
           "Unique": true
         },
         "assets": {
           "traits": [
-            "Abilities§Unholy Hymns",
-            "Abilities§Elite",
-            "Abilities§Fear"
+            "Ability§Unholy Hymns",
+            "Ability§Elite",
+            "Ability§Fear"
           ]
         },
         "keywords": {
@@ -480,6 +1321,9 @@
           ],
           "Keywords": [
             "HERETIC"
+          ],
+          "Type": [
+            "Elite"
           ]
         },
         "stats": {
@@ -499,7 +1343,6 @@
             "value": 6
           },
           "Ranged": {
-            "format": "{v} Dice",
             "value": -2
           }
         }
@@ -510,10 +1353,10 @@
         },
         "assets": {
           "traits": [
-            "Abilities§Infiltrator",
-            "Abilities§Stealth Generator",
-            "Abilities§Hide",
-            "Abilities§Elite"
+            "Ability§Infiltrator",
+            "Ability§Stealth Generator",
+            "Ability§Hide",
+            "Ability§Elite"
           ]
         },
         "keywords": {
@@ -522,6 +1365,9 @@
           ],
           "Keywords": [
             "HERETIC"
+          ],
+          "Type": [
+            "Elite"
           ]
         },
         "stats": {
@@ -551,9 +1397,9 @@
         },
         "assets": {
           "traits": [
-            "Abilities§Puppet Master",
-            "Abilities§Tough",
-            "Abilities§Elite"
+            "Ability§Puppet Master",
+            "Ability§Tough",
+            "Ability§Elite"
           ]
         },
         "keywords": {
@@ -565,6 +1411,10 @@
           ],
           "Tags": [
             "Compulsory"
+          ],
+          "Type": [
+            "Leader",
+            "Elite"
           ]
         },
         "removed": {
@@ -580,7 +1430,6 @@
           "Ducats": {
             "value": 80
           },
-          "MaxQty": {},
           "Melee": {
             "value": 2
           },
@@ -599,6 +1448,9 @@
           ],
           "Keywords": [
             "HERETIC"
+          ],
+          "Type": [
+            "Troop"
           ]
         },
         "rules": {
@@ -838,6 +1690,321 @@
         },
         "text": "You can upgrade up to half of your Heretic Troopers (rounding down) into Heretic Legionnaires at the cost of +10 ducats each. You can elect to upgrade either the Ranged OR Melee characteristic of all your legionnaires by +1 DICE. All Legionnaires must have the same bonus."
       },
+      "Infantry§Highland Lieutenant": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Tough",
+            "Ability§Strong"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Elite"
+          ],
+          "Tags": [
+            "Compulsory"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 70
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        }
+      },
+      "Infantry§Hound of the Black Grail": {
+        "assets": {
+          "traits": [
+            "Ability§Fear"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Black Grail"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": null
+          },
+          "Ducats": {
+            "value": 65
+          },
+          "MaxQty": {
+            "value": 3
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 8
+          },
+          "Ranged": {
+            "value": null
+          }
+        }
+      },
+      "Infantry§Infiltrator Shocktrooper": {
+        "assets": {
+          "traits": [
+            "Ability§Infiltrator"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 55
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Jabirean Alchemist": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 55
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        }
+      },
+      "Infantry§Janissarie": {
+        "assets": {
+          "traits": [
+            "Ability§Strong"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 55
+          },
+          "MaxQty": {
+            "value": 6
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Lieutenant": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Tough"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Leader",
+            "Elite"
+          ],
+          "Tags": [
+            "Compulsory"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 70
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        }
+      },
+      "Infantry§Lion of Jabir": {
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Type": [
+            "M"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": null
+          },
+          "Ducats": {
+            "value": 60
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 8
+          },
+          "Ranged": {
+            "value": null
+          }
+        }
+      },
+      "Infantry§Lord of Tumours": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Fear",
+            "Ability§Tough",
+            "Ability§Strong"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Black Grail"
+          ],
+          "Type": [
+            "Leader",
+            "Elite"
+          ],
+          "Tags": [
+            "Compulsory"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 40
+          },
+          "Ducats": {
+            "value": 130
+          },
+          "MaxQty": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 4
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
       "Infantry§Martyr Penitent": {
         "keywords": {
           "Faction": [
@@ -845,6 +2012,9 @@
           ],
           "Keywords": [
             "PILGRIM"
+          ],
+          "Type": [
+            "Troop"
           ]
         },
         "stats": {
@@ -868,18 +2038,282 @@
           }
         }
       },
+      "Infantry§Mechanized Heavy Infantry": {
+        "assets": {
+          "traits": [
+            "Ability§Strong"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -2
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 85
+          },
+          "MaxQty": {
+            "value": 3
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Mendelist Ammo Monk": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Faction": [
+            "Mercenaries"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": null
+          },
+          "Glory": {
+            "value": 3
+          },
+          "Melee": {
+            "value": -1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": -1
+          }
+        }
+      },
+      "Infantry§Mercenary Combat Medic": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Faction": [
+            "Mercenaries"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -1
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": null
+          },
+          "Glory": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§MHI with Machine Armour": {
+        "assets": {
+          "traits": [
+            "Ability§Strong"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -3
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 100
+          },
+          "MaxQty": {
+            "value": 3
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Observer": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Faction": [
+            "Mercenaries"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -1
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": null
+          },
+          "Glory": {
+            "value": 5
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 8
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Papal Lieutenant": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Tough"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Elite"
+          ],
+          "Tags": [
+            "Compulsory"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 70
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        }
+      },
+      "Infantry§Papal Representative": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Leader",
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 60
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
       "Infantry§Pilgrim Communicant": {
         "aspects": {
           "Unique": true
         },
         "assets": {
           "traits": [
-            "Abilities§Strong",
-            "Abilities§Tough",
-            "Abilities§Miracle of Regeneration",
-            "Abilities§Bodyguard",
+            "Ability§Strong",
+            "Ability§Tough",
+            "Ability§Miracle of Regeneration",
+            "Ability§Bodyguard",
             "Equipment§The Communicant Cross",
-            "Abilities§Elite"
+            "Ability§Elite"
           ]
         },
         "keywords": {
@@ -888,6 +2322,9 @@
           ],
           "Keywords": [
             "PILGRIM"
+          ],
+          "Type": [
+            "Elite"
           ]
         },
         "stats": {
@@ -907,8 +2344,189 @@
             "value": 6
           },
           "Ranged": {
-            "format": "{v} Dice",
             "value": -3
+          }
+        }
+      },
+      "Infantry§Plague Knight": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Fear"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Black Grail"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 60
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Prussian Sniper Priest": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 50
+          },
+          "Melee": {
+            "value": -1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        }
+      },
+      "Infantry§Ranger Lieutenant": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Tough",
+            "Ability§Skirmisher"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Elite"
+          ],
+          "Tags": [
+            "Compulsory"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 70
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        }
+      },
+      "Infantry§Sapper": {
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 50
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Shocktrooper": {
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 45
+          },
+          "MaxQty": {
+            "value": 5
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
           }
         }
       },
@@ -920,8 +2538,8 @@
           "traits": [
             "Equipment§Catherine Wheel",
             "Equipment§Bonebreaker Mace",
-            "Abilities§Fear",
-            "Abilities§Tough"
+            "Ability§Fear",
+            "Ability§Tough"
           ]
         },
         "keywords": {
@@ -930,6 +2548,9 @@
           ],
           "Keywords": [
             "PILGRIM"
+          ],
+          "Type": [
+            "M"
           ]
         },
         "stats": {
@@ -943,6 +2564,7 @@
             "value": 140
           },
           "Melee": {
+            "format": "{v} Dice",
             "statType": "term",
             "value": "+3/+1"
           },
@@ -954,6 +2576,75 @@
           }
         }
       },
+      "Infantry§Sniper Priest": {
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 50
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": -1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        }
+      },
+      "Infantry§Specialist Trench dog": {
+        "keywords": {
+          "Faction": [
+            "Mercenaries"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": null
+          },
+          "Glory": {
+            "value": 2
+          },
+          "MaxQty": {
+            "value": 20
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 8
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
       "Infantry§Stigmatic Nuns": {
         "keywords": {
           "Faction": [
@@ -961,6 +2652,9 @@
           ],
           "Keywords": [
             "PILGRIM"
+          ],
+          "Type": [
+            "Troop"
           ]
         },
         "stats": {
@@ -987,10 +2681,157 @@
           }
         }
       },
+      "Infantry§Sultanate Assassin": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Infiltrator"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 85
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Trench Cleric": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 60
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        }
+      },
+      "Infantry§Trench dog": {
+        "keywords": {
+          "Faction": [
+            "Mercenaries"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": null
+          },
+          "Glory": {
+            "value": 1
+          },
+          "MaxQty": {
+            "value": 20
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 8
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Trench Mole": {
+        "assets": {
+          "traits": [
+            "Ability§Infiltrator"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 40
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
       "Infantry§Trench Pilgrim": {
         "assets": {
           "traits": [
-            "Abilities§Resurrection"
+            "Ability§Resurrection"
           ]
         },
         "keywords": {
@@ -999,6 +2840,9 @@
           ],
           "Keywords": [
             "PILGRIM"
+          ],
+          "Type": [
+            "Troop"
           ]
         },
         "stats": {
@@ -1028,10 +2872,10 @@
         },
         "assets": {
           "traits": [
-            "Abilities§Memento Mori",
-            "Abilities§Laying on Hands",
+            "Ability§Memento Mori",
+            "Ability§Laying on Hands",
             "Equipment§Loudspeakers",
-            "Abilities§Elite"
+            "Ability§Elite"
           ]
         },
         "keywords": {
@@ -1043,6 +2887,10 @@
           ],
           "Tags": [
             "Compulsory"
+          ],
+          "Type": [
+            "Leader",
+            "Elite"
           ]
         },
         "stats": {
@@ -1072,11 +2920,11 @@
         },
         "assets": {
           "traits": [
-            "Abilities§Tough",
-            "Abilities§Loping Dash",
-            "Abilities§Chainmaw",
-            "Abilities§Shredding Claws",
-            "Abilities§Fear"
+            "Ability§Tough",
+            "Ability§Loping Dash",
+            "Ability§Chainmaw",
+            "Ability§Shredding Claws",
+            "Ability§Fear"
           ]
         },
         "keywords": {
@@ -1085,6 +2933,9 @@
           ],
           "Keywords": [
             "HERETIC"
+          ],
+          "Type": [
+            "M"
           ]
         },
         "stats": {
@@ -1098,6 +2949,7 @@
             "value": 140
           },
           "Melee": {
+            "format": "{v} Dice",
             "statType": "term",
             "value": "+3/+1"
           },
@@ -1106,6 +2958,1440 @@
           },
           "Ranged": {
             "value": null
+          }
+        }
+      },
+      "Infantry§Witchburner General": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Immune to Fear",
+            "Ability§No Dash"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Mercenaries"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -2
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": null
+          },
+          "Glory": {
+            "value": 5
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Yeoman": {
+        "keywords": {
+          "Faction": [
+            "New Antioch"
+          ],
+          "Type": [
+            "Troop"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 30
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        }
+      },
+      "Infantry§Yuzbasi Captain": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Tough"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Type": [
+            "Leader",
+            "Elite"
+          ],
+          "Tags": [
+            "Compulsory"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 70
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        }
+      },
+      "Melee Weapon§Anti-Tank Hammer": {
+        "assets": {
+          "traits": [
+            "Ability§Risky",
+            "Ability§Critical"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 35
+          },
+          "Modifiers": {
+            "value": "+1D to Injury, +1 Blood"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Assassin’s Dagger": {
+        "assets": {
+          "traits": [
+            "Ability§Critical"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Assassin"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 10
+          },
+          "Modifiers": {
+            "value": "+1 to Injury"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Bayonet": {
+        "stats": {
+          "Ducats": {
+            "value": 2
+          },
+          "Modifiers": {
+            "value": "Extra melee weapon"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Beelzebub’s Axe": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy",
+            "Ability§Infect"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 30
+          },
+          "Modifiers": {
+            "value": "+1D to Injury"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Blasphemous Staff": {
+        "assets": {
+          "traits": [
+            "Ability§Fire",
+            "Ability§Critical"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 0
+          },
+          "Modifiers": {
+            "value": null
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Bonebreaker mace": {
+        "assets": {
+          "traits": [
+            "Ability§Risky"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Anchorite"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 0
+          },
+          "Modifiers": {
+            "value": "+1D to Injury"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Catherine Wheel": {
+        "assets": {
+          "traits": [
+            "Ability§Risky"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Anchorite"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 0
+          },
+          "Modifiers": {
+            "value": "+3D Injuries, roll 3D for injury  table"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Claymore": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy",
+            "Ability§Critical"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Alba Assault"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 10
+          },
+          "Modifiers": {
+            "value": "+1D to Injury"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Coin Hammer": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 25
+          },
+          "Modifiers": {
+            "value": "+2d to Injury, +1 Blessing on injure vs enemy"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Flail/Scourge": {
+        "stats": {
+          "Ducats": {
+            "value": 5
+          },
+          "Modifiers": {
+            "value": "+1D to hit"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Gavel of Justice": {
+        "keywords": {
+          "Tags": [
+            "Witchburner"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 0
+          },
+          "Modifiers": {
+            "value": "Divine Judgement"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Golden Khanjar": {
+        "assets": {
+          "traits": [
+            "Ability§2 Attacks"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          },
+          "Modifiers": {
+            "value": "+1 to Injury"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Great Hammer": {
+        "stats": {
+          "Ducats": {
+            "value": 12
+          },
+          "Modifiers": {
+            "value": null
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Great Maul": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 12
+          },
+          "Modifiers": {
+            "value": "+1 to Injury"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Great Sword/Axe": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy",
+            "Ability§Critical"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 15
+          },
+          "Modifiers": {
+            "value": "+1D to Injury"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Halberd-Gun": {
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          },
+          "Modifiers": {
+            "value": null
+          },
+          "Range": {
+            "value": "Melee/\"24"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Hellblade": {
+        "assets": {
+          "traits": [
+            "Ability§Fire"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 0
+          },
+          "Modifiers": {
+            "value": "+1D Injuries"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Infected Proboscis": {
+        "keywords": {
+          "Tags": [
+            "Herald of Beelzebub"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 0
+          },
+          "Modifiers": {
+            "value": "When causing a Blood Marker on enemy, remove one from self"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Lochaber": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy",
+            "Ability§Critical"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Alba Assault"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 18
+          },
+          "Modifiers": {
+            "value": "+1 to Injury, -1D for chargers"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Misericordia": {
+        "stats": {
+          "Ducats": {
+            "value": 15
+          },
+          "Modifiers": {
+            "value": "Ignores downed armour"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Plague Blade": {
+        "assets": {
+          "traits": [
+            "Ability§Infect"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 25
+          },
+          "Modifiers": {
+            "value": null
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Polearm": {
+        "stats": {
+          "Ducats": {
+            "value": 7
+          },
+          "Modifiers": {
+            "value": "-1D to hit for Charges"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Sacrificial Blade": {
+        "assets": {
+          "traits": [
+            "Ability§Risky"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 23
+          },
+          "Modifiers": {
+            "value": "+2 to injury"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Sword/Axe": {
+        "assets": {
+          "traits": [
+            "Ability§Critical"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 4
+          },
+          "Modifiers": {
+            "value": null
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Tartarus Claws": {
+        "keywords": {
+          "Tags": [
+            "Death commando"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 25
+          },
+          "Modifiers": {
+            "value": "2 attacks, Follow-up 3\""
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Titan Zulfiqar": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy",
+            "Ability§Critical"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Brazen Bull"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 35
+          },
+          "Modifiers": {
+            "value": "+2 to Injury"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Trench Club": {
+        "stats": {
+          "Ducats": {
+            "value": 3
+          },
+          "Modifiers": {
+            "value": null
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Trench Knife": {
+        "stats": {
+          "Ducats": {
+            "value": 1
+          },
+          "Modifiers": {
+            "value": "-1D to hit"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Unarmed": {
+        "stats": {
+          "Ducats": {
+            "value": null
+          },
+          "Modifiers": {
+            "value": "-1D to Hit/Injury"
+          },
+          "Type": {
+            "value": "Special"
+          }
+        }
+      },
+      "Ranged Weapon§Anti-Materiel Rifle": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy",
+            "Ability§Critical"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 0
+          },
+          "Modifiers": {
+            "value": "+1D to Injury, Ignores armour"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Automatic Pistol": {
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          },
+          "Modifiers": {
+            "value": "-1D to Injury, 2 attacks"
+          },
+          "Range": {
+            "value": null
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Automatic Rifle": {
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Modifiers": {
+            "value": "2 attacks"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Automatic Shotgun": {
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          },
+          "Modifiers": {
+            "value": "+1D to Hit, -1D to Injury long range"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Bolt Action Rifle": {
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 10
+          },
+          "Range": {
+            "value": 24
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Bow of Alamut": {
+        "assets": {
+          "traits": [
+            "Ability§Critical"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 50
+          },
+          "Modifiers": {
+            "value": "Ignore armour"
+          },
+          "Range": {
+            "value": 60
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Corruption Belcher": {
+        "assets": {
+          "traits": [
+            "Ability§Gas"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 40
+          },
+          "Modifiers": {
+            "value": "-1D injury, ignore armour"
+          },
+          "Range": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Flame Cannon": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy",
+            "Ability§Fire"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Brazen bull"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 65
+          },
+          "Range": {
+            "value": 12
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Flamethrower": {
+        "assets": {
+          "traits": [
+            "Ability§Fire"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 40
+          },
+          "Modifiers": {
+            "value": "-1D Injuries, Ignores armour"
+          },
+          "Range": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Gas Grenades": {
+        "assets": {
+          "traits": [
+            "Ability§Assault",
+            "Ability§Gas"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 10
+          },
+          "Modifiers": {
+            "value": "Blast 3\", -1D to Injury"
+          },
+          "Range": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Grenade"
+          }
+        }
+      },
+      "Ranged Weapon§Grenade Launcher": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy",
+            "Ability§Shrapnel"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": null
+          },
+          "Modifiers": {
+            "value": "Blast 3\", Ignores cover"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Grenades": {
+        "assets": {
+          "traits": [
+            "Ability§Assault",
+            "Ability§Shrapnel"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 5
+          },
+          "Modifiers": {
+            "value": "Blast 2\""
+          },
+          "Range": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Grenade"
+          }
+        }
+      },
+      "Ranged Weapon§Heavy Flamethrower": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy",
+            "Ability§Fire"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 55
+          },
+          "Modifiers": {
+            "value": "Ignores armour"
+          },
+          "Range": {
+            "value": 10
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Incendiary Grenades": {
+        "assets": {
+          "traits": [
+            "Ability§Assault",
+            "Ability§Fire"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 10
+          },
+          "Modifiers": {
+            "value": "Ignores cover"
+          },
+          "Range": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Grenade"
+          }
+        }
+      },
+      "Ranged Weapon§Infested Rifle": {
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 15
+          },
+          "Modifiers": {
+            "value": "Reduces 1 armour"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Jezzail": {
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 7
+          },
+          "Range": {
+            "value": 18
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Machine Gun": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": null
+          },
+          "Modifiers": {
+            "value": "3 attacks"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Molotov Cocktail": {
+        "assets": {
+          "traits": [
+            "Ability§Assault",
+            "Ability§Fire"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 5
+          },
+          "Modifiers": {
+            "value": "-1D to Injury, Ignores cover"
+          },
+          "Range": {
+            "value": 6
+          },
+          "Type": {
+            "value": "Grenade"
+          }
+        }
+      },
+      "Ranged Weapon§MURAD Bombard": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Brazen bull"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 50
+          },
+          "Range": {
+            "value": 36
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Musket": {
+        "assets": {
+          "traits": [
+            "Ability§Risky"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 5
+          },
+          "Modifiers": {
+            "value": "-1D to Injury"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Parasite Grenades": {
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 15
+          },
+          "Modifiers": {
+            "value": "Blast 2\""
+          },
+          "Range": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Grenade"
+          }
+        }
+      },
+      "Ranged Weapon§Pistol": {
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 10
+          },
+          "Range": {
+            "value": null
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Putrid Shotgun": {
+        "assets": {
+          "traits": [
+            "Ability§Assault",
+            "Ability§Infect"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 35
+          },
+          "Modifiers": {
+            "value": "+1D to hit, -1D Injury"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Satchel Charge": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy",
+            "Ability§Consumable"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 15
+          },
+          "Modifiers": {
+            "value": "+1D to Injury, Blast 3\""
+          },
+          "Range": {
+            "value": 6
+          },
+          "Type": {
+            "value": "Grenade"
+          }
+        }
+      },
+      "Ranged Weapon§Semi-automatic Rifle": {
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          },
+          "Range": {
+            "value": 24
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Shotgun": {
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 15
+          },
+          "Modifiers": {
+            "value": "+1D to Hit, -1D to Injury long range"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Siege Jezzail": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 30
+          },
+          "Modifiers": {
+            "value": "+1D to injuries"
+          },
+          "Range": {
+            "value": 30
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Silenced Pistol": {
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          },
+          "Modifiers": {
+            "value": "+1D to Hit in cover"
+          },
+          "Range": {
+            "value": null
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Sniper Rifle": {
+        "assets": {
+          "traits": [
+            "Ability§Risky",
+            "Ability§Critical"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 35
+          },
+          "Modifiers": {
+            "value": "+1D to Hit"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Submachine gun": {
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Any"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": null
+          },
+          "Modifiers": {
+            "value": "2 attacks"
+          },
+          "Range": {
+            "value": 16
+          },
+          "Type": {
+            "value": "Range"
+          }
+        }
+      },
+      "Ranged Weapon§Viscera Cannon": {
+        "assets": {
+          "traits": [
+            "Ability§Heavy"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 60
+          },
+          "Modifiers": {
+            "value": "+2D to hit"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Type": {
+            "value": "Range"
           }
         }
       },
@@ -1126,6 +4412,156 @@
           ]
         },
         "rules": {
+          "calcGlory": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Glory",
+                    "max"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Glory Points",
+                  "value"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "calcStrongbox": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Strongbox",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{self}",
+                    "stats",
+                    "Ducats",
+                    "value"
+                  ]
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Total Ducats",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "detectFactionAntioch": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Faction",
+                    "value"
+                  ]
+                ],
+                "value": "Principality of New Antioch"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "included",
+                    "templateClass",
+                    "Model",
+                    "tally",
+                    "New Antioch"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "detectFactionBlackGrail": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Faction",
+                    "value"
+                  ]
+                ],
+                "value": "Black Grail"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "included",
+                    "templateClass",
+                    "Model",
+                    "tally",
+                    "Black Grail"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
           "detectFactionHeretic": {
             "actions": [
               {
@@ -1202,6 +4638,64 @@
             "failState": "pass",
             "order": 1
           },
+          "detectFactionSultanate": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Faction",
+                    "value"
+                  ]
+                ],
+                "value": "Iron Sultanate"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "included",
+                    "templateClass",
+                    "Model",
+                    "tally",
+                    "Iron Sultanate"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "Select your faction.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Faction",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
           "setFactionConstraints": {
             "actions": [
               {
@@ -1214,7 +4708,6 @@
                     "any"
                   ]
                 ],
-                "prepend": "",
                 "value": [
                   "{this}",
                   "evals",
@@ -1222,6 +4715,18 @@
                   "result",
                   "string"
                 ]
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Mercenaries"
               }
             ],
             "evals": [
@@ -1352,10 +4857,12 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Faction": {
             "dynamic": true,
+            "group": "Config",
+            "groupOrder": 1,
             "ranks": {
               "-": {
                 "order": 0
@@ -1375,20 +4882,75 @@
                     "trait": "Infantry§War Prophet"
                   }
                 ]
+              },
+              "Iron Sultanate": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Infantry§Yuzbasi Captain"
+                  }
+                ]
+              },
+              "Principality of New Antioch": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Infantry§Lieutenant"
+                  }
+                ]
+              },
+              "Black Grail": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Infantry§Lord of Tumours"
+                  }
+                ]
               }
             },
+            "statOrder": 1,
             "statType": "rank",
             "value": "-",
             "visibility": "normal"
           },
+          "Glory": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
           "Glory Points": {
+            "icons": [
+              "rear-aura"
+            ],
             "statType": "numeric",
             "tracked": true,
             "value": 0,
             "visibility": "normal"
           },
+          "Strongbox": {
+            "icons": [
+              "open-treasure-chest"
+            ],
+            "min": 0,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Total Ducats": {
+            "dynamic": true,
+            "icons": [
+              "coins"
+            ],
+            "statType": "numeric",
+            "value": 700,
+            "visibility": "normal"
+          },
           "Variant": {
             "dynamic": true,
+            "group": "Config",
+            "groupOrder": 1,
             "ranks": {
               "-": {
                 "order": 0
@@ -1426,6 +4988,7 @@
                 ]
               }
             },
+            "statOrder": 2,
             "statType": "rank",
             "value": "-",
             "visibility": "normal"
@@ -1441,7 +5004,7 @@
             "Trench Pilgrims"
           ]
         },
-        "text": "* **Blood Sacrifice**: Any model in the warband\n(except Ecclesiastic Prisoners who are not worthy)\ncan purchase a Sacrificial Lamb (see below).\n* **Heaven Awaits**: The Cavalcade rejects the\ndoctrine of the Meta-Christ. Their dead Pilgrims\ncannot be resurrected as Martyr-Penitents.\n* **The Unclean**: The Cavalcade detests using the\nunclean Ecclesiastic Prisoners and may only have up\nto two of them.\n* **Day of his Wrath**: The War Prophet of this\nwarband cannot use Laying on Hands, but can call\nupon the Wrath of God instead. This is a RISKY\nACTION. If successful, roll on the Injury Chart\nagainst one enemy model within 3” of the Prophet.\nArmour offers no protection."
+        "text": "* **Blood Sacrifice**: Any model in the warband (except Ecclesiastic Prisoners who are not worthy) can purchase a Sacrificial Lamb (see below).\n* **Heaven Awaits**: The Cavalcade rejects the doctrine of the Meta-Christ. Their dead Pilgrims cannot be resurrected as Martyr-Penitents.\n* **The Unclean**: The Cavalcade detests using the unclean Ecclesiastic Prisoners and may only have up to two of them.\n* **Day of his Wrath**: The War Prophet of this warband cannot use Laying on Hands, but can call upon the Wrath of God instead. This is a RISKY ACTION. If successful, roll on the Injury Chart against one enemy model within 3” of the Prophet. Armour offers no protection."
       },
       "Variant§Heretic Naval Raiding Party": {
         "allowed": {
@@ -1458,7 +5021,7 @@
             "Heretic Legion"
           ]
         },
-        "text": "* All models have +1 DICE when taking their\nDash ACTIONS.\n* The warband can buy Submachine Guns at 25\nducats per weapon.\n* The warband can have only one Anointed model\nand may have only one Artillery Witch.\n* The warband may not include a War Wolf.\n* Up to three models without ELITE Keyword\ncan be upgraded into INFILTRATORS at the cost of\n10 ducats per model."
+        "text": "* All models have +1 DICE when taking their Dash ACTIONS.\n* The warband can buy Submachine Guns at 25 ducats per weapon.\n* The warband can have only one Anointed model and may have only one Artillery Witch.\n* The warband may not include a War Wolf.\n* Up to three models without ELITE Keyword can be upgraded into INFILTRATORS at the cost of 10 ducats per model."
       },
       "Variant§Procession of the Sacred Affliction": {
         "keywords": {
@@ -1469,7 +5032,7 @@
             "Trench Pilgrims"
           ]
         },
-        "text": "* **Face thy Fears**: No model in the Procession of\nthe Sacred Affliction can wear Iron Capirotes. Those\ntroops with Capirotes in their base profile will not\nhave them, though their cost remains the same.\n* **Reliquary Armoury**: All models of this warband\n(save for Anchorite) can buy Holy Icon Shields\nfor 20 ducats, not just ELITE models. In addition,\nwarband models with the ELITE Keyword may\nacquire Holy Icon Armour (see below).\n* **Punishing Millstones**: All models in the\nProcession of the Sacred Affliction add +1 DICE to\ninjury rolls with melee attacks against enemies who\nare Down.\n* **Melee-focused**: This warband may not have any\nMachine Guns"
+        "text": "* **Face thy Fears**: No model in the Procession of the Sacred Affliction can wear Iron Capirotes. Those troops with Capirotes in their base profile will not have them, though their cost remains the same.\n* **Reliquary Armoury**: All models of this warband (save for Anchorite) can buy Holy Icon Shields for 20 ducats, not just ELITE models. In addition, warband models with the ELITE Keyword may acquire Holy Icon Armour (see below).\n* **Punishing Millstones**: All models in the Procession of the Sacred Affliction add +1 DICE to injury rolls with melee attacks against enemies who are Down.\n* **Melee-focused**: This warband may not have any Machine Guns"
       },
       "Variant§Trench Ghosts": {
         "allowed": {
@@ -1486,7 +5049,7 @@
             "Heretic Legion"
           ]
         },
-        "text": "* **Horror**: All models in the Warband cause FEAR.\n* **Semi-corporeal**: All attacks against all models\nin the Trench Ghost Warband roll injuries with -1\nDICE – the undead are hard to kill!\n* **Spectral**: All models in the warband ignore\nmovement penalties for any terrain, though they\ncannot move through any objects/terrain.\n* **Undead**: All models in the Trench Ghost\nwarband are immune to weapons with the Keyword\nGAS.\n* **Lost Souls**: Since only mortals who have souls\nbecome ghosts, this warband may not have any War\nWolves or Artillery Witches, since they are artificial\nbeings.\n* **Slow**: All models in Trench Ghost Warband have\n-1 DICE in all their DASH ACTIONS."
+        "text": "* **Horror**: All models in the Warband cause FEAR.\n* **Semi-corporeal**: All attacks against all models in the Trench Ghost Warband roll injuries with -1 DICE – the undead are hard to kill!\n* **Spectral**: All models in the warband ignore movement penalties for any terrain, though they cannot move through any objects/terrain.\n* **Undead**: All models in the Trench Ghost warband are immune to weapons with the Keyword GAS.\n* **Lost Souls**: Since only mortals who have souls become ghosts, this warband may not have any War Wolves or Artillery Witches, since they are artificial beings.\n* **Slow**: All models in Trench Ghost Warband have -1 DICE in all their DASH ACTIONS."
       }
     },
     "gameModes": {},
