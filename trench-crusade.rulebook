@@ -3414,10 +3414,7 @@
             "Heretic Legion"
           ],
           "Keywords": [
-            "HERETIC"
-          ],
-          "Type": [
-            "Troop"
+            "Heretic"
           ]
         },
         "rules": {
@@ -3608,14 +3605,12 @@
             "value": 30
           },
           "Melee": {
-            "tracked": true,
             "value": 0
           },
           "Movement": {
             "value": 6
           },
           "Ranged": {
-            "tracked": true,
             "value": 0
           },
           "Upgrade": {
@@ -3655,7 +3650,77 @@
             "visibility": "normal"
           }
         },
-        "text": "You can upgrade up to half of your Heretic Troopers (rounding down) into Heretic Legionnaires at the cost of +10 ducats each. You can elect to upgrade either the Ranged OR Melee characteristic of all your legionnaires by +1 DICE. All Legionnaires must have the same bonus."
+        "text": "Heretic Troopers use the Heretic Legion weapons and equipment list. You can upgrade up to half (rounding down) of your Heretic Troopers into Heretic Legionnaires at the cost of +10 Ducats each. You can select to upgrade either the Ranged or Melee characteristic of all your legionnaires by +1 DICE. All Legionnaires must have the same bonus."
+      },
+      "Infantry§Heretic Trooper (Legionnare)": {
+        "assets": {
+          "traits": []
+        },
+        "keywords": {
+          "Faction": [
+            "Heretic Legion"
+          ],
+          "Keywords": [
+            "Heretic"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 40
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          },
+          "Upgrade": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "number": 0,
+                "order": 0,
+                "tracking": {
+                  "Ducats": 0,
+                  "Melee": 0,
+                  "Ranged": 0
+                }
+              },
+              "Legionnaire (Melee)": {
+                "number": 1,
+                "order": 1,
+                "tracking": {
+                  "Ducats": 10,
+                  "Legionnaire (Melee)": 1,
+                  "Melee": 1
+                }
+              },
+              "Legionnaire (Ranged)": {
+                "number": 2,
+                "order": 2,
+                "tracking": {
+                  "Ducats": 10,
+                  "Legionnaire (Ranged)": 1,
+                  "Ranged": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          }
+        },
+        "text": "Heretic Troopers use the Heretic Legion weapons and equipment list. You can upgrade up to half (rounding down) of your Heretic Troopers into Heretic Legionnaires at the cost of +10 Ducats each. You can select to upgrade either the Ranged or Melee characteristic of all your legionnaires by +1 DICE. All Legionnaires must have the same bonus."
       },
       "Infantry§Highland Lieutenant": {
         "aspects": {
