@@ -619,21 +619,1117 @@
       "Ability§Whirling Dervishes": {
         "text": "The ritual Dance of the Dervishes is hypnotic to witness, and it is as graceful as it is deadly. All Ranged attacks against Dervishes suffer -1 DICE penalty. Dervishes do not suffer the normal -1 DICE to hit for fighting with a second melee weapon in off-hand."
       },
+      "Armour§Alchemist Armour—50 Ducats": {
+        "aspects": {
+          "Label": "Alchemist Armour"
+        },
+        "keywords": {
+          "Tags": [
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 50
+          }
+        },
+        "text": "Counts as Heavy Armour and therefore grants a -2 modifier to all injury rolls made against the model wearing it. In addition it makes the Alchemist immune to all damage with the Keywords FIRE and/or GAS"
+      },
+      "Armour§Armour of the Fly—11 Glory": {
+        "aspects": {
+          "Label": "Armour of the Fly"
+        },
+        "keywords": {
+          "Tags": [
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 11
+          }
+        },
+        "text": "The model gains movement type of FLYING and Movement characteristic of 8″. This suit of Heavy Armour includes a helmet. which allows one additional Melee Attack ACTION with +1 DICE per Activation. If this attack hits, do not roll on the Injury chart but instead the target suffers and automatic BLOOD MARKER."
+      },
+      "Armour§Black Grail Shield—20 Ducats": {
+        "aspects": {
+          "Label": "Black Grail Shield"
+        },
+        "keywords": {
+          "Tags": [
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          }
+        },
+        "text": "Works exactly as a standard shield. In addition, if a model carrying a Black Grail Shield is targeted by a ranged attack, before rolling to hit it can immediately take an ACTION without an Activation. If successful, the missile attack suffers -2 DICE to the roll determining whether the attack hits, as the power of the Black Grail disturbs the flow of reality. If the roll is a Critical, the attack misses automatically."
+      },
+      "Armour§Damascus Armour—5 Glory": {
+        "aspects": {
+          "Label": "Damascus Armour"
+        },
+        "keywords": {
+          "Tags": [
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 5
+          }
+        },
+        "text": "This Armour confers a -2 modifier to any Injury Rolls. This modifier applies even against attacks that ignore Armour. It adds +1 to the Scars of the model. Only one model can ever wear this armour. Even if this armour is captured by the enemy, it cannot be worn by a model that does not have the Keyword SULTANATE."
+      },
+      "Armour§Ducal Winged Armour—8 Glory": {
+        "aspects": {
+          "Label": "Ducal Winged Armour"
+        },
+        "keywords": {
+          "Tags": [
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 8
+          }
+        },
+        "text": "Counts as a suit of Machine Armour. The model gains speed of 10″ and movement type of FLYING. A model must also have Knighthood or Promotion Glory Item in order to wear it."
+      },
+      "Armour§Heavy Armour—40 Ducats": {
+        "aspects": {
+          "Label": "Heavy Armour"
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 40
+          }
+        },
+        "text": "Grants a -2 modifier to all injury rolls against the model wearing this armour."
+      },
+      "Armour§Holy Icon Armour—30 Ducats": {
+        "aspects": {
+          "Label": "Holy Icon Armour"
+        },
+        "keywords": {
+          "Tags": [
+            "Procession of the Sacred Affliction"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 30
+          }
+        },
+        "text": "The armour confers a -1 modifier to any Injury Rolls. This modifier applies even against attacks that ignore Armour. Can be combined with a shield, including Holy Icon Shield."
+      },
+      "Armour§Holy Icon Shield—2 Glory": {
+        "aspects": {
+          "Label": "Holy Icon Shield"
+        },
+        "keywords": {
+          "Tags": [
+            "Trench Pilgrim"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 2
+          }
+        },
+        "text": "Grants -1 to all Injury Chart rolls against the model wearing this armour. This armour is effective even against weapons and attacks that would normally ignore armour."
+      },
+      "Armour§Holy Icon Shield—20 Ducats": {
+        "aspects": {
+          "Label": "Holy Icon Shield"
+        },
+        "keywords": {
+          "Tags": [
+            "Procession of the Sacred Affliction"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          }
+        },
+        "text": "Grants -1 to all Injury Chart rolls against the model wearing this armour. This armour is effective even against weapons and attacks that would normally ignore armour."
+      },
+      "Armour§Machine Armour—50 Ducats": {
+        "aspects": {
+          "Label": "Machine Armour"
+        },
+        "keywords": {
+          "Tags": [
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 50
+          }
+        },
+        "text": "Grants a -3 modifier to all injury rolls against the model wearing this armour. Due to its bulk the wearer cannot DASH. Machine armour cannot be combined with any shield."
+      },
+      "Armour§Standard Armour—20 Ducats": {
+        "aspects": {
+          "Label": "Standard Armour"
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          }
+        },
+        "text": "-1 to all Injury Chart rolls against the model. Can be combined with any shield."
+      },
+      "Armour§Tarnished Armour—45 Ducats": {
+        "aspects": {
+          "Label": "Tarnished Armour"
+        },
+        "keywords": {
+          "Tags": [
+            "Knights Of Avarice",
+            "Cavalcade of the Tenth Plague"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 45
+          }
+        },
+        "text": "The suit counts as Heavy Armour, helmet and gas mask. When an enemy declares a charge, they must charge the model wearing this armour if it is visible, not in Cover, and within 12″ of the wearer and the charging model has a viable path to the wearer. If the wearer of the armour is already in melee combat, this power has no effect."
+      },
+      "Armour§Trench Shield—15 Ducats": {
+        "aspects": {
+          "Label": "Trench Shield"
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 15
+          }
+        },
+        "text": "Takes one hand to use in both melee and in ranged combat, and cannot be switched out. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated."
+      },
+      "Equipment§Alchemical Ammunition—3 Ducats": {
+        "aspects": {
+          "Label": "Alchemical Ammunition"
+        },
+        "keywords": {
+          "Tags": [
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 3
+          }
+        },
+        "text": "Adds +1 DICE to Ranged Attack rolls on the Action Success Chart. Can only be used with Jezzails and Siege Jezzails."
+      },
+      "Equipment§Beelzebub’s Embrace—20 Glory": {
+        "aspects": {
+          "Label": "Beelzebub’s Embrace"
+        },
+        "keywords": {
+          "Tags": [
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 20
+          }
+        },
+        "text": "The model loses its existing arms and gains 4 Melee Attack ACTIONS resolved exactly as if it was armed with 4 trench clubs without off-hand penalty. If all of them hit, and the target is on a 32mm or smaller base, it is immediately ripped apart by Beelzebub’s hateful embrace and removed from the game."
+      },
+      "Equipment§Binoculars—10 Ducats": {
+        "aspects": {
+          "Label": "Binoculars"
+        },
+        "keywords": {
+          "Tags": [
+            "Iron Sultanate",
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 10
+          }
+        },
+        "text": "Any enemy Infiltrator cannot be placed closer than 16″ of this model."
+      },
+      "Equipment§Blessed Icon—15 Ducats": {
+        "aspects": {
+          "Label": "Blessed Icon"
+        },
+        "keywords": {
+          "Tags": [
+            "Trench Pilgrim"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 15
+          }
+        },
+        "text": "When a model equipped with the Blessed Icon fails in a RISKY ACTION, this does not end the Activation. Keyword - CONSUMABLE."
+      },
       "Equipment§Bonebreaker Mace": {
         "text": "The Anchorite may use the Bonebreaker Mace in Melee. This attack is a RISKY ACTION and has +1 DICE for rolling to hit, as well as for any injury rolls."
+      },
+      "Equipment§Book of Battle Prayers—7 Glory": {
+        "aspects": {
+          "Label": "Book of Battle Prayers"
+        },
+        "keywords": {
+          "Tags": [
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 7
+          }
+        },
+        "text": "The Model gains an ACTION which can be used to bestow 1 BLESS MARKER (if successful) to any model within 12″. A model with the book of Battle Prayers must always reserve one hand to carry the book, and may not Dash, as they must maintain their continuous litany of Prayers."
+      },
+      "Equipment§Broken Crown—25 Ducats": {
+        "aspects": {
+          "Label": "Broken Crown"
+        },
+        "keywords": {
+          "Tags": [
+            "Dirge of the Great Hegemon"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 25
+          }
+        },
+        "text": "In the beginning of the Activation of the model wearing the Crown, it causes 1 INFECTION MARKER on any enemy model in melee combat with it."
       },
       "Equipment§Catherine Wheel": {
         "text": "The Shrine Anchorite uses the great Catherine Wheel and mace as melee weapons. The Anchorite can take a RISKY ACTION with +3 DICE with its Catherine Wheel in Melee combat as an attack. Due to the enormous weight and the skill of the Shrine Anchorite in inflicting maximum pain, Catherine Wheel attacks roll on the Injury Chart with 3D6 (instead of usual 2D6), adding all three dice together!"
       },
+      "Equipment§Cloak of Alamut—25 Ducats": {
+        "aspects": {
+          "Label": "Cloak of Alamut"
+        },
+        "keywords": {
+          "Tags": [
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 25
+          }
+        },
+        "text": "All ranged attacks against a model that is in cover suffer -2 DICE penalty instead of -1 DICE. All the normal rules for cover apply otherwise."
+      },
+      "Equipment§Combat Helmet—5 Ducats": {
+        "aspects": {
+          "Label": "Combat Helmet"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Shrapnel"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 5
+          }
+        },
+        "text": "Ignores additional BLOOD MARKERS caused by weapons with Keyword SHRAPNEL."
+      },
+      "Equipment§Cup of Filth—2 Glory": {
+        "aspects": {
+          "Label": "Cup of Filth"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Consumable"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 2
+          }
+        },
+        "text": "Up to 4 Thralls can drink from a single Cup, and it grants them +1 DICE to Dash ACTIONS for the duration of a single battle. Alternatively, a single ELITE model can drink it to gain the same effect."
+      },
+      "Equipment§Fianna Upgrade—15 Ducats": {
+        "aspects": {
+          "Label": "Fianna Upgrade"
+        },
+        "keywords": {
+          "Tags": [
+            "Eire Rangers"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 15
+          }
+        },
+        "text": "The Model gains the SKIRMISHER and INFILTRATOR keywords"
+      },
+      "Equipment§Field Hospital—10 Glory": {
+        "aspects": {
+          "Label": "Field Hospital"
+        },
+        "keywords": {
+          "Tags": [
+            "Iron Sultanate",
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 10
+          }
+        },
+        "text": "In a post-battle sequence, you can try to negate a Scar from a model that was taken Out of Action and rolled a result on The Serious Injury Chart that caused a Scar. Roll on the Action Success Chart. If you roll double 1, it means that the model now gains additional Scar, on success (7+) you can remove 1 Scar from the model. Only one model per Battle can be treated by the Field Hospital. The Warband must include a Combat Medic or an Alchemist in order to use the Field Hospital."
+      },
+      "Equipment§Field Shrine—2 Glory": {
+        "aspects": {
+          "Label": "Field Shrine"
+        },
+        "keywords": {
+          "Tags": [
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 2
+          }
+        },
+        "text": "Can be placed on the battlefield in your deployment zone. Can be destroyed if any type of attack hits it. Acts as three models for Morale Tests. It has a base size of 40mm."
+      },
+      "Equipment§Gas Mask—5 Ducats": {
+        "aspects": {
+          "Label": "Gas Mask"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Gas"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 5
+          }
+        },
+        "text": "Models with Gas Masks ignore the extra BLOOD MARKER from weapons with the keyword GAS, and such attacks suffer -1 DICE penalty to all Injury Rolls."
+      },
+      "Equipment§Golden Calf Altar—20 Ducats": {
+        "aspects": {
+          "Label": "Golden Calf Altar"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Consumable"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Knights Of Avarice"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          }
+        },
+        "text": "The area within 3″ of the altar is Difficult Terrain for all models in the opposing Warband. This affects even models that can Fly. The model may drop the altar at any point during their Activation. Once placed down, the Golden Calf Altar cannot be picked up again. It has a 25mm base."
+      },
+      "Equipment§Great Banner of New Antioch—12 Glory": {
+        "aspects": {
+          "Label": "Great Banner of New Antioch"
+        },
+        "keywords": {
+          "Tags": [
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 12
+          }
+        },
+        "text": "The Warband never fails a Morale test while the Great Banner is in Play, but can voluntarily leave the battle if 50% of its models are Out of Action. Takes the use of one hand at all times."
+      },
+      "Equipment§Hallucinogen Disguise—15 Ducats": {
+        "aspects": {
+          "Label": "Hallucinogen Disguise"
+        },
+        "keywords": {
+          "Tags": [
+            "Fida’i of Alamut—The Cabal of Assassins"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 15
+          },
+          "Modifiers": {
+            "value": ""
+          }
+        },
+        "text": "An INFILTRATOR with this ability can be deployed anywhere on the battlefield including the enemy deployment Zone as long as the model is at least 8″ away from any enemy models. The model does not have to be out of Line of Sight. Binoculars or Guard Dogs have no effect on this ability."
+      },
+      "Equipment§Hashashin Leaf—5 Ducats": {
+        "aspects": {
+          "Label": "Hashashin Leaf"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Consumable"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Fida’i of Alamut—The Cabal of Assassins"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 5
+          }
+        },
+        "text": "Gives the model consuming the potion Keyword STRONG for the duration of a single battle. CONSUMABLE."
+      },
+      "Equipment§Hellbound Soul Contract—5 Ducats": {
+        "aspects": {
+          "Label": "Hellbound Soul Contract"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Fire"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 5
+          }
+        },
+        "text": "When this model is taken Out of Action, any model in melee combat with them immediately suffers +1 BLOOD MARKER unless the model ignores damage from sources with the Keyword FIRE."
+      },
+      "Equipment§Holy Relic—2 Glory": {
+        "aspects": {
+          "Label": "Holy Relic"
+        },
+        "keywords": {
+          "Tags": [
+            "Trench Pilgrim",
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 2
+          }
+        },
+        "text": "This model starts each game with +1 BLESSING MARKER."
+      },
+      "Equipment§Horn of Joshua—10 Glory": {
+        "aspects": {
+          "Label": "Horn of Joshua"
+        },
+        "keywords": {
+          "Tags": [
+            "Trench Pilgrim"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 10
+          }
+        },
+        "text": "A model with the Horn of Joshua may take a RISKY ACTION with +1D. If successful, select any piece of terrain of up to 8″x8″ size within 12″ the model can see (a house, 8″ woods, a wall etc. This terrain piece is destroyed and it is removed from the table. Any models inside/touching/on top of this terrain must roll immediately on the Injury Chart. If they are not taken Out of Action they are placed on the ground in their previous spots. If the target is not a trench it is not removed from the table, but the models touching it/inside the Trench all roll on the Injury chart on an 8″ length of a Trench. This Trench segment is selected by the player."
+      },
+      "Equipment§Incendiary Bullets—15 Ducats": {
+        "aspects": {
+          "Label": "Incendiary Bullets"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Fire",
+            "Ability§Consumable"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Trench Pilgrim"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 15
+          }
+        },
+        "text": "Only usable in rifles and pistols (i.e. weapons which have the Keyword pistol or rifle in their name). Adds the Keyword FIRE to the weapon that uses the Incendiary ammunition. Keywords: FIRE, CONSUMABLE."
+      },
+      "Equipment§Infernal Brand Mark—5 Ducats": {
+        "aspects": {
+          "Label": "Infernal Brand Mark"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Fire"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 5
+          }
+        },
+        "text": "This model negates the extra BLOOD MARKER from weapons with the keyword FIRE, and such attacks suffer -1 DICE penalty to all Injury Rolls."
+      },
       "Equipment§Iron Capirote": {},
+      "Equipment§Iron Capirote—7 Ducats": {
+        "aspects": {
+          "Label": "Iron Capirote"
+        },
+        "keywords": {
+          "Tags": [
+            "Trench Pilgrim"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 7
+          }
+        },
+        "text": "Negates the additional BLOOD MARKERS from weapons with SHRAPNEL Keyword. Makes the model immune to the effects of FEAR."
+      },
+      "Equipment§Knighthood—5 Glory": {
+        "aspects": {
+          "Label": "Knighthood"
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 5
+          }
+        },
+        "text": "You will always gain an additional 1 Glory Point after each battle."
+      },
       "Equipment§Loudspeakers": {
         "text": "The War Prophet blares out holy sermons and dire prophecies at 100 decibels to inspire the faithful. The Prophet can take a RISKY ACTION with +2DICE once during each Activation. If the action is successful, all friendly models within 8” of the Prophet can immediately move up to 3” towards any enemy models on the table. This move can allow them to enter combat as if they charged the enemy."
+      },
+      "Equipment§Marid Shovel—15 Ducats": {
+        "aspects": {
+          "Label": "Marid Shovel"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Heavy"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 15
+          }
+        },
+        "text": "A model equipped with a Shovel always starts the game in Cover, even if placed in open terrain and on a surface that you can dig in. As soon as the model  moves, it is no longer in Cover. It also acts exactly as a Trench Club in Melee, except it requires two hands to use"
+      },
+      "Equipment§Martyrdom Device—35 Ducats": {
+        "aspects": {
+          "Label": "Martyrdom Device"
+        },
+        "keywords": {
+          "Tags": [
+            "Trench Pilgrim"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 35
+          }
+        },
+        "text": "Each prisoner is strapped with an explosive which can be triggered one time at any point during their Activation. This counts as a ranged attack against every model (friend or foe) within 3″ of the Prisoner. Everyone, including the Prisoner, is automatically hit and rolls on the Injury Chart to see what happens. Any model within 1″ rolls +1 DICE on the Injury chart. Other models within 3″ roll 2D6 as normal. The Prisoner rolls 4D6 and adds the results together to determine their Injury roll! If the explosive goes off and the Prisoner survives the battle, you can buy them a new Martyrdom Device for 35 ducats as normal, or field them without an Explosive."
       },
       "Equipment§Martyrdom Explosive": {
         "text": "Each prisoner is strapped with an explosive which can be triggered one time at any point during their Activation. This counts as a ranged attack against every model (friend or foe) within 3” of the Prisoner. Everyone, including the Prisoner, is automatically hit – roll on the Injury Chart to see what happens. Any model within 1” rolls +1 DICE on the Injury Chart. Other models within 3” roll 2D6 as normal. The Prisoner rolls 4D6 and adds the results together to determine their injury roll! If the explosive goes off and the Prisoner somehow survives the battle, you can buy them a new explosive for 25 ducats or field them without an explosive."
       },
+      "Equipment§Martyrdom Pills—2 Glory": {
+        "aspects": {
+          "Label": "Martyrdom Pills"
+        },
+        "keywords": {
+          "Tags": [
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 2
+          }
+        },
+        "text": "Add -1 DICE for all injury rolls against this model. The model is immune to FEAR. If taken Out of Action, roll twice on the Permanent Injury Chart and your opponent gets to choose the result."
+      },
+      "Equipment§Martyrdom Pills—30 Ducats": {
+        "aspects": {
+          "Label": "Martyrdom Pills"
+        },
+        "keywords": {
+          "Tags": [
+            "Trench Pilgrim"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 30
+          }
+        },
+        "text": "Add -1 DICE for all injury rolls against this model. The model is immune to FEAR. If taken Out of Action, roll twice on the Permanent Injury Chart and your opponent gets to choose the result."
+      },
+      "Equipment§Medi-kit—10 Ducats": {
+        "aspects": {
+          "Label": "Medi-Kit"
+        },
+        "keywords": {
+          "Tags": [
+            "Trench Pilgrim"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 10
+          }
+        },
+        "text": "Models with a Medi-kit can take a RISKY ACTION to remove one BLOOD MARKER from any one friendly model (including themselves) within 1″ or allow one friendly model (including themselves) who is Down to regain their footing. The model who recovered from Down this way can move at full speed during its next Activation."
+      },
+      "Equipment§Medi-kit—5 Ducats": {
+        "aspects": {
+          "Label": "Medi-Kit"
+        },
+        "keywords": {
+          "Tags": [
+            "Iron Sultanate",
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 5
+          }
+        },
+        "text": "Models with a Medi-kit can take a RISKY ACTION to remove one BLOOD MARKER from any one friendly model (including themselves) within 1″ or allow one friendly model (including themselves) who is Down to regain their footing. The model who recovered from Down this way can move at full speed during its next Activation."
+      },
+      "Equipment§Mirage of Time—20 Ducats": {
+        "aspects": {
+          "Label": "Mirage of Time"
+        },
+        "keywords": {
+          "Tags": [
+            "Fida’i of Alamut—The Cabal of Assassins"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          },
+          "Modifiers": {
+            "value": ""
+          }
+        },
+        "text": "Both Ranged and Melee attacks against the Assassin suffer -1 DICE penalty when determining if they hit."
+      },
+      "Equipment§Musical Instrument—1 Glory": {
+        "aspects": {
+          "Label": "Musical Instrument"
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 1
+          }
+        },
+        "text": "Any friendly models within 8″ of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Musical Instruments take one hand to use at all times as if it were a weapon."
+      },
+      "Equipment§Musical Instrument—15 Ducats": {
+        "aspects": {
+          "Label": "Musical Instrument"
+        },
+        "keywords": {
+          "Tags": [
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 15
+          }
+        },
+        "text": "Any friendly models within 8″ of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Musical Instruments take one hand to use at all times as if it were a weapon."
+      },
+      "Equipment§Promotion—6 Glory": {
+        "aspects": {
+          "Label": "Promotion"
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 6
+          }
+        },
+        "text": "You can increase the LIMIT of any Weapon or Armour by 1. This benefit remains even if the Promoted model is lost."
+      },
+      "Equipment§Resurrection Engine—12 Glory": {
+        "aspects": {
+          "Label": "Resurrection Engine"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Consumable"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 12
+          }
+        },
+        "text": "It can be used to completely negate any result from the Injury Chart that causes a model to die (gaining 3rd Scar, Death etc.)"
+      },
+      "Equipment§Sacrificial Lamb—10 Ducats": {
+        "aspects": {
+          "Label": "Sacrificial Lamb"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Consumable"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Cavalcade of the Tenth Plague"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 10
+          }
+        },
+        "text": "The model ignores the first BLOOD MARKER or INFECTION MARKER it suffers in combat."
+      },
+      "Equipment§Salvage Golem—4 Glory": {
+        "aspects": {
+          "Label": "Salvage Golem"
+        },
+        "keywords": {
+          "Tags": [
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 4
+          }
+        },
+        "text": "You may roll extra D6X5 ducats for Income after each Battle."
+      },
+      "Equipment§Shovel—5 Ducats": {
+        "aspects": {
+          "Label": "Shovel"
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Iron Sultanate",
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 5
+          }
+        },
+        "text": "A model equipped with a Shovel always starts the game in Cover, even if placed in open terrain and on a surface that you can dig in. As soon as the model  moves, it is no longer in Cover. It also acts exactly as a Trench Club in Melee, except it requires two hands to use"
+      },
+      "Equipment§Smoke Screen—5 Glory": {
+        "aspects": {
+          "Label": "Smoke Screen"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Consumable"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 5
+          }
+        },
+        "text": "Select a Quarter of the tabletop you are playing. All Ranged ATTACKs within this area, and into it and out of if suffer -1 DICE penalty when rolling to hit."
+      },
+      "Equipment§Snipe Scope—2 Glory": {
+        "aspects": {
+          "Label": "Snipe Scope"
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Iron Sultanate",
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 2
+          }
+        },
+        "text": "The weapon ignores penalties from Long Range. Only usable with Bolt Action Rifles, Automatic Rifles, Semi-automatic rifles, Anti-Materiel Rifles and Sniper Rifles."
+      },
+      "Equipment§Standard of Mammon—25 Ducats": {
+        "aspects": {
+          "Label": "Standard of Mammon"
+        },
+        "keywords": {
+          "Tags": [
+            "Knights Of Avarice"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 25
+          }
+        },
+        "text": "Grants +1 DICE for all Morale tests as long as the model with the Flag is not Down or Out of Action. Requires 1 hand to use as if it was a weapon, both in ranged and melee combat. Any enemy entering melee combat against the model carrying this banner must make a successful ACTION or the model goes Down and cannot get up as long as they are in melee combat with the bearer of the standard."
+      },
       "Equipment§The Communicant Cross": {
         "text": "A sacred cross is nailed on the face of the Communicant. This counts as an Iron Capirote, a Combat Helmet and a Gas Mask."
+      },
+      "Equipment§Thunderbolt of Alumat—20 Ducats": {
+        "aspects": {
+          "Label": "Thunderbolt of Alumat"
+        },
+        "keywords": {
+          "Tags": [
+            "Fida’i of Alamut—The Cabal of Assassins"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          },
+          "Modifiers": {
+            "value": ""
+          }
+        },
+        "text": "The model has +2″ movement and +1 DICE on its Dash ACTIONs."
+      },
+      "Equipment§Troop Flag—1 Glory": {
+        "aspects": {
+          "Label": "Troop Flag"
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 1
+          }
+        },
+        "text": "Grants +1 DICE for all Morale tests as long as the model with the flag is not Down or Out of Action. Requires one hand to use."
+      },
+      "Equipment§Troop Flag—2 Glory": {
+        "aspects": {
+          "Label": "Troop Flag"
+        },
+        "keywords": {
+          "Tags": [
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 2
+          }
+        },
+        "text": "Grants +1 DICE for all Morale tests as long as the model with the flag is not Down or Out of Action. Requires one hand to use."
+      },
+      "Equipment§Unholy Relic—30 Ducats": {
+        "aspects": {
+          "Label": "Unholy Relic"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Fear"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 30
+          }
+        },
+        "text": "A model equipped with an Unholy relic radiates a truly malignant aura and causes FEAR."
+      },
+      "Equipment§Unholy Trinket—15 Ducats": {
+        "aspects": {
+          "Label": "Unholy Trinket"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Consumable"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 15
+          }
+        },
+        "text": "When a model fails in a RISKY ACTION, this does not end the Activation. Keyword: CONSUMABLE."
+      },
+      "Equipment§Urn of Bitter Ashes—40 Ducats": {
+        "aspects": {
+          "Label": "Urn of Bitter Ashes"
+        },
+        "keywords": {
+          "Tags": [
+            "Dirge of the Great Hegemon"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 40
+          }
+        },
+        "text": "All ranged attacks against a model carrying the Urn and any other models fully with 3″ acquire -1 DICE penalty against any Ranged Attack ACTIONS targeting them which stacks with any other ranged modifiers such as Long Range. This applies even to weapons that ignore Cover such as Grenade Launchers."
+      },
+      "Equipment§Wind Amulet—10 Ducats": {
+        "aspects": {
+          "Label": "Wind Amulet"
+        },
+        "keywords": {
+          "Tags": [
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 10
+          }
+        },
+        "text": "After the deployment, a model with the Wind Amulet may move up to 3″ in any direction, though this move may not take them into melee combat or from the battlefield."
       },
       "Infantry§Alamut Assassin": {
         "assets": {
