@@ -1814,21 +1814,26 @@
       },
       "Infantry§Amalgam": {
         "aspects": {
-          "Lock Qty": true,
           "Unique": true
         },
         "assets": {
           "traits": [
-            "Ability§Fear",
-            "Ability§Tough"
+            "Ability§Corpulent",
+            "Ability§Tough",
+            "Ability§Toxic",
+            "Ability§Trample",
+            "Ability§Unstoppable",
+            "Ability§Unholy Horror"
           ]
         },
         "keywords": {
           "Faction": [
-            "Black Grail"
+            "The Cult of the Black Grail"
           ],
-          "Type": [
-            "M"
+          "Keywords": [
+            "Blackgrail",
+            "Fear",
+            "Tough"
           ]
         },
         "stats": {
@@ -1841,6 +1846,9 @@
           "Ducats": {
             "value": 150
           },
+          "MaxQty": {
+            "value": 1
+          },
           "Melee": {
             "value": 0
           },
@@ -1850,7 +1858,57 @@
           "Ranged": {
             "value": 0
           }
-        }
+        },
+        "text": "The Amalgam has six functional arms. They can carry six one-handed weapons, or three double-handed weapons, or any combination thereof, as long as the six arms can carry them. The Amalgam uses the Black Grail Equipment list for weapons—it never carries any other gear except weapons, though one of its arms may carry a single Trench Shield. It may not carry Grenades. It can execute any ranged and melee attacks with each of the weapons it carries during its Activation. Each counts as a separate ACTION."
+      },
+      "Infantry§Anchorite Shrine": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Tough",
+            "Ability§Fear",
+            "Ability§Broken on the Wheel",
+            "Ability§Catherine Wheel",
+            "Ability§Bonebreaker Mace"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Trench Pilgrim"
+          ],
+          "Keywords": [
+            "Fear",
+            "Tough"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -3
+          },
+          "Base": {
+            "value": 50
+          },
+          "Ducats": {
+            "value": 140
+          },
+          "MaxQty": {
+            "value": 1
+          },
+          "Melee": {
+            "statType": "term",
+            "value": "+3/+1"
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "statType": "term",
+            "value": "N/A"
+          }
+        },
+        "text": "You cannot buy additional equipment, weapons or armour for Shrine Anchorites. Each Anchorite is equipped with Heavy Armour, Combat Helmet and a Catherine Wheel and Bonebreaker Mace (see below). The Anchorite may make one attack ACTION with each of these weapons in Melee (So it can make two attacks per Activation)."
       },
       "Infantry§Anointed Heavy Infantry": {
         "assets": {
@@ -1863,36 +1921,9 @@
             "Heretic Legion"
           ],
           "Keywords": [
-            "HERETIC"
-          ],
-          "Type": [
-            "Troop"
+            "Heretic",
+            "Strong"
           ]
-        },
-        "rules": {
-          "KO CheckMaxQty": {
-            "evals": [
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "SUM",
-                "paths": [
-                  [
-                    "{roster}",
-                    "tally",
-                    "Anointed Heavy Infantry"
-                  ]
-                ],
-                "value": [
-                  "{self}",
-                  "tracked",
-                  "MaxQty"
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
         },
         "stats": {
           "Armour": {
@@ -1905,7 +1936,6 @@
             "value": 95
           },
           "MaxQty": {
-            "tracked": true,
             "value": 5
           },
           "Melee": {
@@ -1917,7 +1947,8 @@
           "Ranged": {
             "value": 1
           }
-        }
+        },
+        "text": "Anointed are always equipped with a suit of Heavy Armour and Infernal brand mark which are included in the cost. This armour can never be removed. They use the Heretic Legion Equipment list."
       },
       "Infantry§Artillery Witch": {
         "assets": {
@@ -1961,6 +1992,86 @@
           }
         }
       },
+      "Infantry§Artillery Witches": {
+        "assets": {
+          "traits": [
+            "Ability§Infernal Bomb",
+            "Ability§Artificial Life"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Heretic Legion"
+          ],
+          "Keywords": [
+            "Heretic"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 90
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": -1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "An Artillery Witch is always equipped with an endless supply of Infernal Bombs (see below) and can carry no other ranged weapons. Otherwise, she can be Equipped from the Standard Heretic Equipment list."
+      },
+      "Infantry§Artillery Witches (Knights Of Avarice)": {
+        "assets": {
+          "traits": [
+            "Ability§Infernal Bomb",
+            "Ability§Artificial Life"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Heretic Legion"
+          ],
+          "Keywords": [
+            "Heretic"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 90
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": -1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "An Artillery Witch is always equipped with an endless supply of Infernal Bombs (see below) and can carry no other ranged weapons. Otherwise, she can be Equipped from the Standard Heretic Equipment list."
+      },
       "Infantry§Assassin Acolyte": {
         "assets": {
           "traits": [
@@ -1971,8 +2082,8 @@
           "Faction": [
             "Iron Sultanate"
           ],
-          "Type": [
-            "Troop"
+          "Keywords": [
+            "Infiltrator"
           ]
         },
         "stats": {
@@ -1997,7 +2108,48 @@
           "Ranged": {
             "value": 0
           }
-        }
+        },
+        "text": "Azebs can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List. Any Azebs can be converted to SKIRMISHERS at the cost of +5 ducats per model. Unless engaged in melee, when an enemy model declares a charge against any Skirmisher Azeb, they can immediately move D3″ in any direction they wish (except within 1″ of any enemy or out of the battlefield). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter into Melee. This move cannot be taken by a model that is Down."
+      },
+      "Infantry§Assassin Acolyte (Skirmisher)": {
+        "assets": {
+          "traits": [
+            "Ability§Infiltrator"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Keywords": [
+            "Infiltrator",
+            "Skirmisher"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 40
+          },
+          "MaxQty": {
+            "value": 3
+          },
+          "Melee": {
+            "value": -1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "Azebs can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List. Any Azebs can be converted to SKIRMISHERS at the cost of +5 ducats per model. Unless engaged in melee, when an enemy model declares a charge against any Skirmisher Azeb, they can immediately move D3″ in any direction they wish (except within 1″ of any enemy or out of the battlefield). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter into Melee. This move cannot be taken by a model that is Down."
       },
       "Infantry§Avarice Witch": {
         "assets": {
@@ -2102,24 +2254,131 @@
           }
         }
       },
+      "Infantry§Azebs": {
+        "assets": {
+          "traits": []
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 25
+          },
+          "Melee": {
+            "value": -1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "Azebs can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List. Any Azebs can be converted to SKIRMISHERS at the cost of +5 ducats per model. Unless engaged in melee, when an enemy model declares a charge against any Skirmisher Azeb, they can immediately move D3″ in any direction they wish (except within 1″ of any enemy or out of the battlefield). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter into Melee. This move cannot be taken by a model that is Down."
+      },
+      "Infantry§Azebs (Skirmisher)": {
+        "assets": {
+          "traits": []
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Keywords": [
+            "Skirmisher"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 30
+          },
+          "Melee": {
+            "value": -1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "Azebs can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List. Any Azebs can be converted to SKIRMISHERS at the cost of +5 ducats per model. Unless engaged in melee, when an enemy model declares a charge against any Skirmisher Azeb, they can immediately move D3″ in any direction they wish (except within 1″ of any enemy or out of the battlefield). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter into Melee. This move cannot be taken by a model that is Down."
+      },
+      "Infantry§Bereaved (Dirge of the Great Hegemon)": {
+        "assets": {
+          "traits": [
+            "Ability§Overwhelming Horde",
+            "Ability§Undead Fortitude",
+            "Ability§Unholy Horror"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "The Cult of the Black Grail"
+          ],
+          "Keywords": [
+            "Blackgrail",
+            "Fear"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 30
+          },
+          "Melee": {
+            "value": -1
+          },
+          "Movement": {
+            "value": 4
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "The Thrall can use ranged weapons from the Black Grail List (though not any other weapons armour and equipment except Standards and Musical Instruments). They suffer no penalties to their combat ability for being unarmed."
+      },
       "Infantry§Brazen Bull": {
         "aspects": {
-          "Lock Qty": true,
           "Unique": true
         },
         "assets": {
           "traits": [
             "Ability§Fear",
             "Ability§Tough",
-            "Ability§Strong"
+            "Ability§Strong",
+            "Ability§Artificial Body",
+            "Ability§Trample"
           ]
         },
         "keywords": {
           "Faction": [
             "Iron Sultanate"
           ],
-          "Type": [
-            "M"
+          "Keywords": [
+            "Fear",
+            "Tough",
+            "Strong"
           ]
         },
         "stats": {
@@ -2132,6 +2391,9 @@
           "Ducats": {
             "value": 100
           },
+          "MaxQty": {
+            "value": 1
+          },
           "Melee": {
             "value": 2
           },
@@ -2141,7 +2403,8 @@
           "Ranged": {
             "value": 0
           }
-        }
+        },
+        "text": "A Brazen Bull can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List. Due to its vast strength and size it can only use Weapons with the Keyword HEAVY—it will simply crush weapons of normal size by accident."
       },
       "Infantry§Castigator": {
         "aspects": {
@@ -2150,16 +2413,12 @@
         "assets": {
           "traits": [
             "Ability§Enforced Orthodoxy",
-            "Ability§Whip of God",
-            "Ability§Elite"
+            "Ability§Whip Of God"
           ]
         },
         "keywords": {
           "Faction": [
-            "Trench Pilgrims"
-          ],
-          "Keywords": [
-            "PILGRIM"
+            "Trench Pilgrim"
           ],
           "Type": [
             "Elite"
@@ -2175,6 +2434,9 @@
           "Ducats": {
             "value": 50
           },
+          "MaxQty": {
+            "value": 1
+          },
           "Melee": {
             "value": 1
           },
@@ -2184,7 +2446,8 @@
           "Ranged": {
             "value": 1
           }
-        }
+        },
+        "text": "The Castigator can be equipped with any weapon, armour and equipment from the Trench Pilgrims Equipment List."
       },
       "Infantry§Combat engineer": {
         "keywords": {
@@ -2218,6 +2481,48 @@
             "value": 1
           }
         }
+      },
+      "Infantry§Combat Engineer": {
+        "assets": {
+          "traits": [
+            "Ability§Engineer Body Armour",
+            "Ability§Battlefield Demolition",
+            "Ability§Dig-In",
+            "Ability§De-Mine"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "The Principality of New Antioch"
+          ],
+          "Keywords": [
+            "Newantioch"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -2
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 75
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        },
+        "text": "Shovel and Engineer Body Armour (Reflected in cost and profile above). Combat Engineer can be equipped with any weapon or equipment from the New Antioch Equipment List."
       },
       "Infantry§Combat medic": {
         "aspects": {
@@ -2257,6 +2562,99 @@
             "value": 0
           }
         }
+      },
+      "Infantry§Combat Medic": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Finish the Fallen",
+            "Ability§Expert Medic"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "The Principality of New Antioch"
+          ],
+          "Keywords": [
+            "Newantioch"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -1
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 65
+          },
+          "MaxQty": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "The Medic carries a Misericordia and a Medi-kit. They wear a gas mask and suit of standard armour (reflected on the profile above).\nYou cannot modify the equipment, armour and weapons of the Medic in any way."
+      },
+      "Infantry§Communicant": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Strong",
+            "Ability§Tough",
+            "Ability§Miracle of Regeneration",
+            "Ability§Bodyguard",
+            "Ability§Communicant Cross"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Trench Pilgrim"
+          ],
+          "Keywords": [
+            "Strong",
+            "Tough"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 40
+          },
+          "Ducats": {
+            "value": 100
+          },
+          "MaxQty": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": -3
+          }
+        },
+        "text": "The Communicant can be equipped with any weapon, armour and equipment from the Trench Pilgrim Equipment List. They always carry a Communicant Cross (see below)."
       },
       "Infantry§Communicant Anti-tank Hunter": {
         "aspects": {
@@ -2302,15 +2700,65 @@
           }
         }
       },
+      "Infantry§Communicant Anti-Tank Hunter": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Strong",
+            "Ability§Tough",
+            "Ability§Miracle of Regeneration"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Trenchpilgrim",
+            "Strong",
+            "Tough"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -1
+          },
+          "Base": {
+            "value": 40
+          },
+          "Glory": {
+            "value": 5
+          },
+          "MaxQty": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        },
+        "text": "The Communicant is armed with an anti-materiel rifle and a helmet. They count as being armed with two Trench clubs in Melee combat - its arms are deadly weapons in their own right. Their flesh is hard as iron, so Communicants are considered to be wearing Standard Armour as noted in their profile."
+      },
       "Infantry§Corpse Guard": {
         "assets": {
           "traits": [
-            "Ability§Fear"
+            "Ability§Parasitic Tick",
+            "Ability§Bodyguard",
+            "Ability§Undead Fortitude",
+            "Ability§Unholy Horror"
           ]
         },
         "keywords": {
           "Faction": [
-            "Black Grail"
+            "The Cult of the Black Grail"
+          ],
+          "Keywords": [
+            "Blackgrail",
+            "Fear"
           ],
           "Type": [
             "Elite"
@@ -2338,15 +2786,19 @@
           "Ranged": {
             "value": 0
           }
-        }
+        },
+        "text": "Corpse Guard can be equipped with any weapon, armour and equipment from the Black Grail Equipment List."
       },
       "Infantry§Dervish": {
+        "assets": {
+          "traits": [
+            "Ability§Whirling Dervishes",
+            "Ability§Counter-Charge"
+          ]
+        },
         "keywords": {
           "Faction": [
             "Iron Sultanate"
-          ],
-          "Type": [
-            "Troop"
           ]
         },
         "stats": {
@@ -2371,7 +2823,48 @@
           "Ranged": {
             "value": 1
           }
-        }
+        },
+        "text": "Janissaries can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List."
+      },
+      "Infantry§Ecclesiastic Prisoner": {
+        "assets": {
+          "traits": [
+            "Ability§Mad Dash",
+            "Ability§Prisoner",
+            "Ability§Martyrdom Device"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Trench Pilgrim"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 20
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "statType": "term",
+            "value": "-1 DICE"
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "statType": "term",
+            "value": "N/A"
+          }
+        },
+        "text": "Iron Capirote. You cannot buy any additional equipment, weapons or armour for Ecclesiastic Prisoners with the exception that up to four may be equipped with a Martyrdom Device (see below) for 35 ducats each. Prisoners fight unarmed in Melee, flailing feebly with their manacled arms. The -1D penalty to Melee combat is included in the profile above."
       },
       "Infantry§Ecclesiastic Prisoners": {
         "assets": {
@@ -2447,6 +2940,57 @@
           }
         }
       },
+      "Infantry§Executor (Dirge of the Great Hegemon)": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Undead Fortitude",
+            "Ability§Unholy Horror",
+            "Ability§Strong",
+            "Ability§Tough",
+            "Ability§Hegemon’s Will"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "The Cult of the Black Grail"
+          ],
+          "Keywords": [
+            "Blackgrail",
+            "Fear",
+            "Tough"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 80
+          },
+          "MaxQty": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        },
+        "text": "Plague Knight must always be equipped with a suit of armour (not just carry a shield), but it can also be Armour bought with Glory Points. In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List."
+      },
       "Infantry§Fianna": {
         "assets": {
           "traits": [
@@ -2487,21 +3031,23 @@
       },
       "Infantry§Goetic Warlock": {
         "aspects": {
-          "Lock Qty": true,
           "Unique": true
         },
         "assets": {
           "traits": [
-            "Ability§Fear",
-            "Ability§Teleport 6\""
+            "Ability§Goetic Portal",
+            "Ability§Barbed Embrace",
+            "Ability§Unholy Horror",
+            "Ability§Goetic Gaze"
           ]
         },
         "keywords": {
           "Faction": [
-            "Mercenaries"
+            "Heretic Legion"
           ],
-          "Type": [
-            "Troop"
+          "Keywords": [
+            "Heretic",
+            "Fear"
           ]
         },
         "stats": {
@@ -2511,11 +3057,11 @@
           "Base": {
             "value": 40
           },
-          "Ducats": {
-            "value": null
-          },
           "Glory": {
             "value": 4
+          },
+          "MaxQty": {
+            "value": 1
           },
           "Melee": {
             "value": 1
@@ -2526,23 +3072,30 @@
           "Ranged": {
             "value": 1
           }
-        }
+        },
+        "text": "The Warlock wears Heavy Armour. A Warlock counts as being armed with two swords in Melee combat - its arms are deadly weapons in their own right.\nYou cannot alter their weapons and equipment in any way."
       },
       "Infantry§Grail Thrall": {
         "assets": {
           "traits": [
-            "Ability§Fear"
+            "Ability§Overwhelming Horde",
+            "Ability§Undead Fortitude",
+            "Ability§Unholy Horror"
           ]
         },
         "keywords": {
           "Faction": [
-            "Black Grail"
+            "The Cult of the Black Grail"
           ],
-          "Type": [
-            "Troop"
+          "Keywords": [
+            "Blackgrail",
+            "Fear"
           ]
         },
         "stats": {
+          "Armour": {
+            "value": 0
+          },
           "Base": {
             "value": 25
           },
@@ -2556,25 +3109,88 @@
             "value": 4
           },
           "Ranged": {
-            "value": null
+            "statType": "term",
+            "value": "N/A"
           }
-        }
+        },
+        "text": "The Thrall never carries any type of weapons, armour or equipment. They suffer no penalties to their combat ability for being unarmed."
+      },
+      "Infantry§Guard Dog": {
+        "assets": {
+          "traits": [
+            "Ability§Four Paws",
+            "Ability§Guard Dog"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Glory": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 8
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "Dogs do not suffer penalties for fighting unarmed. In battle they are treated as non-ELITE Troops. War Dogs cannot become ELITE."
+      },
+      "Infantry§Hellhound": {
+        "assets": {
+          "traits": [
+            "Ability§Four Paws",
+            "Ability§Hellhound"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Glory": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 8
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "Dogs do not suffer penalties for fighting unarmed. In battle they are treated as non-ELITE Troops. War Dogs cannot become ELITE."
       },
       "Infantry§Herald of Beelzebub": {
         "assets": {
           "traits": [
-            "Ability§Fear",
+            "Ability§Infected Proboscis",
+            "Ability§Maddening Buzz",
+            "Ability§Toxic",
             "Ability§Skirmisher",
-            "Ability§Ignores Gas",
-            "Ability§Weak to Fire"
+            "Ability§Unholy Horror"
           ]
         },
         "keywords": {
           "Faction": [
-            "Black Grail"
+            "The Cult of the Black Grail"
           ],
-          "Type": [
-            "Troop"
+          "Keywords": [
+            "Blackgrail",
+            "Fear",
+            "Skirmisher"
           ]
         },
         "stats": {
@@ -2585,7 +3201,7 @@
             "value": 40
           },
           "Ducats": {
-            "value": 60
+            "value": 55
           },
           "MaxQty": {
             "value": 4
@@ -2594,13 +3210,14 @@
             "value": 0
           },
           "Movement": {
-            "format": "{v}” flying",
-            "value": 10
+            "statType": "term",
+            "value": null
           },
           "Ranged": {
             "value": 0
           }
-        }
+        },
+        "text": "Each Herald may purchase ranged weapons from the Black Grail list but may not wear armour or carry any equipment. They can only attack in melee combat with its proboscis as detailed below."
       },
       "Infantry§Heretic Chorister": {
         "aspects": {
@@ -2609,8 +3226,7 @@
         "assets": {
           "traits": [
             "Ability§Unholy Hymns",
-            "Ability§Elite",
-            "Ability§Fear"
+            "Ability§Unholy Horror"
           ]
         },
         "keywords": {
@@ -2618,7 +3234,8 @@
             "Heretic Legion"
           ],
           "Keywords": [
-            "HERETIC"
+            "Heretic",
+            "Fear"
           ],
           "Type": [
             "Elite"
@@ -2634,6 +3251,9 @@
           "Ducats": {
             "value": 65
           },
+          "MaxQty": {
+            "value": 1
+          },
           "Melee": {
             "value": 2
           },
@@ -2643,7 +3263,8 @@
           "Ranged": {
             "value": -2
           }
-        }
+        },
+        "text": "The Chorister uses the Heretic Legion weapons and equipment list."
       },
       "Infantry§Heretic Death Commando": {
         "aspects": {
@@ -2653,8 +3274,7 @@
           "traits": [
             "Ability§Infiltrator",
             "Ability§Stealth Generator",
-            "Ability§Hide",
-            "Ability§Elite"
+            "Ability§Hide"
           ]
         },
         "keywords": {
@@ -2662,7 +3282,8 @@
             "Heretic Legion"
           ],
           "Keywords": [
-            "HERETIC"
+            "Heretic",
+            "Infiltrator"
           ],
           "Type": [
             "Elite"
@@ -2676,7 +3297,10 @@
             "value": 32
           },
           "Ducats": {
-            "value": 95
+            "value": 90
+          },
+          "MaxQty": {
+            "value": 1
           },
           "Melee": {
             "value": 2
@@ -2687,7 +3311,8 @@
           "Ranged": {
             "value": 1
           }
-        }
+        },
+        "text": "The Death Commando can be equipped with any melee weapon, armour or equipment from the Heretic Legion Equipment List. The only ranged weapon they can buy is a silenced pistol."
       },
       "Infantry§Heretic Priest": {
         "aspects": {
@@ -2696,8 +3321,7 @@
         "assets": {
           "traits": [
             "Ability§Puppet Master",
-            "Ability§Tough",
-            "Ability§Elite"
+            "Ability§Tough"
           ]
         },
         "keywords": {
@@ -2705,18 +3329,12 @@
             "Heretic Legion"
           ],
           "Keywords": [
-            "HERETIC"
-          ],
-          "Tags": [
-            "Compulsory"
+            "Heretic",
+            "Tough"
           ],
           "Type": [
-            "Leader",
             "Elite"
           ]
-        },
-        "removed": {
-          "stats": {}
         },
         "stats": {
           "Armour": {
@@ -2728,6 +3346,9 @@
           "Ducats": {
             "value": 80
           },
+          "MaxQty": {
+            "value": 1
+          },
           "Melee": {
             "value": 2
           },
@@ -2737,7 +3358,55 @@
           "Ranged": {
             "value": 2
           }
-        }
+        },
+        "text": "The Heretic Priest uses the Heretic Legion weapons and equipment list."
+      },
+      "Infantry§Heretic Priest (Knights of Avarice)": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§The Price Of Greed",
+            "Ability§Tough"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Heretic Legion"
+          ],
+          "Keywords": [
+            "Heretic",
+            "Tough"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 80
+          },
+          "MaxQty": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        },
+        "text": "The Heretic Priest uses the Heretic Legion weapons and equipment list."
       },
       "Infantry§Heretic Trooper": {
         "keywords": {
@@ -3031,18 +3700,17 @@
           }
         }
       },
-      "Infantry§Hound of the Black Grail": {
+      "Infantry§Homunculus": {
         "assets": {
           "traits": [
-            "Ability§Fear"
+            "Ability§Re-Creation",
+            "Ability§Artificial Body",
+            "Ability§Alchemical Formula"
           ]
         },
         "keywords": {
           "Faction": [
-            "Black Grail"
-          ],
-          "Type": [
-            "Troop"
+            "Iron Sultanate"
           ]
         },
         "stats": {
@@ -3050,6 +3718,49 @@
             "value": 0
           },
           "Base": {
+            "value": 25
+          },
+          "Glory": {
+            "value": 2
+          },
+          "MaxQty": {
+            "value": "1 per Alchemist"
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "The homunculus cannot be equipped with any weapons, armour or equipment. It can fight in melee without any penalty."
+      },
+      "Infantry§Hound of the Black Grail": {
+        "assets": {
+          "traits": [
+            "Ability§Frightening Speed",
+            "Ability§Undead Fortitude",
+            "Ability§Unholy Horror"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "The Cult of the Black Grail"
+          ],
+          "Keywords": [
+            "Blackgrail",
+            "Fear"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "statType": "term",
             "value": null
           },
           "Ducats": {
@@ -3065,9 +3776,11 @@
             "value": 8
           },
           "Ranged": {
-            "value": null
+            "statType": "term",
+            "value": "N/A"
           }
-        }
+        },
+        "text": "The Hounds never carry any type of weapons, armour or equipment. They do not suffer penalties for fighting unarmed."
       },
       "Infantry§Infiltrator Shocktrooper": {
         "assets": {
@@ -3109,8 +3822,12 @@
       },
       "Infantry§Jabirean Alchemist": {
         "aspects": {
-          "Lock Qty": true,
           "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Mastery of the Elements"
+          ]
         },
         "keywords": {
           "Faction": [
@@ -3130,6 +3847,9 @@
           "Ducats": {
             "value": 55
           },
+          "MaxQty": {
+            "value": 1
+          },
           "Melee": {
             "value": 1
           },
@@ -3139,7 +3859,8 @@
           "Ranged": {
             "value": 2
           }
-        }
+        },
+        "text": "The Alchemist can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List."
       },
       "Infantry§Janissarie": {
         "assets": {
@@ -3179,26 +3900,66 @@
           }
         }
       },
-      "Infantry§Lieutenant": {
-        "aspects": {
-          "Lock Qty": true,
-          "Unique": true
-        },
+      "Infantry§Janissaries": {
         "assets": {
           "traits": [
-            "Ability§Tough"
+            "Ability§Strong",
+            "Ability§Counter-Charge"
           ]
         },
         "keywords": {
           "Faction": [
-            "New Antioch"
+            "Iron Sultanate"
+          ],
+          "Keywords": [
+            "Strong"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 55
+          },
+          "MaxQty": {
+            "value": 6
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        },
+        "text": "Janissaries can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List."
+      },
+      "Infantry§Lieutenant": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Tough",
+            "Ability§On My Command!"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "The Principality of New Antioch"
+          ],
+          "Keywords": [
+            "Newantioch",
+            "Tough"
           ],
           "Type": [
-            "Leader",
             "Elite"
-          ],
-          "Tags": [
-            "Compulsory"
           ]
         },
         "stats": {
@@ -3211,6 +3972,9 @@
           "Ducats": {
             "value": 70
           },
+          "MaxQty": {
+            "value": 1
+          },
           "Melee": {
             "value": 2
           },
@@ -3220,7 +3984,105 @@
           "Ranged": {
             "value": 2
           }
-        }
+        },
+        "text": "The Lieutenant can be equipped with any weapon, armour and equipment from the New Antioch Equipment List."
+      },
+      "Infantry§Lieutenant (Eire Rangers)": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Tough",
+            "Ability§Skirmisher"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "The Principality of New Antioch"
+          ],
+          "Keywords": [
+            "Newantioch",
+            "Tough",
+            "Skirmisher"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 70
+          },
+          "MaxQty": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        },
+        "text": "The Lieutenant can be equipped with any weapon, armour and equipment from the New Antioch Equipment List."
+      },
+      "Infantry§Lieutenant (Kingdom of Alba Assault Detachment)": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Tough",
+            "Ability§Strong",
+            "Ability§On My Command!"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "The Principality of New Antioch"
+          ],
+          "Keywords": [
+            "Newantioch",
+            "Tough",
+            "Strong"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 70
+          },
+          "MaxQty": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        },
+        "text": "The Lieutenant can be equipped with any weapon, armour and equipment from the New Antioch Equipment List."
       },
       "Infantry§Lion of Jabir": {
         "keywords": {
@@ -3255,28 +4117,71 @@
           }
         }
       },
+      "Infantry§Lions of Jabir": {
+        "assets": {
+          "traits": [
+            "Ability§Artificial Body",
+            "Ability§Mauling",
+            "Ability§Lion’s Grace"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "statType": "term",
+            "value": null
+          },
+          "Ducats": {
+            "value": 60
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 8
+          },
+          "Ranged": {
+            "statType": "term",
+            "value": "N/A"
+          }
+        },
+        "text": "The Lions never carry any type of weapons but can wear armour (though no shields!) and can be equipped with Wind Amulets. They do not suffer penalties for fighting unarmed."
+      },
       "Infantry§Lord of Tumours": {
         "aspects": {
-          "Lock Qty": true,
           "Unique": true
         },
         "assets": {
           "traits": [
-            "Ability§Fear",
+            "Ability§Beelzebub’s Touch",
+            "Ability§Undead Fortitude",
+            "Ability§Unholy Horror",
             "Ability§Tough",
             "Ability§Strong"
           ]
         },
         "keywords": {
           "Faction": [
-            "Black Grail"
+            "The Cult of the Black Grail"
+          ],
+          "Keywords": [
+            "Blackgrail",
+            "Tough",
+            "Strong",
+            "Fear"
           ],
           "Type": [
-            "Leader",
             "Elite"
-          ],
-          "Tags": [
-            "Compulsory"
           ]
         },
         "stats": {
@@ -3301,18 +4206,18 @@
           "Ranged": {
             "value": 1
           }
-        }
+        },
+        "text": "A Lord of Tumours can be equipped with any weapon, armour and equipment from the Black Grail Equipment List."
       },
       "Infantry§Martyr Penitent": {
+        "assets": {
+          "traits": [
+            "Ability§Ressurection"
+          ]
+        },
         "keywords": {
           "Faction": [
-            "Trench Pilgrims"
-          ],
-          "Keywords": [
-            "PILGRIM"
-          ],
-          "Type": [
-            "Troop"
+            "Trench Pilgrim"
           ]
         },
         "stats": {
@@ -3323,7 +4228,7 @@
             "value": 25
           },
           "Ducats": {
-            "value": 30
+            "value": 75
           },
           "Melee": {
             "value": 1
@@ -3334,7 +4239,166 @@
           "Ranged": {
             "value": 0
           }
-        }
+        },
+        "text": "Trench Pilgrim can be equipped with any weapon, armour and equipment from the Trench Pilgrim Equipment List."
+      },
+      "Infantry§Martyrdom Dog": {
+        "assets": {
+          "traits": [
+            "Ability§Four Paws",
+            "Ability§Martyrdom Dog"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Glory": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 8
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "Dogs do not suffer penalties for fighting unarmed. In battle they are treated as non-ELITE Troops. War Dogs cannot become ELITE."
+      },
+      "Infantry§Master Assassin": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Time Slip",
+            "Ability§Temporal Assassin",
+            "Ability§Infiltrator",
+            "Ability§Tough"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Keywords": [
+            "Infiltrator",
+            "Tough"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 95
+          },
+          "MaxQty": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        },
+        "text": "The Assassin can be equipped with any weapon, armour or equipment from the Iron Sultanate Equipment List."
+      },
+      "Infantry§Mechanised Heavy Infantry": {
+        "assets": {
+          "traits": [
+            "Ability§Strong"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "The Principality of New Antioch"
+          ],
+          "Keywords": [
+            "Newantioch",
+            "Strong"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -2
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 85
+          },
+          "MaxQty": {
+            "value": 3
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 1
+          }
+        },
+        "text": "Mechanised Heavy Infantry always wear Light Machine Armour which counts as Heavy Armour. This is reflected in the cost and profile above. This can be upgraded into Machine Armour (despite not being ELITE and LIMIT: 1) for +15 Gold Ducats.\nMechanised Heavy Infantry can be equipped with any weapon, armour and equipment from the New Antioch Equipment List."
+      },
+      "Infantry§Mechanised Heavy Infantry (Kingdom of Alba Assault Detachment)": {
+        "assets": {
+          "traits": [
+            "Ability§Strong"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "The Principality of New Antioch"
+          ],
+          "Keywords": [
+            "Newantioch",
+            "Strong"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -2
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 85
+          },
+          "MaxQty": {
+            "value": 3
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "Mechanised Heavy Infantry always wear Light Machine Armour which counts as Heavy Armour. This is reflected in the cost and profile above. This can be upgraded into Machine Armour (despite not being ELITE and LIMIT: 1) for +15 Gold Ducats.\nMechanised Heavy Infantry can be equipped with any weapon, armour and equipment from the New Antioch Equipment List."
       },
       "Infantry§Mechanized Heavy Infantry": {
         "assets": {
@@ -3376,15 +4440,12 @@
       },
       "Infantry§Mendelist Ammo Monk": {
         "aspects": {
-          "Lock Qty": true,
           "Unique": true
         },
-        "keywords": {
-          "Faction": [
-            "Mercenaries"
-          ],
-          "Type": [
-            "Elite"
+        "assets": {
+          "traits": [
+            "Ability§Faithful Followers",
+            "Ability§The Ammunition Sacrament"
           ]
         },
         "stats": {
@@ -3394,11 +4455,11 @@
           "Base": {
             "value": 25
           },
-          "Ducats": {
-            "value": null
-          },
           "Glory": {
             "value": 3
+          },
+          "MaxQty": {
+            "value": 1
           },
           "Melee": {
             "value": -1
@@ -3409,7 +4470,8 @@
           "Ranged": {
             "value": -1
           }
-        }
+        },
+        "text": "The Monk has no weapons. They wear a gas mask and carry the Ammunition Sacrament (see below)."
       },
       "Infantry§Mercenary Combat Medic": {
         "aspects": {
@@ -3447,6 +4509,35 @@
             "value": 0
           }
         }
+      },
+      "Infantry§Mercy Dog": {
+        "assets": {
+          "traits": [
+            "Ability§Four Paws",
+            "Ability§Mercy Dog"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Glory": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 8
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "Dogs do not suffer penalties for fighting unarmed. In battle they are treated as non-ELITE Troops. War Dogs cannot become ELITE."
       },
       "Infantry§MHI with Machine Armour": {
         "assets": {
@@ -3488,15 +4579,14 @@
       },
       "Infantry§Observer": {
         "aspects": {
-          "Lock Qty": true,
           "Unique": true
         },
-        "keywords": {
-          "Faction": [
-            "Mercenaries"
-          ],
-          "Type": [
-            "Elite"
+        "assets": {
+          "traits": [
+            "Ability§Lightning Speed",
+            "Ability§Temporal Fugue",
+            "Ability§Eye of God",
+            "Ability§Voice of God"
           ]
         },
         "stats": {
@@ -3506,11 +4596,11 @@
           "Base": {
             "value": 25
           },
-          "Ducats": {
-            "value": null
-          },
           "Glory": {
             "value": 5
+          },
+          "MaxQty": {
+            "value": 1
           },
           "Melee": {
             "value": 2
@@ -3519,9 +4609,11 @@
             "value": 8
           },
           "Ranged": {
-            "value": 0
+            "statType": "term",
+            "value": "N/A"
           }
-        }
+        },
+        "text": "Standard Armour, Oculus Helm (counts as Combat Helmet and Gas Mask), Trench Polearm, in-built First Aid Kit."
       },
       "Infantry§Papal Lieutenant": {
         "aspects": {
@@ -3648,17 +4740,22 @@
       },
       "Infantry§Plague Knight": {
         "aspects": {
-          "Lock Qty": true,
           "Unique": true
         },
         "assets": {
           "traits": [
-            "Ability§Fear"
+            "Ability§Undead Fortitude",
+            "Ability§Unholy Horror",
+            "Ability§Strong"
           ]
         },
         "keywords": {
           "Faction": [
-            "Black Grail"
+            "The Cult of the Black Grail"
+          ],
+          "Keywords": [
+            "Blackgrail",
+            "Fear"
           ],
           "Type": [
             "Elite"
@@ -3674,6 +4771,9 @@
           "Ducats": {
             "value": 60
           },
+          "MaxQty": {
+            "value": 1
+          },
           "Melee": {
             "value": 2
           },
@@ -3683,7 +4783,54 @@
           "Ranged": {
             "value": 0
           }
-        }
+        },
+        "text": "Plague Knight must always be equipped with a suit of armour (not just carry a shield), but it can also be Armour bought with Glory Points. In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List."
+      },
+      "Infantry§Plague Knight (Dirge of the Great Hegemon)": {
+        "assets": {
+          "traits": [
+            "Ability§Undead Fortitude",
+            "Ability§Unholy Horror",
+            "Ability§Strong",
+            "Ability§Hegemon’s Will"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "The Cult of the Black Grail"
+          ],
+          "Keywords": [
+            "Blackgrail",
+            "Fear"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 60
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "Plague Knight must always be equipped with a suit of armour (not just carry a shield), but it can also be Armour bought with Glory Points. In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List."
       },
       "Infantry§Prussian Sniper Priest": {
         "aspects": {
@@ -3796,12 +4943,17 @@
         }
       },
       "Infantry§Shocktrooper": {
+        "assets": {
+          "traits": [
+            "Ability§Shock Charge"
+          ]
+        },
         "keywords": {
           "Faction": [
-            "New Antioch"
+            "The Principality of New Antioch"
           ],
-          "Type": [
-            "Troop"
+          "Keywords": [
+            "Newantioch"
           ]
         },
         "stats": {
@@ -3826,7 +4978,8 @@
           "Ranged": {
             "value": 0
           }
-        }
+        },
+        "text": "A Shocktrooper can be equipped with any weapon, armour and equipment from the New Antioch Equipment List."
       },
       "Infantry§Shrine Anchorite": {
         "aspects": {
@@ -3874,10 +5027,55 @@
           }
         }
       },
+      "Infantry§Sin Eater": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Tough",
+            "Ability§Devour"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": -2
+          },
+          "Base": {
+            "value": 50
+          },
+          "Glory": {
+            "value": 6
+          },
+          "MaxQty": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "statType": "term",
+            "value": "N/A"
+          }
+        },
+        "text": "Heavy Armour and 2-handed Tenderizer Maul. You cannot alter Sin Eater’s weapons and equipment in any way."
+      },
       "Infantry§Sniper Priest": {
+        "assets": {
+          "traits": [
+            "Ability§Aim",
+            "Ability§Absolute Faith"
+          ]
+        },
         "keywords": {
           "Faction": [
-            "New Antioch"
+            "The Principality of New Antioch"
+          ],
+          "Keywords": [
+            "Newantioch"
           ],
           "Type": [
             "Elite"
@@ -3897,7 +5095,7 @@
             "value": 2
           },
           "Melee": {
-            "value": -1
+            "value": 1
           },
           "Movement": {
             "value": 6
@@ -3905,7 +5103,8 @@
           "Ranged": {
             "value": 2
           }
-        }
+        },
+        "text": "A Sniper Priest can be equipped with any weapon, armour and equipment from the New Antioch Equipment List."
       },
       "Infantry§Specialist Trench dog": {
         "keywords": {
@@ -3942,6 +5141,43 @@
             "value": 0
           }
         }
+      },
+      "Infantry§Stigmatic Nun": {
+        "assets": {
+          "traits": [
+            "Ability§Blessed Stigmata",
+            "Ability§Agile"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Trench Pilgrim"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 50
+          },
+          "MaxQty": {
+            "value": 4
+          },
+          "Melee": {
+            "value": 1
+          },
+          "Movement": {
+            "value": 8
+          },
+          "Ranged": {
+            "value": 1
+          }
+        },
+        "text": "Stigmatic Nuns can be equipped with any melee weapons, armour or equipment from the Trench Pilgrim Equipment List. Nuns may only use pistols and semi-automatic pistols as Ranged Weapons."
       },
       "Infantry§Stigmatic Nuns": {
         "keywords": {
@@ -3981,17 +5217,21 @@
       },
       "Infantry§Sultanate Assassin": {
         "aspects": {
-          "Lock Qty": true,
           "Unique": true
         },
         "assets": {
           "traits": [
+            "Ability§Time Slip",
+            "Ability§Temporal Assassin",
             "Ability§Infiltrator"
           ]
         },
         "keywords": {
           "Faction": [
             "Iron Sultanate"
+          ],
+          "Keywords": [
+            "Infiltrator"
           ],
           "Type": [
             "Elite"
@@ -4007,6 +5247,9 @@
           "Ducats": {
             "value": 85
           },
+          "MaxQty": {
+            "value": 1
+          },
           "Melee": {
             "value": 2
           },
@@ -4016,16 +5259,62 @@
           "Ranged": {
             "value": 1
           }
-        }
+        },
+        "text": "The Assassin can be equipped with any weapon, armour or equipment from the Iron Sultanate Equipment List."
       },
-      "Infantry§Trench Cleric": {
-        "aspects": {
-          "Lock Qty": true,
-          "Unique": true
+      "Infantry§Sultanate Sapper": {
+        "assets": {
+          "traits": [
+            "Ability§Mine-setting",
+            "Ability§De-mine",
+            "Ability§Dig-In"
+          ]
         },
         "keywords": {
           "Faction": [
-            "New Antioch"
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Ducats": {
+            "value": 50
+          },
+          "MaxQty": {
+            "value": 2
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "Shovel and Tufenjieff anti-personnel mines. Sapper can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List."
+      },
+      "Infantry§Trench Cleric": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Onward, Christian Soldiers!"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "The Principality of New Antioch"
+          ],
+          "Keywords": [
+            "Newantioch"
           ],
           "Type": [
             "Elite"
@@ -4039,7 +5328,10 @@
             "value": 32
           },
           "Ducats": {
-            "value": 60
+            "value": 65
+          },
+          "MaxQty": {
+            "value": 1
           },
           "Melee": {
             "value": 1
@@ -4050,7 +5342,8 @@
           "Ranged": {
             "value": 1
           }
-        }
+        },
+        "text": "A Cleric can be equipped with any weapon, armour and equipment from the New Antioch Equipment List."
       },
       "Infantry§Trench dog": {
         "keywords": {
@@ -4090,16 +5383,15 @@
       },
       "Infantry§Trench Mole": {
         "assets": {
-          "traits": [
-            "Ability§Infiltrator"
-          ]
+          "traits": []
         },
         "keywords": {
           "Faction": [
-            "New Antioch"
+            "The Principality of New Antioch"
           ],
-          "Type": [
-            "Troop"
+          "Keywords": [
+            "Newantioch",
+            "Infiltrator"
           ]
         },
         "stats": {
@@ -4110,7 +5402,7 @@
             "value": 25
           },
           "Ducats": {
-            "value": 40
+            "value": 50
           },
           "MaxQty": {
             "value": 2
@@ -4124,23 +5416,18 @@
           "Ranged": {
             "value": 0
           }
-        }
+        },
+        "text": "Each Yeoman is equipped with a Bolt Action Rifle. You can swap the Bolt Action Rifle for another ranged weapon of lower, equal or greater cost. If the cost is greater, yoy must pay the difference in ducats.\nYeomen can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.\nAt the cost of +10 Gold Ducats per model, up to two Yeoman can be upgraded into Trench Moles, scouts who make use of tunnels that criss-cross the No Man’s Land. They gain the Keyword INFILTRATOR."
       },
       "Infantry§Trench Pilgrim": {
         "assets": {
           "traits": [
-            "Ability§Resurrection"
+            "Ability§Ressurection"
           ]
         },
         "keywords": {
           "Faction": [
-            "Trench Pilgrims"
-          ],
-          "Keywords": [
-            "PILGRIM"
-          ],
-          "Type": [
-            "Troop"
+            "Trench Pilgrim"
           ]
         },
         "stats": {
@@ -4162,7 +5449,36 @@
           "Ranged": {
             "value": 0
           }
-        }
+        },
+        "text": "Trench Pilgrim can be equipped with any weapon, armour and equipment from the Trench Pilgrim Equipment List."
+      },
+      "Infantry§War Dog": {
+        "assets": {
+          "traits": [
+            "Ability§Four Paws"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 25
+          },
+          "Glory": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 0
+          },
+          "Movement": {
+            "value": 8
+          },
+          "Ranged": {
+            "value": 0
+          }
+        },
+        "text": "Dogs do not suffer penalties for fighting unarmed. In battle they are treated as non-ELITE Troops. War Dogs cannot become ELITE."
       },
       "Infantry§War Prophet": {
         "aspects": {
@@ -4171,23 +5487,15 @@
         "assets": {
           "traits": [
             "Ability§Memento Mori",
-            "Ability§Laying on Hands",
-            "Equipment§Loudspeakers",
-            "Ability§Elite"
+            "Ability§Laying On Hands",
+            "Ability§Loudspeakers"
           ]
         },
         "keywords": {
           "Faction": [
-            "Trench Pilgrims"
-          ],
-          "Keywords": [
-            "PILGRIM"
-          ],
-          "Tags": [
-            "Compulsory"
+            "Trench Pilgrim"
           ],
           "Type": [
-            "Leader",
             "Elite"
           ]
         },
@@ -4201,6 +5509,9 @@
           "Ducats": {
             "value": 80
           },
+          "MaxQty": {
+            "value": 1
+          },
           "Melee": {
             "value": 2
           },
@@ -4210,7 +5521,52 @@
           "Ranged": {
             "value": 2
           }
-        }
+        },
+        "text": "Loudspeakers (see below). The War Prophet can be equipped with any weapons, armour or equipment from the Trench Pilgrims Equipment List."
+      },
+      "Infantry§War Prophet (Cavalcade of the Tenth Plague)": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Memento Mori",
+            "Ability§Day of His Wrath",
+            "Ability§Loudspeakers"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Trench Pilgrim"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 80
+          },
+          "MaxQty": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        },
+        "text": "Loudspeakers (see below). The War Prophet can be equipped with any weapons, armour or equipment from the Trench Pilgrims Equipment List."
       },
       "Infantry§War Wolf Assault Beast": {
         "aspects": {
@@ -4220,9 +5576,9 @@
           "traits": [
             "Ability§Tough",
             "Ability§Loping Dash",
+            "Ability§Terrifying",
             "Ability§Chainmaw",
-            "Ability§Shredding Claws",
-            "Ability§Fear"
+            "Ability§Shredding Claws"
           ]
         },
         "keywords": {
@@ -4230,10 +5586,9 @@
             "Heretic Legion"
           ],
           "Keywords": [
-            "HERETIC"
-          ],
-          "Type": [
-            "M"
+            "Heretic",
+            "Fear",
+            "Tough"
           ]
         },
         "stats": {
@@ -4246,8 +5601,10 @@
           "Ducats": {
             "value": 140
           },
+          "MaxQty": {
+            "value": 1
+          },
           "Melee": {
-            "format": "{v} Dice",
             "statType": "term",
             "value": "+3/+1"
           },
@@ -4255,25 +5612,22 @@
             "value": 8
           },
           "Ranged": {
-            "value": null
+            "value": 0
           }
-        }
+        },
+        "text": "The War Wolf is encased in nigh-impregnable Tartarus armour reflected in the profile above. In Melee combat the War Wolf can use both the Chainsaw Mouth and Shredding Claws (see below) during the same Activation with no additional penalty for the second attack. You cannot buy any other armour, weapons or equipment for the War Wolf."
       },
       "Infantry§Witchburner General": {
         "aspects": {
-          "Lock Qty": true,
           "Unique": true
         },
         "assets": {
           "traits": [
-            "Ability§Immune to Fear",
-            "Ability§No Dash"
+            "Ability§Divine Judgement",
+            "Ability§Ceremonial Duty"
           ]
         },
         "keywords": {
-          "Faction": [
-            "Mercenaries"
-          ],
           "Type": [
             "Elite"
           ]
@@ -4285,11 +5639,11 @@
           "Base": {
             "value": 32
           },
-          "Ducats": {
-            "value": null
-          },
           "Glory": {
             "value": 5
+          },
+          "MaxQty": {
+            "value": 1
           },
           "Melee": {
             "value": 1
@@ -4300,15 +5654,19 @@
           "Ranged": {
             "value": 0
           }
-        }
+        },
+        "text": "The Witchburner is equipped with Heavy Armour, wears a Helmet and carries a War Gavel."
       },
       "Infantry§Yeoman": {
+        "assets": {
+          "traits": []
+        },
         "keywords": {
           "Faction": [
-            "New Antioch"
+            "The Principality of New Antioch"
           ],
-          "Type": [
-            "Troop"
+          "Keywords": [
+            "Newantioch"
           ]
         },
         "stats": {
@@ -4319,7 +5677,7 @@
             "value": 25
           },
           "Ducats": {
-            "value": 30
+            "value": 40
           },
           "Melee": {
             "value": 0
@@ -4330,7 +5688,8 @@
           "Ranged": {
             "value": 0
           }
-        }
+        },
+        "text": "Each Yeoman is equipped with a Bolt Action Rifle. You can swap the Bolt Action Rifle for another ranged weapon of lower, equal or greater cost. If the cost is greater, yoy must pay the difference in ducats.\nYeomen can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.\nAt the cost of +10 Gold Ducats per model, up to two Yeoman can be upgraded into Trench Moles, scouts who make use of tunnels that criss-cross the No Man’s Land. They gain the Keyword INFILTRATOR."
       },
       "Infantry§Yuzbasi Captain": {
         "aspects": {
@@ -4374,6 +5733,52 @@
             "value": 2
           }
         }
+      },
+      "Infantry§Yüzbaşı Captain": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ability§Tough",
+            "Ability§Mubarizun"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ],
+          "Keywords": [
+            "Tough"
+          ],
+          "Type": [
+            "Elite"
+          ]
+        },
+        "stats": {
+          "Armour": {
+            "value": 0
+          },
+          "Base": {
+            "value": 32
+          },
+          "Ducats": {
+            "value": 70
+          },
+          "MaxQty": {
+            "value": 1
+          },
+          "Melee": {
+            "value": 2
+          },
+          "Movement": {
+            "value": 6
+          },
+          "Ranged": {
+            "value": 2
+          }
+        },
+        "text": "Yüzbaşı can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List."
       },
       "Melee Weapon§Anti-tank Hammer—35 Ducats": {
         "aspects": {
