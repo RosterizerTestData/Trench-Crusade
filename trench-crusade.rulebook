@@ -4375,7 +4375,10 @@
           }
         }
       },
-      "Melee Weapon§Anti-Tank Hammer": {
+      "Melee Weapon§Anti-tank Hammer—35 Ducats": {
+        "aspects": {
+          "Label": "Anti-Tank Hammer"
+        },
         "assets": {
           "traits": [
             "Ability§Risky",
@@ -4384,7 +4387,7 @@
         },
         "keywords": {
           "Tags": [
-            "Elite"
+            "Trench Pilgrim"
           ]
         },
         "stats": {
@@ -4392,14 +4395,18 @@
             "value": 35
           },
           "Modifiers": {
-            "value": "+1D to Injury, +1 Blood"
+            "value": "+1D to Injury"
           },
           "Type": {
-            "value": "Melee"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "Ignores armour modifiers and rolls injuries with +1 DICE. If it hits the enemy, the wielder suffers +1 BLOOD MARKER as well."
       },
-      "Melee Weapon§Assassin’s Dagger": {
+      "Melee Weapon§Assassin’s Dagger—10 Ducats": {
+        "aspects": {
+          "Label": "Assassin’s Dagger"
+        },
         "assets": {
           "traits": [
             "Ability§Critical"
@@ -4407,7 +4414,7 @@
         },
         "keywords": {
           "Tags": [
-            "Assassin"
+            "Iron Sultanate"
           ]
         },
         "stats": {
@@ -4415,36 +4422,52 @@
             "value": 10
           },
           "Modifiers": {
-            "value": "+1 to Injury"
+            "value": "+1 on Injury Results"
+          },
+          "Range": {
+            "value": null
           },
           "Type": {
-            "value": "Melee"
+            "value": "1-Handed"
           }
-        }
+        },
+        "text": "Adds +1 to injury rolls (i.e. a roll of 7 on the Injury Chart becomes 8). If the Assassin hits an enemy and causes at least one BLOOD MARKER, the Assassin can move away from combat with the model the Assassin wounded during this Activation without giving the opponent a chance to attack them, as the poison paralyses their enemy momentarily. Assassins can use both normal and Dash moves to do this, though this may not be used for charging."
       },
-      "Melee Weapon§Bayonet": {
+      "Melee Weapon§Bayonet—2 Ducats": {
+        "aspects": {
+          "Label": "Bayonet"
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
+          ]
+        },
         "stats": {
           "Ducats": {
             "value": 2
           },
-          "Modifiers": {
-            "value": "Extra melee weapon"
-          },
           "Type": {
-            "value": "Melee"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "Bayonets can only be attached to a Bolt Action Rifle, Automatic Rifle, Musket, Shotgun, Automatic Shotgun and Submachine Gun, and does not count towards the maximum Melee weapons a model can carry. Requires two hands to use in Melee.″"
       },
-      "Melee Weapon§Beelzebub’s Axe": {
+      "Melee Weapon§Beelzebub’s Axe—30 Ducats": {
+        "aspects": {
+          "Label": "Beelzebub’s Axe"
+        },
         "assets": {
           "traits": [
-            "Ability§Heavy",
-            "Ability§Infect"
+            "Ability§Heavy"
           ]
         },
         "keywords": {
           "Tags": [
-            "Elite"
+            "The Cult of the Black Grail"
           ]
         },
         "stats": {
@@ -4455,76 +4478,132 @@
             "value": "+1D to Injury"
           },
           "Type": {
-            "value": "Melee"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "Whenever a model suffers a BLOOD MARKER as a result of an injury caused by a hit from Beelzebub’s Axe, they will gain an INFECTION MARKER instead."
       },
-      "Melee Weapon§Blasphemous Staff": {
+      "Melee Weapon§Blasphemous Staff—2 Glory": {
+        "aspects": {
+          "Label": "Blasphemous Staff"
+        },
         "assets": {
           "traits": [
             "Ability§Fire",
             "Ability§Critical"
           ]
         },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion"
+          ]
+        },
         "stats": {
-          "Ducats": {
-            "value": 0
-          },
-          "Modifiers": {
-            "value": null
+          "Glory": {
+            "value": 2
           },
           "Type": {
-            "value": "Melee"
+            "value": "1-Handed"
           }
         }
       },
-      "Melee Weapon§Bonebreaker mace": {
+      "Melee Weapon§Coin Hammer—25 Ducats": {
+        "aspects": {
+          "Label": "Coin Hammer"
+        },
         "assets": {
           "traits": [
-            "Ability§Risky"
+            "Ability§Heavy"
           ]
         },
         "keywords": {
           "Tags": [
-            "Anchorite"
+            "Knights Of Avarice"
           ]
         },
         "stats": {
           "Ducats": {
-            "value": 0
+            "value": 25
           },
           "Modifiers": {
             "value": "+1D to Injury"
           },
           "Type": {
-            "value": "Melee"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "Roll all injuries with +1 DICE. When you cause a Blood Marker in Melee with this weapon, the model wielding the Hammer gains 1 BLESSINGS MARKER."
       },
-      "Melee Weapon§Catherine Wheel": {
-        "assets": {
-          "traits": [
-            "Ability§Risky"
-          ]
+      "Melee Weapon§Donkey’s Jawbone—8 Glory": {
+        "aspects": {
+          "Label": "Donkey’s Jawbone"
         },
         "keywords": {
           "Tags": [
-            "Anchorite"
+            "Trench Pilgrim"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 8
+          },
+          "Modifiers": {
+            "value": "+2D to Injury"
+          },
+          "Type": {
+            "value": "1-Handed"
+          }
+        }
+      },
+      "Melee Weapon§Flail/scourge—5 Ducats": {
+        "aspects": {
+          "Label": "Flail/Scourge"
+        },
+        "keywords": {
+          "Tags": [
+            "Trench Pilgrim"
           ]
         },
         "stats": {
           "Ducats": {
-            "value": 0
+            "value": 5
           },
           "Modifiers": {
-            "value": "+3D Injuries, roll 3D for injury  table"
+            "value": "+1D to Hit"
           },
           "Type": {
-            "value": "Melee"
+            "value": "1-Handed"
           }
-        }
+        },
+        "text": "If a model is fighting in melee with a Whip, any off-hand weapon the model has will suffer -2D instead of -1D penalty to hit."
       },
-      "Melee Weapon§Claymore": {
+      "Melee Weapon§Golden Khanjar—20 Ducats": {
+        "aspects": {
+          "Label": "Golden Khanjar"
+        },
+        "keywords": {
+          "Tags": [
+            "Fida’i of Alamut—The Cabal of Assassins",
+            "Papal States Intervention Force"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          },
+          "Modifiers": {
+            "value": "+1 on Injury Results"
+          },
+          "Type": {
+            "value": "1-Handed"
+          }
+        },
+        "text": "Add +1 to the result of all injuries caused by this weapon (i.e. a roll of 7 on the Injury Chart becomes 8). A model armed with a Golden Khanjar can make two Attacks instead of one in melee per Melee Attack ACTION. This effect also applies to a Golden Khanjar wielded off-hand. Thus a model armed with Khanjar and additional 1-handed melee weapon can make a total of three Melee attacks during a single Activation."
+      },
+      "Melee Weapon§Greatsword/axe—10 Ducats": {
+        "aspects": {
+          "Label": "GreatSword/Axe"
+        },
         "assets": {
           "traits": [
             "Ability§Heavy",
@@ -4533,7 +4612,7 @@
         },
         "keywords": {
           "Tags": [
-            "Alba Assault"
+            "Kingdom of Alba Assault Detachment"
           ]
         },
         "stats": {
@@ -4544,113 +4623,27 @@
             "value": "+1D to Injury"
           },
           "Type": {
-            "value": "Melee"
+            "value": "2-Handed"
           }
         }
       },
-      "Melee Weapon§Coin Hammer": {
-        "assets": {
-          "traits": [
-            "Ability§Heavy"
-          ]
+      "Melee Weapon§Greatsword/axe—15 Ducats": {
+        "aspects": {
+          "Label": "GreatSword/Axe"
         },
-        "stats": {
-          "Ducats": {
-            "value": 25
-          },
-          "Modifiers": {
-            "value": "+2d to Injury, +1 Blessing on injure vs enemy"
-          },
-          "Type": {
-            "value": "Melee"
-          }
-        }
-      },
-      "Melee Weapon§Flail/Scourge": {
-        "stats": {
-          "Ducats": {
-            "value": 5
-          },
-          "Modifiers": {
-            "value": "+1D to hit"
-          },
-          "Type": {
-            "value": "Melee"
-          }
-        }
-      },
-      "Melee Weapon§Gavel of Justice": {
-        "keywords": {
-          "Tags": [
-            "Witchburner"
-          ]
-        },
-        "stats": {
-          "Ducats": {
-            "value": 0
-          },
-          "Modifiers": {
-            "value": "Divine Judgement"
-          },
-          "Type": {
-            "value": "Melee"
-          }
-        }
-      },
-      "Melee Weapon§Golden Khanjar": {
-        "assets": {
-          "traits": [
-            "Ability§2 Attacks"
-          ]
-        },
-        "stats": {
-          "Ducats": {
-            "value": 20
-          },
-          "Modifiers": {
-            "value": "+1 to Injury"
-          },
-          "Type": {
-            "value": "Melee"
-          }
-        }
-      },
-      "Melee Weapon§Great Hammer": {
-        "stats": {
-          "Ducats": {
-            "value": 12
-          },
-          "Modifiers": {
-            "value": null
-          },
-          "Type": {
-            "value": "Melee"
-          }
-        }
-      },
-      "Melee Weapon§Great Maul": {
-        "assets": {
-          "traits": [
-            "Ability§Heavy"
-          ]
-        },
-        "stats": {
-          "Ducats": {
-            "value": 12
-          },
-          "Modifiers": {
-            "value": "+1 to Injury"
-          },
-          "Type": {
-            "value": "Melee"
-          }
-        }
-      },
-      "Melee Weapon§Great Sword/Axe": {
         "assets": {
           "traits": [
             "Ability§Heavy",
             "Ability§Critical"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
           ]
         },
         "stats": {
@@ -4661,11 +4654,14 @@
             "value": "+1D to Injury"
           },
           "Type": {
-            "value": "Melee"
+            "value": "2-Handed"
           }
         }
       },
-      "Melee Weapon§Halberd-Gun": {
+      "Melee Weapon§Halberd-gun—20 Ducats": {
+        "aspects": {
+          "Label": "Halberd-Gun"
+        },
         "assets": {
           "traits": [
             "Ability§Assault"
@@ -4673,134 +4669,171 @@
         },
         "keywords": {
           "Tags": [
-            "Elite"
+            "Iron Sultanate"
           ]
         },
         "stats": {
           "Ducats": {
             "value": 20
           },
-          "Modifiers": {
+          "Range": {
             "value": null
           },
-          "Range": {
-            "value": "Melee/\"24"
-          },
           "Type": {
-            "value": "Melee"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "Enemies charging a model equipped with a Halberd-gun add -1 DICE in Melee combat when rolling to hit. This only applies when a model attacks after a charge, not on subsequent rounds of Melee."
       },
-      "Melee Weapon§Hellblade": {
+      "Melee Weapon§Hellblade—2 Glory": {
+        "aspects": {
+          "Label": "Hellblade"
+        },
         "assets": {
           "traits": [
             "Ability§Fire"
           ]
         },
-        "stats": {
-          "Ducats": {
-            "value": 0
-          },
-          "Modifiers": {
-            "value": "+1D Injuries"
-          },
-          "Type": {
-            "value": "Melee"
-          }
-        }
-      },
-      "Melee Weapon§Infected Proboscis": {
         "keywords": {
           "Tags": [
-            "Herald of Beelzebub"
+            "Heretic Legion"
           ]
         },
         "stats": {
-          "Ducats": {
-            "value": 0
+          "Glory": {
+            "value": 2
           },
           "Modifiers": {
-            "value": "When causing a Blood Marker on enemy, remove one from self"
+            "value": "+1D to Injury"
           },
           "Type": {
-            "value": "Melee"
+            "value": "2-Handed"
           }
         }
       },
-      "Melee Weapon§Lochaber": {
+      "Melee Weapon§Kilij—2 Glory": {
+        "aspects": {
+          "Label": "Kilij"
+        },
         "assets": {
           "traits": [
-            "Ability§Heavy",
             "Ability§Critical"
           ]
         },
         "keywords": {
           "Tags": [
-            "Alba Assault"
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 2
+          },
+          "Modifiers": {
+            "value": "+1 on Injury Results"
+          },
+          "Type": {
+            "value": "1-Handed"
+          }
+        }
+      },
+      "Melee Weapon§Knife/dagger—1 Ducats": {
+        "aspects": {
+          "Label": "Knife/Dagger"
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
           ]
         },
         "stats": {
           "Ducats": {
-            "value": 18
+            "value": 1
           },
           "Modifiers": {
-            "value": "+1 to Injury, -1D for chargers"
+            "value": "-1D to Hit"
           },
           "Type": {
-            "value": "Melee"
+            "value": "1-Handed"
           }
         }
       },
-      "Melee Weapon§Misericordia": {
+      "Melee Weapon§Misericordia—15 Ducats": {
+        "aspects": {
+          "Label": "Misericordia"
+        },
+        "keywords": {
+          "Tags": [
+            "Trench Pilgrim"
+          ]
+        },
         "stats": {
           "Ducats": {
             "value": 15
           },
           "Modifiers": {
-            "value": "Ignores downed armour"
+            "value": "Ignore Armour"
           },
           "Type": {
-            "value": "Melee"
+            "value": "1-Handed"
           }
-        }
+        },
+        "text": "Ignores the armour of opponents that are Down."
       },
-      "Melee Weapon§Plague Blade": {
-        "assets": {
-          "traits": [
-            "Ability§Infect"
-          ]
+      "Melee Weapon§Plague Blade—25 Ducats": {
+        "aspects": {
+          "Label": "Plague Blade"
         },
         "keywords": {
           "Tags": [
-            "Elite"
+            "The Cult of the Black Grail",
+            "Dirge of the Great Hegemon"
           ]
         },
         "stats": {
           "Ducats": {
             "value": 25
           },
-          "Modifiers": {
-            "value": null
-          },
           "Type": {
-            "value": "Melee"
+            "value": "1-Handed"
           }
-        }
+        },
+        "text": "Whenever a model suffers a BLOOD MARKER as a result of an injury caused by a hit from a Plague Blade, they will gain an INFECTION MARKER instead."
       },
-      "Melee Weapon§Polearm": {
+      "Melee Weapon§Polearm—7 Ducats": {
+        "aspects": {
+          "Label": "Polearm"
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
+          ]
+        },
         "stats": {
           "Ducats": {
             "value": 7
           },
           "Modifiers": {
-            "value": "-1D to hit for Charges"
+            "value": "-1D to Hit for Chargers"
           },
           "Type": {
-            "value": "Melee"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "Polearms take two hands to use and the model armed with it cannot use any shield. Models equipped with a Trench Polearm give any charging opponent -1 DICE in Melee combat when rolling to hit. This only applies when a charging model attacks, not on subsequent rounds of Melee."
       },
-      "Melee Weapon§Sacrificial Blade": {
+      "Melee Weapon§Sacrificial Knife—23 Ducats": {
+        "aspects": {
+          "Label": "Sacrificial Knife"
+        },
         "assets": {
           "traits": [
             "Ability§Risky"
@@ -4808,7 +4841,7 @@
         },
         "keywords": {
           "Tags": [
-            "Elite"
+            "Heretic Legion"
           ]
         },
         "stats": {
@@ -4816,122 +4849,73 @@
             "value": 23
           },
           "Modifiers": {
-            "value": "+2 to injury"
+            "value": "+2 on Injury Results"
           },
           "Type": {
-            "value": "Melee"
+            "value": "1-Handed"
           }
-        }
+        },
+        "text": "The Sacrificial Knife adds +2 to all rolls on the Injury Chart. For example, a roll of 7 on the Injury Chart becomes 9 when using the Sacrificial Knife."
       },
-      "Melee Weapon§Sword/Axe": {
+      "Melee Weapon§Sword/axe—4 Ducats": {
+        "aspects": {
+          "Label": "Sword/Axe"
+        },
         "assets": {
           "traits": [
             "Ability§Critical"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
           ]
         },
         "stats": {
           "Ducats": {
             "value": 4
           },
-          "Modifiers": {
-            "value": null
-          },
           "Type": {
-            "value": "Melee"
+            "value": "1-Handed"
           }
         }
       },
-      "Melee Weapon§Tartarus Claws": {
+      "Melee Weapon§Tartarus Claws—25 Ducats": {
+        "aspects": {
+          "Label": "Tartarus Claws"
+        },
         "keywords": {
           "Tags": [
-            "Death commando"
+            "Heretic Legion"
           ]
         },
         "stats": {
           "Ducats": {
             "value": 25
           },
-          "Modifiers": {
-            "value": "2 attacks, Follow-up 3\""
-          },
           "Type": {
-            "value": "Melee"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "Tartarus Claws always come as a pair and do not allow the use of any other melee weapons. You can make two Attack ACTIONS with the Claws without the usual -1 DICE for the second attack. If the opponent is taken Down or Out of Action with the Claws you may immediately move the model up to 3″. If the move takes you into contact with another enemy model, this counts as a charge and you can make a second Melee Attack ACTION with the claws. You can only do this follow-up move once per Activation."
       },
-      "Melee Weapon§Titan Zulfiqar": {
+      "Melee Weapon§Tenderizer Maul—0 Ducats": {
+        "aspects": {
+          "Label": "Tenderizer Maul"
+        },
         "assets": {
           "traits": [
-            "Ability§Heavy",
-            "Ability§Critical"
+            "Ability§Heavy"
           ]
         },
         "keywords": {
           "Tags": [
-            "Brazen Bull"
-          ]
-        },
-        "stats": {
-          "Ducats": {
-            "value": 35
-          },
-          "Modifiers": {
-            "value": "+2 to Injury"
-          },
-          "Type": {
-            "value": "Melee"
-          }
-        }
-      },
-      "Melee Weapon§Trench Club": {
-        "stats": {
-          "Ducats": {
-            "value": 3
-          },
-          "Modifiers": {
-            "value": null
-          },
-          "Type": {
-            "value": "Melee"
-          }
-        }
-      },
-      "Melee Weapon§Trench Knife": {
-        "stats": {
-          "Ducats": {
-            "value": 1
-          },
-          "Modifiers": {
-            "value": "-1D to hit"
-          },
-          "Type": {
-            "value": "Melee"
-          }
-        }
-      },
-      "Melee Weapon§Unarmed": {
-        "stats": {
-          "Ducats": {
-            "value": null
-          },
-          "Modifiers": {
-            "value": "-1D to Hit/Injury"
-          },
-          "Type": {
-            "value": "Special"
-          }
-        }
-      },
-      "Ranged Weapon§Anti-Materiel Rifle": {
-        "assets": {
-          "traits": [
-            "Ability§Heavy",
-            "Ability§Critical"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Any"
+            "Heretic Legion",
+            "The Cult of the Black Grail"
           ]
         },
         "stats": {
@@ -4939,95 +4923,339 @@
             "value": 0
           },
           "Modifiers": {
-            "value": "+1D to Injury, Ignores armour"
-          },
-          "Range": {
-            "value": 36
+            "value": "+1D to Injury"
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "Its huge reach means that the Sin Eater may make one Melee Attack ACTION against each enemy model it is fighting in Melee."
       },
-      "Ranged Weapon§Automatic Pistol": {
+      "Melee Weapon§Titan Zulfiqar—35 Ducats": {
+        "aspects": {
+          "Label": "Titan Zulfiqar"
+        },
         "assets": {
           "traits": [
-            "Ability§Assault"
+            "Ability§Heavy",
+            "Ability§Critical"
           ]
         },
         "keywords": {
           "Tags": [
-            "Elite"
+            "Iron Sultanate"
           ]
         },
         "stats": {
           "Ducats": {
-            "value": 20
+            "value": 35
           },
           "Modifiers": {
-            "value": "-1D to Injury, 2 attacks"
-          },
-          "Range": {
-            "value": null
+            "value": "+2 on Injury Results"
           },
           "Type": {
-            "value": "Range"
+            "value": "1-Handed"
           }
-        }
+        },
+        "text": "Add +2 to the result of all injuries caused by this weapon (i.e. a roll of 7 on the Injury Chart becomes 9)."
       },
-      "Ranged Weapon§Automatic Rifle": {
-        "assets": {
-          "traits": [
-            "Ability§Assault"
-          ]
+      "Melee Weapon§Trench Club—3 Ducats": {
+        "aspects": {
+          "Label": "Trench Club"
         },
         "keywords": {
           "Tags": [
-            "Any"
-          ]
-        },
-        "stats": {
-          "Modifiers": {
-            "value": "2 attacks"
-          },
-          "Range": {
-            "value": 24
-          },
-          "Type": {
-            "value": "Range"
-          }
-        }
-      },
-      "Ranged Weapon§Automatic Shotgun": {
-        "assets": {
-          "traits": [
-            "Ability§Assault"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Any"
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
           ]
         },
         "stats": {
           "Ducats": {
-            "value": 20
+            "value": 3
+          },
+          "Type": {
+            "value": "1-Handed"
+          }
+        }
+      },
+      "Melee Weapon§Two-handed Hammer—12 Ducats": {
+        "aspects": {
+          "Label": "Two-Handed Hammer"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Heavy"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 12
           },
           "Modifiers": {
-            "value": "+1D to Hit, -1D to Injury long range"
+            "value": "+1D to Injury"
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        }
+      },
+      "Melee Weapon§War Gavel—0 Ducats": {
+        "aspects": {
+          "Label": "War Gavel"
+        },
+        "keywords": {
+          "Tags": [
+            "Trench Pilgrim",
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 0
+          },
+          "Type": {
+            "value": "1-Handed"
+          }
+        },
+        "text": "If the Witchburner hits an enemy with the Gavel of Justice, the target of the attack automatically sustains Divine Judgement as explained in the Witchburner’s Abilities, even if the attack did no damage otherwise. Thus the Witchburner can potentially cause two Divine Judgements in a single Activation, targeting either the same model or two separate ones."
+      },
+      "Ranged Weapon§Alaybozan—10 Ducats": {
+        "aspects": {
+          "Label": "Alaybozan"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Shrapnel"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 10
           },
           "Range": {
             "value": 12
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
+          }
+        },
+        "text": "You can buy Alchemical Ammunition for Alaybozan."
+      },
+      "Ranged Weapon§Anti-material Rifle—3 Glory": {
+        "aspects": {
+          "Label": "Anti-Material Rifle"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Heavy",
+            "Ability§Critical"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Rifle",
+            "Heretic Legion"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 3
+          },
+          "Modifiers": {
+            "value": "+1D to Injury"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        },
+        "text": "Ignores armour. Add +1 DICE when rolling on the Injury Chart."
+      },
+      "Ranged Weapon§Automatic Pistol—20 Ducats": {
+        "aspects": {
+          "Label": "Automatic Pistol"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Off-hand"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Pistol",
+            "Trench Pilgrim",
+            "The Principality of New Antioch",
+            "Stoßtruppen of the Free State of Prussia"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          },
+          "Modifiers": {
+            "value": "-1D to Injury"
+          },
+          "Range": {
+            "value": null
+          },
+          "Type": {
+            "value": "1-Handed"
           }
         }
       },
-      "Ranged Weapon§Bolt Action Rifle": {
+      "Ranged Weapon§Automatic Rifle—3 Glory": {
+        "aspects": {
+          "Label": "Automatic Rifle"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "Rifle",
+            "Heretic Legion"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 3
+          },
+          "Range": {
+            "value": 24
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        },
+        "text": "A model armed with an Automatic Rifle can make two attack ACTIONS instead of one. Both attacks must be against the same target."
+      },
+      "Ranged Weapon§Automatic Rifle—40 Ducats": {
+        "aspects": {
+          "Label": "Automatic Rifle"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Rifle",
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 40
+          },
+          "Range": {
+            "value": 24
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        },
+        "text": "A model armed with an Automatic Rifle can make two attack ACTIONS instead of one. Both attacks must be against the same target."
+      },
+      "Ranged Weapon§Automatic Shotgun—20 Ducats": {
+        "aspects": {
+          "Label": "Automatic Shotgun"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Heretic Legion",
+            "The Principality of New Antioch",
+            "Stoßtruppen of the Free State of Prussia",
+            "Kingdom of Alba Assault Detachment"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          },
+          "Modifiers": {
+            "value": "+1D to Hit"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        },
+        "text": "Owing to its high accuracy, add +1 DICE to all rolls to hit. However, injuries are rolled with -1 DICE at long range due to its low penetration power.  Counts as a 1-Handed weapon when wielded with a shield."
+      },
+      "Ranged Weapon§Blunderbuss—10 Ducats": {
+        "aspects": {
+          "Label": "Blunderbuss"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Shrapnel"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Dirge of the Great Hegemon"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 10
+          },
+          "Range": {
+            "value": 10
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        },
+        "text": "Counts as a 1-Handed weapon when used alongside a shield."
+      },
+      "Ranged Weapon§Bolt Action Rifle—10 Ducats": {
+        "aspects": {
+          "Label": "Bolt Action Rifle"
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Rifle",
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
           ]
         },
         "stats": {
@@ -5038,11 +5266,14 @@
             "value": 24
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
         }
       },
-      "Ranged Weapon§Bow of Alamut": {
+      "Ranged Weapon§Bow of Alumat—50 Ducats": {
+        "aspects": {
+          "Label": "Bow of Alumat"
+        },
         "assets": {
           "traits": [
             "Ability§Critical"
@@ -5050,7 +5281,8 @@
         },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "Fida’i of Alamut—The Cabal of Assassins"
           ]
         },
         "stats": {
@@ -5058,17 +5290,21 @@
             "value": 50
           },
           "Modifiers": {
-            "value": "Ignore armour"
+            "value": "Ignore Armour"
           },
           "Range": {
             "value": 60
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "Ignores Armour. If the Assassin hits a model and causes at least one BLOOD MARKER, the Assassin can instantly move into Melee range with the target as if the Assassin just charged the model, and can therefore use Melee ACTIONS as if they charged the enemy. Note that if the bow takes the target Out of Action, no BLOOD MARKERS are caused and the move cannot be made. Temporal Assassin ability cannot be used with the Bow of Alamut."
       },
-      "Ranged Weapon§Corruption Belcher": {
+      "Ranged Weapon§Corruption Belcher—40 Ducats": {
+        "aspects": {
+          "Label": "Corruption Belcher"
+        },
         "assets": {
           "traits": [
             "Ability§Gas"
@@ -5076,7 +5312,8 @@
         },
         "keywords": {
           "Tags": [
-            "Elite"
+            "Non-pistol",
+            "The Cult of the Black Grail"
           ]
         },
         "stats": {
@@ -5084,17 +5321,21 @@
             "value": 40
           },
           "Modifiers": {
-            "value": "-1D injury, ignore armour"
+            "value": "-1D to Injury"
           },
           "Range": {
             "value": 8
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "A Corruption Belcher hits one model within range automatically with its ranged attack ACTION. It ignores Armour. Injuries caused by a Corruption Belcher are rolled with an additional -1 DICE. It also has the Keyword GAS, so it inflicts an additional +1 BLOOD MARKER on enemies it hits."
       },
-      "Ranged Weapon§Flame Cannon": {
+      "Ranged Weapon§Flame Cannon—65 Ducats": {
+        "aspects": {
+          "Label": "Flame Cannon"
+        },
         "assets": {
           "traits": [
             "Ability§Heavy",
@@ -5103,7 +5344,8 @@
         },
         "keywords": {
           "Tags": [
-            "Brazen bull"
+            "Non-pistol",
+            "Iron Sultanate"
           ]
         },
         "stats": {
@@ -5114,11 +5356,15 @@
             "value": 12
           },
           "Type": {
-            "value": "Range"
+            "value": "1-Handed"
           }
-        }
+        },
+        "text": "When this weapon is fired, draw an imaginary straight line 1mm wide and 12″ long from the Brazen Bull. Every model along the path of the line is hit automatically by this attack—roll for their injuries intermediately. Armour does not protect against the Flame Cannon. Due to the Keyword FIRE, its hits cause an additional +1 BLOOD MARKER. This is applied after rolling for injuries."
       },
-      "Ranged Weapon§Flamethrower": {
+      "Ranged Weapon§Flamethrower—30 Ducats": {
+        "aspects": {
+          "Label": "Flamethrower"
+        },
         "assets": {
           "traits": [
             "Ability§Fire"
@@ -5126,25 +5372,33 @@
         },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch"
           ]
         },
         "stats": {
           "Ducats": {
-            "value": 40
+            "value": 30
           },
           "Modifiers": {
-            "value": "-1D Injuries, Ignores armour"
+            "value": "-1D Injuries"
           },
           "Range": {
             "value": 8
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "A Flamethrower hits one model within range automatically with its attack ACTION, ignoring armour. Injuries caused by a Flamethrower are rolled with an additional -1 DICE. It also has the Keyword FIRE, so it causes an additional +1 BLOOD MARKER on enemies it hits."
       },
-      "Ranged Weapon§Gas Grenades": {
+      "Ranged Weapon§Gas Grenades—10 Ducats": {
+        "aspects": {
+          "Label": "Gas Grenades"
+        },
         "assets": {
           "traits": [
             "Ability§Assault",
@@ -5153,7 +5407,9 @@
         },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "Heretic Legion",
+            "The Cult of the Black Grail"
           ]
         },
         "stats": {
@@ -5161,7 +5417,7 @@
             "value": 10
           },
           "Modifiers": {
-            "value": "Blast 3\", -1D to Injury"
+            "value": "-1D to Injury"
           },
           "Range": {
             "value": 8
@@ -5169,36 +5425,78 @@
           "Type": {
             "value": "Grenade"
           }
-        }
+        },
+        "text": "Gas Grenades ignore all penalties for cover and armour but roll injuries with -1 DICE. Gas Grenades hit all models within 3″ of a target they hit."
       },
-      "Ranged Weapon§Grenade Launcher": {
+      "Ranged Weapon§Grenade Launcher—40 Ducats": {
+        "aspects": {
+          "Label": "Grenade Launcher"
+        },
         "assets": {
           "traits": [
-            "Ability§Heavy",
-            "Ability§Shrapnel"
+            "Ability§Shrapnel",
+            "Ability§Heavy"
           ]
         },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "The Principality of New Antioch",
+            "Kingdom of Alba Assault Detachment"
           ]
         },
         "stats": {
           "Ducats": {
-            "value": null
+            "value": 40
           },
           "Modifiers": {
-            "value": "Blast 3\", Ignores cover"
+            "value": "Ignore Cover"
           },
           "Range": {
             "value": 36
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "Ignores all penalties for cover. This weapon has a blast radius of 3″—all models within this range are hit."
       },
-      "Ranged Weapon§Grenades": {
+      "Ranged Weapon§Grenade Launcher—50 Ducats": {
+        "aspects": {
+          "Label": "Grenade Launcher"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Shrapnel",
+            "Ability§Heavy"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Heretic Legion"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 50
+          },
+          "Modifiers": {
+            "value": "Ignore Cover"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        },
+        "text": "Ignores all penalties for cover. This weapon has a blast radius of 3″—all models within this range are hit."
+      },
+      "Ranged Weapon§Grenades—5 Ducats": {
+        "aspects": {
+          "Label": "Grenades"
+        },
         "assets": {
           "traits": [
             "Ability§Assault",
@@ -5207,25 +5505,29 @@
         },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "Heretic Legion",
+            "Iron Sultanate",
+            "The Principality of New Antioch"
           ]
         },
         "stats": {
           "Ducats": {
             "value": 5
           },
-          "Modifiers": {
-            "value": "Blast 2\""
-          },
           "Range": {
             "value": 8
           },
           "Type": {
             "value": "Grenade"
           }
-        }
+        },
+        "text": "Grenades have a blast radius of 2″—all models within this blast radius are hit."
       },
-      "Ranged Weapon§Heavy Flamethrower": {
+      "Ranged Weapon§Heavy Flamethrower—55 Ducats": {
+        "aspects": {
+          "Label": "Heavy Flamethrower"
+        },
         "assets": {
           "traits": [
             "Ability§Heavy",
@@ -5234,25 +5536,57 @@
         },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "Heretic Legion",
+            "The Principality of New Antioch"
           ]
         },
         "stats": {
           "Ducats": {
             "value": 55
           },
-          "Modifiers": {
-            "value": "Ignores armour"
-          },
           "Range": {
             "value": 10
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "Hits up to two models within range automatically with an Attack Action as long as they are within 6″ of each other. Ignores armour. It also has the Keyword FIRE, so it causes an additional +1 BLOOD MARKER on enemies it hits, even if no other damage is caused."
       },
-      "Ranged Weapon§Incendiary Grenades": {
+      "Ranged Weapon§Holy Grenade—2 Glory": {
+        "aspects": {
+          "Label": "Holy Grenade"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Shrapnel",
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Trench Pilgrim"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 2
+          },
+          "Range": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Grenade"
+          }
+        },
+        "text": "Holy Grenades have a blast radius of 2″ -all model within 2″ the target are hit but other models than the original target roll Injuries with -1 DICE. Adds +1 DICE to Injury rolls against targets with the Keyword BLACK GRAIL or DEMONIC."
+      },
+      "Ranged Weapon§Incendiary Grenades—10 Ducats": {
+        "aspects": {
+          "Label": "Incendiary Grenades"
+        },
         "assets": {
           "traits": [
             "Ability§Assault",
@@ -5261,15 +5595,15 @@
         },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "The Principality of New Antioch"
           ]
         },
         "stats": {
           "Ducats": {
             "value": 10
-          },
-          "Modifiers": {
-            "value": "Ignores cover"
           },
           "Range": {
             "value": 8
@@ -5277,33 +5611,41 @@
           "Type": {
             "value": "Grenade"
           }
-        }
+        },
+        "text": "Incendiary Grenades ignore all penalties for terrain/cover."
       },
-      "Ranged Weapon§Infested Rifle": {
+      "Ranged Weapon§Infested Rifle—15 Ducats": {
+        "aspects": {
+          "Label": "Infested Rifle"
+        },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "Rifle",
+            "The Cult of the Black Grail"
           ]
         },
         "stats": {
           "Ducats": {
             "value": 15
           },
-          "Modifiers": {
-            "value": "Reduces 1 armour"
-          },
           "Range": {
             "value": 12
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "When resolving hits from an Infested Rifle, the modifier to injury rolls offered by a model’s armour is reduced by 1. Thus Heavy armour would only offer a -1 modifier to injury rolls, Standard Armour would offer no modifier and so on."
       },
-      "Ranged Weapon§Jezzail": {
+      "Ranged Weapon§Jezzail—7 Ducats": {
+        "aspects": {
+          "Label": "Jezzail"
+        },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "Iron Sultanate"
           ]
         },
         "stats": {
@@ -5314,11 +5656,40 @@
             "value": 18
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
         }
       },
-      "Ranged Weapon§Machine Gun": {
+      "Ranged Weapon§Locust Spitter—6 Glory": {
+        "aspects": {
+          "Label": "Locust Spitter"
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 6
+          },
+          "Modifiers": {
+            "value": "-1D to Injury"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        },
+        "text": "If you successfully hit a target with the Locust Spitter, the mindless hunger of the Lord of Flies compels the swarm to continue devouring. Subtract the distance of the target from your maximum range, and then target the closest non-BLACK GRAIL model, friend or foe, that is wholly within the remaining distance. That target is also hit, and you may repeat this process until there are no targets still in range. Each model may only be  hit by the Locust Spitter once."
+      },
+      "Ranged Weapon§Machine Gun—3 Glory": {
+        "aspects": {
+          "Label": "Machine Gun"
+        },
         "assets": {
           "traits": [
             "Ability§Heavy"
@@ -5326,34 +5697,106 @@
         },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "Trench Pilgrim"
           ]
         },
         "stats": {
-          "Ducats": {
-            "value": null
+          "Glory": {
+            "value": 3
           },
           "Modifiers": {
-            "value": "3 attacks"
+            "value": "3 Attacks"
           },
           "Range": {
             "value": 36
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "Machine Guns can make three Attack Actions instead of one. They can target separate models with each attack, as long as all targets are within 6″ of each other. After taking all three attacks the Activation of the model is over regardless of any remaining ACTIONS the model might have."
       },
-      "Ranged Weapon§Molotov Cocktail": {
+      "Ranged Weapon§Machine Gun—60 Ducats": {
+        "aspects": {
+          "Label": "Machine Gun"
+        },
         "assets": {
           "traits": [
-            "Ability§Assault",
-            "Ability§Fire"
+            "Ability§Heavy"
           ]
         },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "Heretic Legion",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "Stoßtruppen of the Free State of Prussia",
+            "Kingdom of Alba Assault Detachment"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 60
+          },
+          "Modifiers": {
+            "value": "3 Attacks"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        },
+        "text": "Machine Guns can make three Attack Actions instead of one. They can target separate models with each attack, as long as all targets are within 6″ of each other. After taking all three attacks the Activation of the model is over regardless of any remaining ACTIONS the model might have."
+      },
+      "Ranged Weapon§Masterwork Jezzail—4 Glory": {
+        "aspects": {
+          "Label": "Masterwork Jezzail"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Critical"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 4
+          },
+          "Modifiers": {
+            "value": "+1D to Hit"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        },
+        "text": "You can shoot at opponents in melee without having to randomise between friendly and enemy models. Masterwork Jezzail is loaded with Alchemical Ammunition, so it has +1 DICE on all to hit rolls. If you roll greater than required 7 on Action Success Chart to hit, you can also hit another enemy model with it in distance equal to the number you beat the 7 by. Roll Injuries separately for both models."
+      },
+      "Ranged Weapon§Molotov Cocktail—5 Ducats": {
+        "aspects": {
+          "Label": "Molotov Cocktail"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Fire",
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Trench Pilgrim"
           ]
         },
         "stats": {
@@ -5361,7 +5804,7 @@
             "value": 5
           },
           "Modifiers": {
-            "value": "-1D to Injury, Ignores cover"
+            "value": "-1D to Injury"
           },
           "Range": {
             "value": 6
@@ -5369,9 +5812,13 @@
           "Type": {
             "value": "Grenade"
           }
-        }
+        },
+        "text": "-1 DICE on injury rolls. Molotov Cocktails ignore all penalties for terrain/cover, as well as ignoring all armour on a Critical Attack roll."
       },
-      "Ranged Weapon§MURAD Bombard": {
+      "Ranged Weapon§Murad Bombard—50 Ducats": {
+        "aspects": {
+          "Label": "MURAD Bombard"
+        },
         "assets": {
           "traits": [
             "Ability§Heavy"
@@ -5379,7 +5826,8 @@
         },
         "keywords": {
           "Tags": [
-            "Brazen bull"
+            "Non-pistol",
+            "Iron Sultanate"
           ]
         },
         "stats": {
@@ -5390,19 +5838,20 @@
             "value": 36
           },
           "Type": {
-            "value": "Range"
+            "value": "1-Handed"
           }
-        }
+        },
+        "text": "Choose a point on the battlefield that is visible to the model and within 36″ and make a Ranged Attack ACTION. If the roll is unsuccessful, the bomb is off-target and will deviate 1″ from your nominated target point for each degree of failure of the Ranged Attack ACTION in a direction determined by your opponent (for example, if you rolled 5, the bomb lands 2″ away, as 7-5=2). The direction is decided by your opponent. Once the landing site of the bomb has been determined, it will detonate. If the bomb lands directly on top of any model, roll with 3D6 on the Injury Chart and add the dice together to see what happens! Other models in 3″ hit by the Bomb suffer a Down result due the booming shockwave and take BLOOD MARKERS, but do not suffer any other effects from this attack."
       },
-      "Ranged Weapon§Musket": {
-        "assets": {
-          "traits": [
-            "Ability§Risky"
-          ]
+      "Ranged Weapon§Musket—5 Ducats": {
+        "aspects": {
+          "Label": "Musket"
         },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "Trench Pilgrim",
+            "The Cult of the Black Grail"
           ]
         },
         "stats": {
@@ -5416,11 +5865,39 @@
             "value": 18
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
         }
       },
-      "Ranged Weapon§Parasite Grenades": {
+      "Ranged Weapon§Musket—6 Ducats": {
+        "aspects": {
+          "Label": "Musket"
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 6
+          },
+          "Modifiers": {
+            "value": "-1D to Injury"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        }
+      },
+      "Ranged Weapon§Parasite Grenade—15 Ducats": {
+        "aspects": {
+          "Label": "Parasite Grenade"
+        },
         "assets": {
           "traits": [
             "Ability§Assault"
@@ -5428,15 +5905,13 @@
         },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "The Cult of the Black Grail"
           ]
         },
         "stats": {
           "Ducats": {
             "value": 15
-          },
-          "Modifiers": {
-            "value": "Blast 2\""
           },
           "Range": {
             "value": 8
@@ -5444,12 +5919,26 @@
           "Type": {
             "value": "Grenade"
           }
-        }
+        },
+        "text": "If a Parasite Grenade hits a model, the Black Grail player can move this model up 3″ into any direction they wish. This can be used to move the model out of cover, to fall from a high position, or even into Melee with their enemies. This additional effect does not work on models with the Keyword FEAR."
       },
-      "Ranged Weapon§Pistol": {
+      "Ranged Weapon§Pistol—10 Ducats": {
+        "aspects": {
+          "Label": "Pistol"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Off-hand"
+          ]
+        },
         "keywords": {
           "Tags": [
-            "Any"
+            "Pistol",
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "The Cult of the Black Grail"
           ]
         },
         "stats": {
@@ -5460,65 +5949,15 @@
             "value": null
           },
           "Type": {
-            "value": "Range"
+            "value": "1-Handed"
           }
-        }
+        },
+        "text": "The pistol can use Ranged or Melee characteristic in Melee combat (choose highest)."
       },
-      "Ranged Weapon§Putrid Shotgun": {
-        "assets": {
-          "traits": [
-            "Ability§Assault",
-            "Ability§Infect"
-          ]
+      "Ranged Weapon§Putrid Shotgun—20 Ducats": {
+        "aspects": {
+          "Label": "Putrid Shotgun"
         },
-        "keywords": {
-          "Tags": [
-            "Any"
-          ]
-        },
-        "stats": {
-          "Ducats": {
-            "value": 35
-          },
-          "Modifiers": {
-            "value": "+1D to hit, -1D Injury"
-          },
-          "Range": {
-            "value": 12
-          },
-          "Type": {
-            "value": "Range"
-          }
-        }
-      },
-      "Ranged Weapon§Satchel Charge": {
-        "assets": {
-          "traits": [
-            "Ability§Heavy",
-            "Ability§Consumable"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Any"
-          ]
-        },
-        "stats": {
-          "Ducats": {
-            "value": 15
-          },
-          "Modifiers": {
-            "value": "+1D to Injury, Blast 3\""
-          },
-          "Range": {
-            "value": 6
-          },
-          "Type": {
-            "value": "Grenade"
-          }
-        }
-      },
-      "Ranged Weapon§Semi-automatic Rifle": {
         "assets": {
           "traits": [
             "Ability§Assault"
@@ -5526,7 +5965,163 @@
         },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "The Cult of the Black Grail"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 20
+          },
+          "Range": {
+            "value": 12
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        },
+        "text": "When you hit an opponent with the Putrid Shotgun, whenever an injury roll caused by the Putrid Shotgun would indicate the enemy suffering a BLOOD MARKER, they gain an INFECTION MARKER instead. Due to its high accuracy,  add +1 DICE to all rolls to hit and ignores penalties for long range. However, Injuries are rolled with -1 DICE at long range due the low penetration power.  Counts as a 1-Handed weapon when wielded with a shield."
+      },
+      "Ranged Weapon§Putrid Shotgun—35 Ducats": {
+        "aspects": {
+          "Label": "Putrid Shotgun"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Dirge of the Great Hegemon"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 35
+          },
+          "Range": {
+            "value": 12
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        },
+        "text": "When you hit an opponent with the Putrid Shotgun, whenever an injury roll caused by the Putrid Shotgun would indicate the enemy suffering a BLOOD MARKER, they gain an INFECTION MARKER instead. Due to its high accuracy,  add +1 DICE to all rolls to hit and ignores penalties for long range. However, Injuries are rolled with -1 DICE at long range due the low penetration power.  Counts as a 1-Handed weapon when wielded with a shield."
+      },
+      "Ranged Weapon§Rocket Propelled Grenade—2 Glory": {
+        "aspects": {
+          "Label": "Rocket Propelled Grenade"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Consumable"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 2
+          },
+          "Modifiers": {
+            "value": "+1D to Injury"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        },
+        "text": "Add +1 DICE to all Injury rolls to hit and ignore armour. If an RPG hits a target but does not take it out of action, the target is pushed back by 1D3″ directly away from the shooter. If they hit another model or a solid object, they stop. A model may carry a single RPG and any one other Ranged Weapon with them."
+      },
+      "Ranged Weapon§Satchel Charge—15 Ducats": {
+        "aspects": {
+          "Label": "Satchel Charge"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Consumable",
+            "Ability§Heavy"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "The Principality of New Antioch"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 15
+          },
+          "Modifiers": {
+            "value": "+1D to Injury"
+          },
+          "Range": {
+            "value": 6
+          },
+          "Type": {
+            "value": "Grenade"
+          }
+        },
+        "text": "You can aim the Satchel Charge at any point on the ground as well as against an enemy model within range. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less), the bomb lands 1″ away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the satchel charge lands 2″ away, as 7-5=2). The direction is decided by your opponent. The Satchel Charge adds +1 DICE to injury rolls and has a blast radius of 3″ hitting all models within this range."
+      },
+      "Ranged Weapon§Seige Jezzail—30 Ducats": {
+        "aspects": {
+          "Label": "Seige Jezzail"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Heavy"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 30
+          },
+          "Modifiers": {
+            "value": "+1D to Injury"
+          },
+          "Range": {
+            "value": 30
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        }
+      },
+      "Ranged Weapon§Semi-automatic Rifle—20 Ducats": {
+        "aspects": {
+          "Label": "Semi-Automatic Rifle"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Rifle",
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "The Principality of New Antioch"
           ]
         },
         "stats": {
@@ -5537,14 +6132,21 @@
             "value": 24
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
         }
       },
-      "Ranged Weapon§Shotgun": {
+      "Ranged Weapon§Shotgun—15 Ducats": {
+        "aspects": {
+          "Label": "Shotgun"
+        },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "Heretic Legion",
+            "Trench Pilgrim",
+            "Iron Sultanate",
+            "The Principality of New Antioch"
           ]
         },
         "stats": {
@@ -5552,43 +6154,21 @@
             "value": 15
           },
           "Modifiers": {
-            "value": "+1D to Hit, -1D to Injury long range"
+            "value": "+1D to Hit"
           },
           "Range": {
             "value": 12
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
-        }
-      },
-      "Ranged Weapon§Siege Jezzail": {
-        "assets": {
-          "traits": [
-            "Ability§Heavy"
-          ]
         },
-        "keywords": {
-          "Tags": [
-            "Any"
-          ]
-        },
-        "stats": {
-          "Ducats": {
-            "value": 30
-          },
-          "Modifiers": {
-            "value": "+1D to injuries"
-          },
-          "Range": {
-            "value": 30
-          },
-          "Type": {
-            "value": "Range"
-          }
-        }
+        "text": "Owing to its high accuracy, add +1 DICE to all rolls to hit. However, injuries are rolled with -1 DICE at long range due to its low penetration power. Counts as a 1-Handed weapon when wielded with a shield."
       },
-      "Ranged Weapon§Silenced Pistol": {
+      "Ranged Weapon§Silenced Pistol—20 Ducats": {
+        "aspects": {
+          "Label": "Silenced Pistol"
+        },
         "assets": {
           "traits": [
             "Ability§Assault"
@@ -5596,7 +6176,8 @@
         },
         "keywords": {
           "Tags": [
-            "Elite"
+            "Pistol",
+            "Heretic Legion"
           ]
         },
         "stats": {
@@ -5604,17 +6185,21 @@
             "value": 20
           },
           "Modifiers": {
-            "value": "+1D to Hit in cover"
+            "value": "+1D to Hit in Cover"
           },
           "Range": {
             "value": null
           },
           "Type": {
-            "value": "Range"
+            "value": "1-Handed"
           }
-        }
+        },
+        "text": "A model armed with a silenced pistol can use it in melee as well as ranged combat, including as an off-hand weapon to execute an additional melee attack. Add +1 DICE to hit rolls if shot from behind any terrain obstacles."
       },
-      "Ranged Weapon§Sniper Rifle": {
+      "Ranged Weapon§Sniper Rifle—35 Ducats": {
+        "aspects": {
+          "Label": "Sniper Rifle"
+        },
         "assets": {
           "traits": [
             "Ability§Risky",
@@ -5623,7 +6208,11 @@
         },
         "keywords": {
           "Tags": [
-            "Elite"
+            "Non-pistol",
+            "Rifle",
+            "Iron Sultanate",
+            "The Principality of New Antioch",
+            "Kingdom of Alba Assault Detachment"
           ]
         },
         "stats": {
@@ -5637,11 +6226,14 @@
             "value": 48
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
         }
       },
-      "Ranged Weapon§Submachine gun": {
+      "Ranged Weapon§Submachine Gun—2 Glory": {
+        "aspects": {
+          "Label": "Submachine Gun"
+        },
         "assets": {
           "traits": [
             "Ability§Assault"
@@ -5649,25 +6241,95 @@
         },
         "keywords": {
           "Tags": [
-            "Any"
+            "Non-pistol",
+            "Heretic Legion",
+            "Trench Pilgrim"
           ]
         },
         "stats": {
-          "Ducats": {
-            "value": null
+          "Glory": {
+            "value": 2
           },
           "Modifiers": {
-            "value": "2 attacks"
+            "value": "2 Attacks"
           },
           "Range": {
             "value": 16
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "Can make two attack ACTIONS instead of one. These can be against a single target or two separate ones."
       },
-      "Ranged Weapon§Viscera Cannon": {
+      "Ranged Weapon§Submachine Gun—25 Ducats": {
+        "aspects": {
+          "Label": "Submachine Gun"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "Naval Raiding Party"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 25
+          },
+          "Modifiers": {
+            "value": "2 Attacks"
+          },
+          "Range": {
+            "value": 16
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        },
+        "text": "Can make two attack ACTIONS instead of one. These can be against a single target or two separate ones."
+      },
+      "Ranged Weapon§Submachine Gun—30 Ducats": {
+        "aspects": {
+          "Label": "Submachine Gun"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "The Principality of New Antioch",
+            "Stoßtruppen of the Free State of Prussia",
+            "Kingdom of Alba Assault Detachment"
+          ]
+        },
+        "stats": {
+          "Ducats": {
+            "value": 30
+          },
+          "Modifiers": {
+            "value": "2 Attacks"
+          },
+          "Range": {
+            "value": 16
+          },
+          "Type": {
+            "value": "2-Handed"
+          }
+        },
+        "text": "Can make two attack ACTIONS instead of one. These can be against a single target or two separate ones."
+      },
+      "Ranged Weapon§Sultanate Grand Cannon—12 Glory": {
+        "aspects": {
+          "Label": "Sultanate Grand Cannon"
+        },
         "assets": {
           "traits": [
             "Ability§Heavy"
@@ -5675,23 +6337,56 @@
         },
         "keywords": {
           "Tags": [
-            "Elite"
+            "Non-pistol",
+            "Iron Sultanate"
+          ]
+        },
+        "stats": {
+          "Glory": {
+            "value": 12
+          },
+          "Modifiers": {
+            "value": "+2D to Injury"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Type": {
+            "value": "1-Handed"
+          }
+        },
+        "text": "If the Great Cannon hits a target but does not take it out of action, the target is pushed back by 1D6″ directly away from the shooter. If they hit another model or a solid object, they stop."
+      },
+      "Ranged Weapon§Viscera Cannon—50 Ducats": {
+        "aspects": {
+          "Label": "Viscera Cannon"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Heavy"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Non-pistol",
+            "The Cult of the Black Grail"
           ]
         },
         "stats": {
           "Ducats": {
-            "value": 60
+            "value": 50
           },
           "Modifiers": {
-            "value": "+2D to hit"
+            "value": "+2D to Hit"
           },
           "Range": {
             "value": 18
           },
           "Type": {
-            "value": "Range"
+            "value": "2-Handed"
           }
-        }
+        },
+        "text": "The Viscera Cannon has additional +2 DICE on Ranged Attack rolls as even the slightest splash can kill. If it hits the enemy, roll to injure as normal. After rolling for injuries, you can boost the damage by up to three additional BLOOD MARKERS per hit by taking the same number of BLOOD MARKERS on the shooter itself."
       },
       "Roster§Roster": {
         "allowed": {
