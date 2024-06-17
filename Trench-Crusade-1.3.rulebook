@@ -1,6 +1,6 @@
 {
   "name": "Trench Crusade 1.3",
-  "revision": "1.3.200",
+  "revision": "1.3.201",
   "game": "Trench Crusade",
   "genre": "fantasy",
   "publisher": "",
@@ -2427,6 +2427,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -2466,15 +2469,15 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
           "Type": [
             "Leader",
             "Elite"
-          ],
-          "Tags": [
-            "Compulsory"
           ]
         },
         "stats": {
@@ -2516,6 +2519,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "The Black Grail model"
+          ],
           "Faction": [
             "The Black Grail"
           ],
@@ -2563,6 +2569,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Trench Pilgrims model"
+          ],
           "Faction": [
             "Trench Pilgrims"
           ],
@@ -2605,6 +2614,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Heretic Legion model"
+          ],
           "Faction": [
             "Heretic Legion"
           ],
@@ -2645,6 +2657,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Heretic Legion model"
+          ],
           "Faction": [
             "Heretic Legion"
           ]
@@ -2681,6 +2696,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -2720,6 +2738,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -2760,6 +2781,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Heretic Legion model"
+          ],
           "Faction": [
             "Heretic Legion"
           ],
@@ -2793,6 +2817,9 @@
       },
       "Model§Azeb": {
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -2828,6 +2855,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -2861,6 +2891,9 @@
           "traits": []
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ]
@@ -2892,6 +2925,9 @@
           "traits": []
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -2930,6 +2966,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "The Black Grail model"
+          ],
           "Faction": [
             "The Black Grail"
           ],
@@ -2973,6 +3012,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -3018,6 +3060,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Trench Pilgrims model"
+          ],
           "Faction": [
             "Trench Pilgrims"
           ],
@@ -3052,6 +3097,9 @@
       },
       "Model§Combat engineer": {
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -3093,6 +3141,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ]
@@ -3133,6 +3184,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ]
@@ -3176,6 +3230,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Trench Pilgrims model"
+          ],
           "Faction": [
             "Trench Pilgrims"
           ],
@@ -3267,6 +3324,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "The Black Grail model"
+          ],
           "Faction": [
             "The Black Grail"
           ],
@@ -3310,6 +3370,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ]
@@ -3348,6 +3411,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Trench Pilgrims model"
+          ],
           "Faction": [
             "Trench Pilgrims"
           ]
@@ -3386,6 +3452,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Trench Pilgrims model"
+          ],
           "Faction": [
             "Trench Pilgrims"
           ],
@@ -3419,6 +3488,9 @@
       },
       "Model§Eire Trench Cleric": {
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -3464,6 +3536,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "The Black Grail model"
+          ],
           "Faction": [
             "The Black Grail"
           ],
@@ -3507,6 +3582,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -3551,6 +3629,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Heretic Legion model"
+          ],
           "Faction": [
             "Heretic Legion"
           ],
@@ -3592,6 +3673,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "The Black Grail model"
+          ],
           "Faction": [
             "The Black Grail"
           ],
@@ -3630,6 +3714,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Mercenaries model"
+          ],
           "Faction": [
             "Mercenaries"
           ]
@@ -3664,6 +3751,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Mercenaries model"
+          ],
           "Faction": [
             "Mercenaries"
           ]
@@ -3701,6 +3791,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "The Black Grail model"
+          ],
           "Faction": [
             "The Black Grail"
           ],
@@ -3746,6 +3839,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Heretic Legion model"
+          ],
           "Faction": [
             "Heretic Legion"
           ],
@@ -3793,6 +3889,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Heretic Legion model"
+          ],
           "Faction": [
             "Heretic Legion"
           ],
@@ -3839,6 +3938,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Heretic Legion model"
+          ],
           "Faction": [
             "Heretic Legion"
           ],
@@ -3877,6 +3979,9 @@
       },
       "Model§Heretic Trooper": {
         "keywords": {
+          "Tags": [
+            "Heretic Legion model"
+          ],
           "Faction": [
             "Heretic Legion"
           ]
@@ -4123,6 +4228,9 @@
           "traits": []
         },
         "keywords": {
+          "Tags": [
+            "Heretic Legion model"
+          ],
           "Faction": [
             "Heretic Legion"
           ]
@@ -4199,14 +4307,14 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
           "Type": [
             "Elite"
-          ],
-          "Tags": [
-            "Compulsory"
           ]
         },
         "stats": {
@@ -4239,6 +4347,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ]
@@ -4277,6 +4388,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "The Black Grail model"
+          ],
           "Faction": [
             "The Black Grail"
           ],
@@ -4318,6 +4432,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -4359,6 +4476,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -4398,6 +4518,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -4437,6 +4560,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -4480,6 +4606,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -4527,6 +4656,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -4575,6 +4707,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -4613,6 +4748,9 @@
       },
       "Model§Lion of Jabir": {
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -4653,6 +4791,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ]
@@ -4698,6 +4839,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "The Black Grail model"
+          ],
           "Faction": [
             "The Black Grail"
           ],
@@ -4743,6 +4887,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Trench Pilgrims model"
+          ],
           "Faction": [
             "Trench Pilgrims"
           ]
@@ -4777,6 +4924,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Mercenaries model"
+          ],
           "Faction": [
             "Mercenaries"
           ]
@@ -4816,6 +4966,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -4859,6 +5012,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -4898,6 +5054,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -4937,6 +5096,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -4979,6 +5141,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Mercenaries model"
+          ],
           "Faction": [
             "Mercenaries"
           ]
@@ -5014,6 +5179,9 @@
           "Unique": true
         },
         "keywords": {
+          "Tags": [
+            "Mercenaries model"
+          ],
           "Faction": [
             "Mercenaries"
           ],
@@ -5053,6 +5221,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Mercenaries model"
+          ],
           "Faction": [
             "Mercenaries"
           ]
@@ -5086,6 +5257,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -5130,6 +5304,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Mercenaries model"
+          ],
           "Faction": [
             "Mercenaries"
           ]
@@ -5171,14 +5348,14 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
           "Type": [
             "Elite"
-          ],
-          "Tags": [
-            "Compulsory"
           ]
         },
         "stats": {
@@ -5208,6 +5385,9 @@
           "Unique": true
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -5252,6 +5432,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Trench Pilgrims model"
+          ],
           "Faction": [
             "Trench Pilgrims"
           ],
@@ -5292,6 +5475,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "The Black Grail model"
+          ],
           "Faction": [
             "The Black Grail"
           ],
@@ -5337,6 +5523,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "The Black Grail model"
+          ],
           "Faction": [
             "The Black Grail"
           ],
@@ -5378,6 +5567,9 @@
           "Unique": true
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -5418,14 +5610,14 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
           "Type": [
             "Elite"
-          ],
-          "Tags": [
-            "Compulsory"
           ]
         },
         "stats": {
@@ -5451,6 +5643,9 @@
       },
       "Model§Sapper": {
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -5489,6 +5684,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ]
@@ -5531,6 +5729,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Trench Pilgrims model"
+          ],
           "Faction": [
             "Trench Pilgrims"
           ],
@@ -5572,6 +5773,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Mercenaries model"
+          ],
           "Faction": [
             "Mercenaries"
           ]
@@ -5610,6 +5814,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -5644,6 +5851,9 @@
       },
       "Model§Specialist Trench dog": {
         "keywords": {
+          "Tags": [
+            "Mercenaries model"
+          ],
           "Faction": [
             "Mercenaries"
           ],
@@ -5686,6 +5896,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Trench Pilgrims model"
+          ],
           "Faction": [
             "Trench Pilgrims"
           ]
@@ -5717,6 +5930,9 @@
       },
       "Model§Stigmatic Nuns": {
         "keywords": {
+          "Tags": [
+            "Trench Pilgrims model"
+          ],
           "Faction": [
             "Trench Pilgrims"
           ],
@@ -5760,6 +5976,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -5804,6 +6023,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ]
@@ -5843,6 +6065,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -5877,6 +6102,9 @@
       },
       "Model§Trench dog": {
         "keywords": {
+          "Tags": [
+            "Mercenaries model"
+          ],
           "Faction": [
             "Mercenaries"
           ],
@@ -5916,6 +6144,9 @@
           "traits": []
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ],
@@ -5955,6 +6186,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Trench Pilgrims model"
+          ],
           "Faction": [
             "Trench Pilgrims"
           ]
@@ -5988,6 +6222,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Mercenaries model"
+          ],
           "Faction": [
             "Mercenaries"
           ]
@@ -6026,6 +6263,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Trench Pilgrims model"
+          ],
           "Faction": [
             "Trench Pilgrims"
           ],
@@ -6071,6 +6311,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Trench Pilgrims model"
+          ],
           "Faction": [
             "Trench Pilgrims"
           ],
@@ -6117,6 +6360,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Heretic Legion model"
+          ],
           "Faction": [
             "Heretic Legion"
           ],
@@ -6199,6 +6445,9 @@
           "traits": []
         },
         "keywords": {
+          "Tags": [
+            "New Antioch model"
+          ],
           "Faction": [
             "New Antioch"
           ]
@@ -6236,6 +6485,9 @@
           ]
         },
         "keywords": {
+          "Tags": [
+            "Iron Sultanate model"
+          ],
           "Faction": [
             "Iron Sultanate"
           ],
@@ -7796,7 +8048,7 @@
                     "classification",
                     "Model",
                     "tally",
-                    "New Antioch"
+                    "New Antioch model"
                   ]
                 ]
               }
@@ -7834,7 +8086,7 @@
                     "classification",
                     "Model",
                     "tally",
-                    "The Black Grail"
+                    "The Black Grail model"
                   ]
                 ]
               }
@@ -7872,7 +8124,7 @@
                     "classification",
                     "Model",
                     "tally",
-                    "Heretic Legion"
+                    "Heretic Legion model"
                   ]
                 ]
               }
@@ -7910,7 +8162,7 @@
                     "classification",
                     "Model",
                     "tally",
-                    "Trench Pilgrims"
+                    "Trench Pilgrims model"
                   ]
                 ]
               }
@@ -7948,7 +8200,7 @@
                     "classification",
                     "Model",
                     "tally",
-                    "Iron Sultanate"
+                    "Iron Sultanate model"
                   ]
                 ]
               }
