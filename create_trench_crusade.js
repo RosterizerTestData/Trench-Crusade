@@ -90,7 +90,6 @@ async function processFiles() {
       });
 
       Object.entries(mdList).forEach(([key, md]) => {
-        // "Infantry§Alamut Assassin"
         let mdItem = {
           "assets": {
             "traits": []
@@ -102,7 +101,9 @@ async function processFiles() {
         };
         let factionName = data.Faction.find(f => f.id == md.faction_id)?.name;
         if(factionName) mdItem.keywords.Faction = [factionName];
-        mdItem.keywords.Keywords = md.tags.filter(t => !['elite','leader'].includes(t.tag_name) && t.tag_name.toLowerCase().replace(/ /g,'') !== factionName?.toLowerCase()?.replace(/ /g,'')).map(t => titleCase(t.tag_name));
+        if(factionName) mdItem.keywords.Tags = [factionName + ' model'];
+        if(!factionName) mdItem.keywords.Faction = ['Mercenaries'];
+        mdItem.keywords.Keywords = md.tags.filter(t => !['elite','leader','newantioch','blackgrail','heretic'].includes(t.tag_name) && t.tag_name.toLowerCase().replace(/ /g,'') !== factionName?.toLowerCase()?.replace(/ /g,'')).map(t => titleCase(t.tag_name));
         if(md.tags.filter(t => t.tag_name === 'elite').length > 0) mdItem.keywords.Type = ['Elite'];
         if(md.tags.filter(t => t.tag_name === 'leader').length > 0) mdItem.keywords.Type = ['Leader'];
         if(!mdItem.keywords.Keywords.length) delete mdItem.keywords.Keywords;
@@ -116,11 +117,11 @@ async function processFiles() {
           if(typeof mdItem.stats.Base.value !== 'number') mdItem.stats.Base.statType = 'term';
         }
         if(md.hasOwnProperty('movement')){
-          mdItem.stats.Movement = {value: numberr(md.movement.replace(/″/g,''))};
+          mdItem.stats.Movement = {value: numberr(md.movement)};
           if(typeof mdItem.stats.Movement.value !== 'number') mdItem.stats.Movement.statType = 'term';
         }
         if(md.hasOwnProperty('melee')){
-          mdItem.stats.Melee = {value: numberr(md.melee.replace(/\+/g,'')) !== null ? numberr(md.melee.replace(/\+/g,'')) : md.melee};
+          mdItem.stats.Melee = {value: numberr(md.melee) !== null ? numberr(md.melee) : md.melee};
           if(typeof mdItem.stats.Melee.value !== 'number') mdItem.stats.Melee.statType = 'term';
         }
         if(md.hasOwnProperty('ranged')){
@@ -140,7 +141,7 @@ async function processFiles() {
           else mdItem.text = mdItem.text ? mdItem.text + '\n' + t : t;
         });
 
-        rulebook.rulebook.assetCatalog['Infantry§' + md.name.trim()] = mdItem;
+        rulebook.rulebook.assetCatalog['Model§' + md.name.trim()] = mdItem;
       });
 
       Object.entries(eqList).forEach(([key, eq]) => {
@@ -158,7 +159,7 @@ async function processFiles() {
         if(eq.name.toLowerCase().includes('rifle')) eqItem.keywords.Tags.push('Rifle');
 
         if(eq.range && eq.range !== 'Melee'){
-          let repl = eq.range.replace(/″/g,'');
+          let repl = eq.range;
           if(Number(repl) != repl) eqItem.stats.Range = {value: repl,statType: 'term'};
           eqItem.stats.Range = {value: Number(repl)};
         }
