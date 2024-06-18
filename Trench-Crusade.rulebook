@@ -1,6 +1,6 @@
 {
   "name": "Trench Crusade",
-  "revision": "1.4.0",
+  "revision": "1.4.1",
   "game": "Trench Crusade",
   "genre": "fantasy",
   "publisher": "",
@@ -4076,7 +4076,7 @@
                     "{self}",
                     "included",
                     "classification",
-                    "Model",
+                    "Warrior",
                     "tally",
                     "New Antioch model"
                   ]
@@ -4114,7 +4114,7 @@
                     "{self}",
                     "included",
                     "classification",
-                    "Model",
+                    "Warrior",
                     "tally",
                     "The Black Grail model"
                   ]
@@ -4152,7 +4152,7 @@
                     "{self}",
                     "included",
                     "classification",
-                    "Model",
+                    "Warrior",
                     "tally",
                     "Heretic Legion model"
                   ]
@@ -4190,7 +4190,7 @@
                     "{self}",
                     "included",
                     "classification",
-                    "Model",
+                    "Warrior",
                     "tally",
                     "Trench Pilgrims model"
                   ]
@@ -4228,7 +4228,7 @@
                     "{self}",
                     "included",
                     "classification",
-                    "Model",
+                    "Warrior",
                     "tally",
                     "Iron Sultanate model"
                   ]
@@ -4254,7 +4254,7 @@
                     "{self}",
                     "assets",
                     "classification",
-                    "Model",
+                    "Warrior",
                     "constraints",
                     "any"
                   ]
