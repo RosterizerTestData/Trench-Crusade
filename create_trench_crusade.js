@@ -164,7 +164,7 @@ async function processFiles() {
           eqItem.stats.Range = {value: Number(repl)};
         }
         if(eq.equip_type) eqItem.stats.Type = {value: eq.equip_type};
-        if(eq.description.length) eqItem.text = formatText(eq.description[0].subcontent[0].content.trim());
+        if(eq.description.length) eqItem.text = formatText(eq.description[0]?.subcontent?.[0]?.content?.trim() || eq.description[0]?.content.trim());
         if(eq.modifiers?.length) eqItem.stats.Modifiers = {value: eq.modifiers[0]};
         if(eq.tags?.length){
           eqItem.assets = {};
