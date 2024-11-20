@@ -2037,6 +2037,7 @@
         "text": "Once per battle, you may add +3″ to the Movement characteristic of this model once during the activation. Declare this when the model is Activated."
       },
       "Faction§Heretic Legion": {},
+      "Faction§The Court of the Seven-Headed Serpent": {},
       "Faction§The Cult of the Black Grail": {},
       "Faction§The Iron Sultanate": {},
       "Faction§The Principality of New Antioch": {},
@@ -4850,6 +4851,44 @@
             "failState": "pass",
             "order": 0
           },
+          "detectFactionSerpent": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Faction",
+                    "value"
+                  ]
+                ],
+                "value": "The Court of the Seven-Headed Serpent"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "included",
+                    "classification",
+                    "Warrior",
+                    "tally",
+                    "The Court of the Seven-Headed Serpent model"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
+          },
           "detectFactionSultanate": {
             "actions": [
               {
@@ -5002,6 +5041,19 @@
                   ]
                 ],
                 "value": "Alba Assault Detachment"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Variant",
+                    "ranks"
+                  ]
+                ],
+                "value": "Forces of Abyssinia"
               }
             ],
             "evals": [
@@ -5017,7 +5069,43 @@
                     "value"
                   ]
                 ],
-                "value": "The Principality of New Antioch"
+                "value": "New Antioch"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 20
+          },
+          "unsetBlackGrailVariants": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Variant",
+                    "ranks"
+                  ]
+                ],
+                "value": "Great Hegemon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Faction",
+                    "value"
+                  ]
+                ],
+                "value": "Black Grail"
               }
             ],
             "evaluate": "AND",
@@ -5037,7 +5125,7 @@
                     "ranks"
                   ]
                 ],
-                "value": "Heretic Naval Raiding Party"
+                "value": "Naval Raiding Party"
               },
               {
                 "actionType": "remove",
@@ -5149,6 +5237,19 @@
                   ]
                 ],
                 "value": "Fidai of Alamut"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Variant",
+                    "ranks"
+                  ]
+                ],
+                "value": "House of Wisdom"
               }
             ],
             "evals": [
@@ -5220,7 +5321,7 @@
                   }
                 ]
               },
-              "The Principality of New Antioch": {
+              "New Antioch": {
                 "order": 4,
                 "traits": [
                   {
@@ -5231,7 +5332,7 @@
                   }
                 ]
               },
-              "The Cult of the Black Grail": {
+              "Black Grail": {
                 "order": 5,
                 "traits": [
                   {
@@ -5239,6 +5340,14 @@
                   },
                   {
                     "trait": "Warrior§Lord of Tumours"
+                  }
+                ]
+              },
+              "Seven-Headed Serpent": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Faction§The Court of the Seven-Headed Serpent"
                   }
                 ]
               }
@@ -5293,7 +5402,7 @@
               "-": {
                 "order": 0
               },
-              "Heretic Naval Raiding Party": {
+              "Naval Raiding Party": {
                 "order": 1,
                 "term": "Variant§Heretic Naval Raiding Party"
               },
@@ -5317,21 +5426,33 @@
                 "order": 6,
                 "term": "Variant§Fidai of Alamut"
               },
-              "Intervention Force": {
+              "House of Wisdom": {
                 "order": 7,
+                "term": "Variant§House of Wisdom"
+              },
+              "Intervention Force": {
+                "order": 8,
                 "term": "Variant§Papal States Intervention Force"
               },
               "Eire Rangers": {
-                "order": 8,
+                "order": 9,
                 "term": "Variant§Eire Rangers"
               },
               "Free State of Prussia": {
-                "order": 9,
+                "order": 10,
                 "term": "Variant§Stoßtruppen of the Free State of Prussia"
               },
               "Alba Assault Detachment": {
-                "order": 10,
-                "term": "Variant§Alba Assault Detachment"
+                "order": 11,
+                "term": "Variant§Kingdom of Alba Assault Detachment"
+              },
+              "Forces of Abyssinia": {
+                "order": 12,
+                "term": "Variant§Expeditionary Forces of Abyssinia"
+              },
+              "Great Hegemon": {
+                "order": 13,
+                "term": "Variant§Dirge of the Great Hegemon"
               }
             },
             "statOrder": 2,
@@ -5341,7 +5462,6 @@
           }
         }
       },
-      "Variant§Alba Assault Detachment": {},
       "Variant§Cavalcade of the Tenth Plague": {
         "keywords": {
           "Faction": [
@@ -5350,8 +5470,34 @@
         },
         "text": "* **Blood Sacrifice**: Any model in the warband (except Ecclesiastic Prisoners who are not worthy) can purchase a Sacrificial Lamb (see below).\n* **Heaven Awaits**: The Cavalcade rejects the doctrine of the Meta-Christ. Their dead Pilgrims cannot be resurrected as Martyr-Penitents.\n* **The Unclean**: The Cavalcade detests using the unclean Ecclesiastic Prisoners and may only have up to two of them.\n* **Day of his Wrath**: The War Prophet of this warband cannot use Laying on Hands, but can call upon the Wrath of God instead. This is a RISKY ACTION. If successful, roll on the Injury Chart against one enemy model within 3” of the Prophet. Armour offers no protection."
       },
-      "Variant§Eire Rangers": {},
-      "Variant§Fidai of Alamut": {},
+      "Variant§Dirge of the Great Hegemon": {
+        "keywords": {
+          "Faction": [
+            "The Cult of the Black Grail"
+          ]
+        }
+      },
+      "Variant§Eire Rangers": {
+        "keywords": {
+          "Faction": [
+            "The Principality of New Antioch"
+          ]
+        }
+      },
+      "Variant§Expeditionary Forces of Abyssinia": {
+        "keywords": {
+          "Faction": [
+            "The Principality of New Antioch"
+          ]
+        }
+      },
+      "Variant§Fidai of Alamut": {
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ]
+        }
+      },
       "Variant§Heretic Naval Raiding Party": {
         "keywords": {
           "Faction": [
@@ -5360,8 +5506,34 @@
         },
         "text": "* All models have +1 DICE when taking their Dash ACTIONS.\n* The warband can buy Submachine Guns at 25 ducats per weapon.\n* The warband can have only one Anointed model and may have only one Artillery Witch.\n* The warband may not include a War Wolf.\n* Up to three models without ELITE Keyword can be upgraded into INFILTRATORS at the cost of 10 ducats per model."
       },
-      "Variant§Knights of Avarice": {},
-      "Variant§Papal States Intervention Force": {},
+      "Variant§House of Wisdom": {
+        "keywords": {
+          "Faction": [
+            "Iron Sultanate"
+          ]
+        }
+      },
+      "Variant§Kingdom of Alba Assault Detachment": {
+        "keywords": {
+          "Faction": [
+            "The Principality of New Antioch"
+          ]
+        }
+      },
+      "Variant§Knights of Avarice": {
+        "keywords": {
+          "Faction": [
+            "Heretic Legion"
+          ]
+        }
+      },
+      "Variant§Papal States Intervention Force": {
+        "keywords": {
+          "Faction": [
+            "The Principality of New Antioch"
+          ]
+        }
+      },
       "Variant§Procession of the Sacred Affliction": {
         "keywords": {
           "Faction": [
@@ -5370,7 +5542,13 @@
         },
         "text": "* **Face thy Fears**: No model in the Procession of the Sacred Affliction can wear Iron Capirotes. Those troops with Capirotes in their base profile will not have them, though their cost remains the same.\n* **Reliquary Armoury**: All models of this warband (save for Anchorite) can buy Holy Icon Shields for 20 ducats, not just ELITE models. In addition, warband models with the ELITE Keyword may acquire Holy Icon Armour (see below).\n* **Punishing Millstones**: All models in the Procession of the Sacred Affliction add +1 DICE to injury rolls with melee attacks against enemies who are Down.\n* **Melee-focused**: This warband may not have any Machine Guns"
       },
-      "Variant§Stoßtruppen of the Free State of Prussia": {},
+      "Variant§Stoßtruppen of the Free State of Prussia": {
+        "keywords": {
+          "Faction": [
+            "The Principality of New Antioch"
+          ]
+        }
+      },
       "Variant§Trench Ghosts": {
         "keywords": {
           "Faction": [
